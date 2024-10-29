@@ -1,0 +1,120 @@
+site_name: Dria Docs
+site_author: andthattoo
+site_description: >-
+  Detailed documentation of Dria: A complete framework for synthetic data generation.
+repo_name: dria-sdk-docs
+theme:
+  name: material
+  favicon: './favicon-32x32.png'
+  logo: 'img/android-chrome-512x512.png'
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-2
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+markdown_extensions:
+  - abbr
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: andthattoo # Replace with your GitHub username if needed
+      repo: firstbatchxyz/dria-blog         # Replace with your GitHub repo name if needed
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+nav:
+  - Getting Started:
+    - What is Dria?: "README.md"
+    - Installation: "quickstart.md"
+    - Run a Node (Optional): "node.md"
+  - How-To Guides:
+    - Simple:
+      - Tasks: "how-to/tasks.md"
+      - Singletons: "how-to/singletons.md"
+      - Selecting Models: "how-to/models.md"
+      - Batches: "how-to/batches.md"
+    - Advanced:
+      - Writing Workflows: "how-to/workflows.md"
+      - Functions: "how-to/functions.md"
+      - Pipelines: "how-to/pipelines.md"
+  - Singletons:
+    - Simple: "factory/simple.md"
+    - CLAIR: "factory/clair.md"
+    - Generate Code: "factory/code_generation.md"
+    - Iterate Code: "factory/iterate_code.md"
+    - Evolve Complexity: "factory/evolve_complexity.md"
+    - Score Complexity: "factory/complexity_scorer.md"
+    - Evolve Instruction: "factory/instruction_evolution.md"
+    - Evolve Quality: "factory/quality_evolution.md"
+    - Generate Graph: "factory/graph_builder.md"
+    - MagPie: "factory/magpie.md"
+    - Self-Instruct: "factory/self_instruct.md"
+    - Text Embeddings:
+      - Text Retrieval: "factory/text_retrieval.md"
+      - Text Matching: "factory/text_matching.md"
+      - Text Classification: "factory/text_classification.md"
+      - Semantic Triplet: "factory/semantic_triplet.md"
+    - Model-as-a-Judge:
+      - Evaluate Prediction: "factory/evaluate.md"
+      - Validate Prediction: "factory/validate.md"
+    - Search & Data Ingestion (Experimental):
+      - Web Multi-Choice: "factory/web_multi_choice.md"
+  - Pipelines:
+    - List Extender: "factory/list_extender.md"
+    - CSV Extender: "factory/csv_extender.md"
+    - Persona Pipeline: "factory/persona.md"
+    - Sub-Topic Pipeline: "factory/subtopic.md"
+    - Search Pipeline: "factory/search.md"
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: alphabetical
+            allow_inspection: true
+            show_bases: true
+
+copyright: Copyright &copy; 2023 FirstBatch Inc.
