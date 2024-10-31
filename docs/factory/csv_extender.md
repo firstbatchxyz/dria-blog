@@ -15,12 +15,13 @@ tags:
 
 `CSVExtenderPipeline` is a class that creates a pipeline for extending a given `csv`. The pipeline generates new rows based on the existing ones.
 
-## Class Overview
+## Overview
 
-The `CSVExtenderPipeline` class has the following components:
+This pipeline extends a given `csv` by generating new rows based on the existing ones. The extension is done by adding new subcategories to the existing categories. The number of subcategories can be specified to determine the number of rows to be generated.
 
-- Constructor: Initializes the pipeline with a `Dria` instance and a `PipelineConfig`.
-- `build` method: Constructs the pipeline based on the given csv
+#### Input
+
+- `csv` (`str`): The csv data to be extended.
 
 ```python
 import asyncio

@@ -19,6 +19,11 @@ tags:
 
 This pipeline generates personas by creating random variables that fit into the simulation description and then generating a backstory for each sample. The number of samples can be specified to determine the number of personas to be generated.
 
+#### Inputs
+
+- `simulation_description` (`str`): The description of the simulation for which personas are to be generated.
+- `num_personas` (`int`): The number of personas to be generated.
+
 
 ```python
 import asyncio

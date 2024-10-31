@@ -50,8 +50,8 @@ markdown_extensions:
   - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: andthattoo # Replace with your GitHub username if needed
-      repo: firstbatchxyz/dria-blog         # Replace with your GitHub repo name if needed
+      user: andthattoo
+      repo: firstbatchxyz/dria-blog
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
@@ -108,6 +108,7 @@ nav:
     - Persona Pipeline: "factory/persona.md"
     - Sub-Topic Pipeline: "factory/subtopic.md"
     - Search Pipeline: "factory/search.md"
+    - QA Pipeline: "factory/qa.md"
 plugins:
   - mkdocstrings:
       handlers:

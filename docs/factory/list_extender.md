@@ -15,13 +15,14 @@ tags:
 
 `ListExtenderPipeline` is a class that creates a pipeline for extending a given list of items. The pipeline generates new items based on the existing ones.
 
-## Class Overview
+## Overview
 
-The `ListExtenderPipeline` class has the following components:
+This pipeline extends a given list by generating new items based on the existing ones. The extension is done by adding new subcategories to the existing categories. The number of subcategories can be specified to determine the number of items to be generated.
 
-- Constructor: Initializes the pipeline with a `Dria` instance and a `PipelineConfig`.
-- `build` method: Constructs the pipeline based on the given list. 
-  - `granularize`: If set to True, the pipeline will generate detailed subtopics, extending the list with more granular topics.
+#### Inputs
+
+- `list` (`List[str]`): The list of items to be extended.
+- `granularize` (`bool`): Whether to granularize the items in the list.
 
 ```python
 import asyncio
