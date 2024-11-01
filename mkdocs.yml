@@ -91,6 +91,7 @@ nav:
     - Evolve Quality: "factory/quality_evolution.md"
     - Generate Graph: "factory/graph_builder.md"
     - MagPie: "factory/magpie.md"
+    - MultiHopQA: "factory/multihopqa.md"
     - Self-Instruct: "factory/self_instruct.md"
     - Text Embeddings:
       - Text Retrieval: "factory/text_retrieval.md"
@@ -100,8 +101,7 @@ nav:
     - Model-as-a-Judge:
       - Evaluate Prediction: "factory/evaluate.md"
       - Validate Prediction: "factory/validate.md"
-    - Search & Data Ingestion (Experimental):
-      - Web Multi-Choice: "factory/web_multi_choice.md"
+    - Web Multi-Choice: "factory/web_multi_choice.md"
   - Pipelines:
     - List Extender: "factory/list_extender.md"
     - CSV Extender: "factory/csv_extender.md"
