@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate engaging dialogues between personas with MagPie, a Singleton
-  task using advanced models like GEMMA2.
+description: Generate dialogues with the `MagPie` Singleton task, featuring customizable
+  personas and dialogue turns using advanced AI models.
 tags:
-- AI Dialogue Generation
-- Persona Conversation
-- Natural Language Processing
-- Dialogue Systems
-- Machine Learning
+- AI
+- dialogue generation
+- MagPie
+- conversational AI
+- GEMMA2
 ---
 
 # MagPie

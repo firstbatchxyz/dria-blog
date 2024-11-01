@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to validate predictions using a Singleton task that compares
-  predicted answers against correct answers.
+description: ValidatePrediction is a singleton task for verifying if a predicted answer
+  matches a correct answer semantically and contextually.
 tags:
 - validation
-- predictions
-- AI model
-- singleton task
-- correct answers
+- prediction
+- model evaluation
+- AI tasks
+- contextual analysis
 ---
 
 # ValidatePrediction

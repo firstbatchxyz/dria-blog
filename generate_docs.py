@@ -9,6 +9,9 @@ from rich.table import Table
 from pydantic import BaseModel, Field
 import instructor
 import frontmatter
+from dotenv import load_dotenv
+
+load_dotenv()
 
 console = Console()
 client = instructor.from_openai(AsyncOpenAI())

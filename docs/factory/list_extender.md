@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Extend lists of items with the ListExtenderPipeline class, utilizing
-  a Dria instance for enhanced topic generation.
+- Applied AI
+description: Explore the ListExtender class to generate new items based on existing
+  lists, enhancing organization and categorization.
 tags:
-- ListExtender
+- List Management
 - Python
-- Dria
-- SoftwareDevelopment
-- TopicGeneration
+- Data Handling
+- Pipeline
+- Subcategories
 ---
 
 # ListExtender

@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore the PersonaPipeline class for generating unique cyberpunk personas
-  from simulation descriptions in Python.
+- Applied AI
+description: Explore the PersonaPipeline class for generating unique personas based
+  on simulation descriptions and random variables.
 tags:
-- cyberpunk
-- Python
 - personas
-- game development
 - simulation
+- cyberpunk
+- AI
+- data generation
 ---
 
 # PersonaPipeline

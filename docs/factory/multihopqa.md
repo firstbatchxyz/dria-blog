@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Generate multi-hop questions using three documents requiring reasoning
+  across multiple sources.
+tags:
+- multi-hop questions
+- question generation
+- reasoning
+- NLP
+- data processing
+---
+
 # MultiHopQuestion 
 
 `MultiHopQuestion` is a `Singleton` task that generates multi-hop questions from three input documents. 

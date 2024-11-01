@@ -72,14 +72,16 @@ factory/complexity_scorer.md:
     the ComplexityScorer Distilabel and a comprehensive study on data selection in
     instruction tuning.
 factory/csv_extender.md:
-  hash: 2412b04c8b712480ed635ba7d60b0fa3
-  summary: The article introduces the `CSVExtenderPipeline` class, which enhances
-    data management by extending CSV files with new rows based on existing data using
-    Python. It highlights the components of the class, such as its constructor that
-    initializes the pipeline with a `Dria` instance, and the `build` method that constructs
-    the pipeline. The guide provides a sample script to demonstrate how to use the
-    class for CSV file extension, resulting in a potentially large output JSON file.
-    Key terms include CSV, data management, Python, Dria, and automation.
+  hash: e4f12fc36420e54590b945ea8d1b8e45
+  summary: The "CSVExtenderPipeline" is a Python class designed to enhance CSV file
+    management by generating new rows from existing data, particularly adding new
+    subcategories to existing categories. It is implemented using the Dria framework,
+    facilitating automation and data management in software engineering tasks. Users
+    provide CSV data as a string, and the pipeline outputs an extended CSV by creating
+    new category and subcategory combinations. This tool is relevant for developers
+    involved in Python programming, CSV manipulation, and data management automation.
+    Core keywords include CSV, data management, Python, Dria, automation, CSVExtenderPipeline,
+    and software engineering.
 factory/evaluate.md:
   hash: 806da96a7c2e4328823adf71e6729b48
   summary: The `EvaluatePrediction` task assesses the semantic and contextual accuracy
@@ -139,16 +141,16 @@ factory/iterate_code.md:
     handling to a Python function, utilizing models like GEMMA2_9B_FP16 and DEEPSEEK_CODER_6_7B.
     Key aspects include code improvement, iteration, and error handling in programming.
 factory/list_extender.md:
-  hash: 714b0fa8142a48989345e28a044db9c6
-  summary: The article introduces the `ListExtenderPipeline` class, a tool in software
-    development designed to extend lists of topics by generating additional items
-    based on existing ones. Utilizing a `Dria` instance, the pipeline can create detailed
-    subtopics, enhancing the depth of the list. The provided Python script showcases
-    how to initialize the pipeline and execute it with the option to granularize topics
-    for more comprehensive outcomes. The expected JSON output includes an extensive
-    array of history, science, arts, and technology topics, demonstrating the pipeline's
-    ability to expand diverse subject areas effectively. Key terms include ListExtender,
-    Python, Dria, topic generation, software engineering, and software development.
+  hash: 75a3986755935a15d960dc36d7d6ed55
+  summary: The content describes the `ListExtenderPipeline` class, a Python tool for
+    extending a given list of items by generating new topics based on existing ones.
+    Utilizing a Dria instance, this pipeline enhances topic generation by adding subcategories
+    to the given categories. Users can input a list of items and specify whether to
+    make the list more granular. Keywords include ListExtender, Python, Dria, Software
+    Development, and Topic Generation. The example code demonstrates creating and
+    executing the pipeline, producing an expanded list across diverse categories such
+    as Wildlife, Computers, Food, and Physics, intended for storing enhanced lists
+    in a JSON format for versatile applications.
 factory/magpie.md:
   hash: 3bb351559ca78a202871e270fd92d581
   summary: MagPie is a specialized AI task designed to generate dynamic dialogues
@@ -159,17 +161,47 @@ factory/magpie.md:
     The task emphasizes bias mitigation, ensuring fairness and objectivity in the
     generated dialogues. MagPie is ideal for AI developers and researchers interested
     in enhancing Dialogue Systems with authentic interactions.
+factory/multihopqa.md:
+  hash: 734233c5a1730598af4acd883e07fe95
+  summary: The `MultiHopQuestion` is a Singleton task designed to generate multi-hop
+    questions that require reasoning across multiple documents to find answers. It
+    takes exactly three text documents as input, producing a list of questions that
+    vary in complexity, ranging from single-document queries to those that integrate
+    information across all three. The generated output includes a question for each
+    hop level (1-hop, 2-hop, and 3-hop), the answer, and the model utilized for generation.
+    The process involves setting execution constraints, including time, steps, and
+    token limits, and using a custom prompt template to form questions. The functionality
+    is showcased through a Python example using asyncio to execute the task with a
+    model like GEMINI_15_FLASH. Important keywords include multi-hop questions, document
+    reasoning, generative model, and question generation.
 factory/persona.md:
-  hash: 38f7f245db7814fa2a6119f7f3023fcc
-  summary: The "PersonaPipeline" class is a Python tool designed for generating unique
-    cyberpunk personas from simulation descriptions. It operates by creating random
-    variables that align with given simulation descriptions and then crafting detailed
-    backstories for each generated persona. Users can specify the number of personas
-    to be created, enhancing customizability for applications in game development
-    and simulation projects. The example provided illustrates how to use the class
-    to generate personas set in a cyberpunk city in 2077, integrating themes of cybernetic
-    enhancements and gritty urban life. Key keywords include cyberpunk, Python, personas,
-    game development, and simulation.
+  hash: 11edd9f287ac800342e30a5456e45725
+  summary: The "PersonaPipeline" class in Python is designed for generating unique
+    cyberpunk personas from simulation descriptions, ideal for applications in game
+    development and simulation contexts. This pipeline uses random variables to craft
+    personas and detailed backstories, with user-specified options for the number
+    of personas to generate. Key features include integration with the Dria client
+    and the ability to output detailed character narratives, such as a mercenary in
+    Neo-Tokyo or an entrepreneurial street vendor utilizing cybernetic enhancements.
+    The setup involves asynchronous execution, leveraging environment variables for
+    authentication, and offers customizable configurations through `PipelineConfig`.
+factory/qa.md:
+  hash: 261d1b2e2b49b45bfb38989a76159d4d
+  summary: The `QAPipeline` class is designed for generating personas and simulating
+    question-answer interactions within specified scenarios. It processes simulation
+    descriptions and persona details to create contextually appropriate responses
+    that reflect the character's attributes. The pipeline is capable of producing
+    multiple question-answer samples by analyzing text chunks, making it an ideal
+    tool for creating detailed personas with backstories for educational or research
+    purposes. Using advanced methodologies such as iterative training, synthetic data
+    generation, and majority voting, the pipeline enhances model performance. Key
+    elements include simulation descriptions, persona definitions, and structured
+    outputs, which are crucial for effective persona simulation and language model
+    evaluation. Core features like question generation, concise researcher personas,
+    and detailed benchmarking are highlighted, making `QAPipeline` a versatile tool
+    for AI-driven language model development and evaluation. Keywords include QAPipeline,
+    simulation description, personas, question-answer interactions, synthetic data,
+    and iterative training.
 factory/quality_evolution.md:
   hash: c82a7e5b8aca13f3607f10b594aecc9e
   summary: '"EvolveQuality" is a Python-based task designed to improve the quality
@@ -226,17 +258,16 @@ factory/simple.md:
     to demonstrate how to execute the task asynchronously. Keywords include text generation,
     Singleton pattern, NLP, GEMMA2 model, and Python.
 factory/subtopic.md:
-  hash: e3b48714938728835c70a7da8a05e263
-  summary: The `SubTopicPipeline` class is designed to generate comprehensive subtopics
-    for a given topic using a recursive pipeline structure, suitable for deep-diving
-    into subjects such as AI and machine learning. This class, utilizing the `Dria`
-    instance and a `PipelineConfig`, allows users to construct and execute pipelines
-    that explore topics like deep learning, neural networks, AI ethics, and human-AI
-    collaboration, all to a specified depth. By automating this subtopic generation,
-    the `SubTopicPipeline` proves crucial for areas demanding structured insight like
-    healthcare applications, natural language processing, and the assessment of bias
-    in AI. Key tags include Applied AI, Subtopics, Machine Learning, Deep Learning,
-    and Pipeline.
+  hash: 509b279dfbb4c9437b4bdbc24fedc8a8
+  summary: 'The "SubTopicPipeline" is an AI class designed to generate detailed subtopics
+    from a given topic using a recursive pipeline structure. Targeted for use in fields
+    such as Machine Learning, Deep Learning, and Applied AI, it enables a comprehensive
+    exploration of subtopics with specified tree depth, allowing for the layered generation
+    of themes like "Applications of Deep Learning in Healthcare" and "Future of Work:
+    Human-AI Collaboration." By integrating the Dria library, this tool supports advanced
+    subtopic development for diverse applications, emphasizing key themes like bias,
+    fairness, transfer learning, and AI ethics, making it a valuable resource for
+    AI-driven analysis and decision-making processes.'
 factory/text_classification.md:
   hash: 8e2cd01fae20b56de69f1f9b2da84d82
   summary: 'The content provides an overview of using Python for text classification
@@ -369,6 +400,32 @@ how-to/workflows.md:
     including defining tasks and flow with conditional logic, and offers an example
     workflow that involves generating, validating, and possibly regenerating random
     variables. Key areas include Dria SDK, LLMs, memory operations, and task automation.
+modules/structrag.md:
+  hash: 09e9a33a260c135947d395810dc815e5
+  summary: 'StructRag is an advanced retrieval-augmented generation (RAG) framework
+    designed to improve large language models (LLMs) for knowledge-intensive reasoning
+    tasks by using cognitive-inspired techniques. Unlike traditional RAG methods,
+    it restructures documents into optimal formats for specific tasks, enhancing accuracy
+    and reasoning. The framework includes components like StructRAGSynthesize, StructRAGSimulate,
+    and StructRAGJudge, which collectively transform raw data, simulate and evaluate
+    structured responses, and refine outputs. This process is shown to achieve state-of-the-art
+    results across various complex tasks. Key elements include the integration of
+    models like GEMINI and Qwen2.5, with a complete dataset and model available on
+    Hugging Face. Keywords: StructRAG, RAG framework, large language models, knowledge-intensive
+    reasoning, document restructuring, GEMINI, Qwen2.5, Hugging Face.'
+modules/structrag2.md:
+  hash: 276d0c5a855cf70852a1f9dc5c0de6e9
+  summary: StructRAG is an advanced framework designed to enhance the reasoning capabilities
+    of large language models by utilizing hybrid information structuring techniques
+    at inference time. The process involves a Hybrid Router that determines the optimal
+    format for structuring information, improving knowledge-intensive tasks. It incorporates
+    components like StructRAGGraph, StructRAGCatalogue, StructRAGAlgorithm, and StructRAGTable
+    to manage and execute tasks efficiently. An example script demonstrates scoring
+    tasks by complexity, utilizing models such as Model.GEMMA2_9B_FP16. This innovative
+    approach enhances machine learning processes, allowing for more effective decision-making
+    and information management through structured reasoning and knowledge restructuring.
+    Keywords include StructRAG, hybrid information structuring, language models, and
+    knowledge-intensive reasoning.
 node.md:
   hash: 9af50e50492cc8eb51edcf7013617e82
   summary: 'Discover how to quickly set up a Node in the Dria decentralized AI network,

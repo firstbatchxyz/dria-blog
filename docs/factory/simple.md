@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Explore a Singleton task for text generation with the GEMMA2_9B_FP16
-  model. Perfect for quick and efficient NLP solutions.
+description: Explore a Singleton task for generating text based on prompts using the
+  GEMMA2 model in Python with Dria API.
 tags:
 - text generation
-- singleton pattern
-- NLP
-- GEMMA2 model
 - Python
+- Dria API
+- GEMMA model
+- Singleton pattern
 ---
 
 # Simple

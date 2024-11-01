@@ -5,14 +5,14 @@ categories:
 - Software Engineering
 comments: true
 date: 2024-10-29
-description: Learn how to create custom workflows using the Dria SDK to enhance task
-  execution with LLMs and memory operations.
+description: Learn to create custom workflows in Dria Network, integrating LLMs for
+  efficient task management using dria_workflows.
 tags:
-- Dria SDK
-- workflows
-- Large Language Models
-- customization
-- memory operations
+- Dria Network
+- Workflows
+- LLMs
+- Python
+- AI Integration
 title: Custom Workflows within Dria Network
 ---
 

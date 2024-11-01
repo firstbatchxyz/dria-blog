@@ -1,13 +1,13 @@
 ---
 categories:
-- Applied AI
-description: Generate a graph representing concepts and relationships in a given context
-  using the GenerateGraph task.
+- Software Engineering
+description: Generate a graph of concepts and their relationships using a Singleton
+  task in Dria client.
 tags:
 - graph generation
-- AI concepts
-- relationship mapping
-- data visualization
+- Artificial Intelligence
+- concept mapping
+- Dria client
 - machine learning
 ---
 

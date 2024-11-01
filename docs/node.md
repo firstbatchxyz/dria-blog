@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Quickly set up a Node in the Dria decentralized AI network with easy
-  steps and no wallet required. Perfect for AI enthusiasts!
+- Software Engineering
+description: Learn how to quickly set up a Node on the Dria decentralized AI collaboration
+  network with our easy-to-follow guide.
 tags:
 - Node Setup
-- AI Collaboration
-- Decentralized Network
-- Dria
+- Decentralized AI
+- Dria Network
 - FirstBatch
+- AI Collaboration
 ---
 
 # Run a Node

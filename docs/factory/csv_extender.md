@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to extend CSV files using the CSVExtenderPipeline class with
-  Dria, enhancing your data management capabilities.
+description: Extend CSV data with new subcategories using the CSVExtenderPipeline
+  class, implemented in Python.
 tags:
 - CSV
-- Data Management
+- Data Processing
 - Python
-- Dria
-- Automation
+- Pipeline
+- Software Development
 ---
 
 # CSVExtenderPipeline

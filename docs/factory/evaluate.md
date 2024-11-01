@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Evaluate the correctness of predictions using context and questions with
-  the EvaluatePrediction Singleton task.
+description: Evaluate predictions using context and questions with a Singleton task.
+  Check semantic and contextual accuracy seamlessly.
 tags:
-- prediction evaluation
-- semantic correctness
-- AI models
-- contextual analysis
-- software development
+- Evaluation
+- Prediction
+- AI Task
+- Contextual Analysis
+- Semantic Accuracy
 ---
 
 # EvaluatePrediction

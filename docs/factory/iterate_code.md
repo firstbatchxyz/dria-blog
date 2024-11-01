@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: IterateCode improves existing code with specified instructions in different
-  programming languages, enhancing functionality and quality.
+description: IterateCode enhances code quality through specific instructions in various
+  programming languages, improving functionality and robustness.
 tags:
-- Code Improvement
-- Code Iteration
-- Programming
-- Error Handling
-- AI Coding Models
+- code improvement
+- software engineering
+- error handling
+- programming
+- AI code generation
 ---
 
 # IterateCode

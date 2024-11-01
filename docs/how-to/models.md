@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore Dria Network's models and task execution with LLMs, including
-  multi-model assignments and various available providers.
+- Software Engineering
+description: Learn how to select and manage various LLM models using the Dria Network
+  infrastructure for efficient task execution.
 tags:
-- LLMs
-- Applied AI
-- Model Selection
-- Task Execution
+- LLM
 - Dria Network
+- model selection
+- MoA
+- task execution
 ---
 
 # Selecting Models

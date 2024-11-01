@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn to generate JSON objects for text retrieval tasks with user queries,
-  documents, and models.
+- Applied AI
+description: Generate JSON for text retrieval tasks including user queries and related
+  documents with the TextRetrieval task.
 tags:
 - text retrieval
-- JSON
-- data generation
+- JSON generation
 - machine learning
-- natural language processing
+- data processing
+- information retrieval
 ---
 
 # TextRetrieval

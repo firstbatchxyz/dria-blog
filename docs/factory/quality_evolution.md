@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Learn how to evolve response quality using EvolveQuality in Python, applying
-  methods like creativity and relevance for improved results.
+- Software Engineering
+description: EvolveQuality enhances response quality through advanced rewriting methods
+  like creativity and relevance.
 tags:
-- EvolveQuality
-- Response Improvement
-- AI Methods
-- Python Programming
-- Machine Learning
+- quality improvement
+- AI response
+- rewriting techniques
+- evolution
+- machine learning
 ---
 
 # EvolveQuality

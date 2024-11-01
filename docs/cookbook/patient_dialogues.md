@@ -1,12 +1,12 @@
 ---
 categories:
-- Applied AI
-description: Engaging dialogues between patients and healthcare professionals exploring
-  various medical topics.
+- Writing and Communication
+description: Explore insightful patient dialogues that highlight medical experiences
+  and enhance understanding in healthcare discussions.
 tags:
-- patient care
-- healthcare
-- medical dialogue
-- communication
-- patient experience
+- patient communication
+- healthcare dialogues
+- medical experiences
+- patient stories
+- dialogue analysis
 ---

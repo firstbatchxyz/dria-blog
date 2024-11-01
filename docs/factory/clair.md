@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Clair is a SingletonTemplate task that corrects student solutions using
-  specified models like GEMMA2, providing reasoning and improved outputs.
+- Software Engineering
+description: Clair is a SingletonTemplate task that corrects student solutions with
+  reasoning, improving coding skills interactively.
 tags:
-- Clair
-- SingletonTemplate
-- Automated Correction
-- AI Models
-- Code Improvement
+- education
+- AI
+- coding
+- student solutions
+- tutorial
 ---
 
 # Clair

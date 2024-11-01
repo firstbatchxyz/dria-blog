@@ -7,6 +7,9 @@ import typer
 from rich.console import Console
 from rich.progress import Progress
 import hashlib
+from dotenv import load_dotenv
+
+load_dotenv()
 
 console = Console()
 

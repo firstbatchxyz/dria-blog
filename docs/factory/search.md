@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Explore the SearchPipeline class for efficient web data retrieval and
-  summarization based on specific topics.
+description: Create an optimized SearchPipeline for web data retrieval on any topic,
+  enhancing efficiency with optional page summarization.
 tags:
 - SearchPipeline
-- Web Data Retrieval
-- Data Summarization
-- Software Engineering
-- Data Science
+- Data Retrieval
+- Web Summarization
+- Python
+- Machine Learning
 ---
 
 # SearchPipeline

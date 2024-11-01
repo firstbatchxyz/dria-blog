@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Rank instructions by complexity with the ScoreComplexity Singleton task
-  using the GEMMA2_9B_FP16 model in Python.
+description: ScoreComplexity ranks instructions by complexity using the GEMMA2_9B_FP16
+  model, helping to analyze task difficulty effectively.
 tags:
-- complexity scoring
-- Python example
+- complexity
+- ranking
+- instructions
+- GEMMA2_9B_FP16
 - machine learning
-- instruction ranking
-- GEMMA model
 ---
 
 # ScoreComplexity

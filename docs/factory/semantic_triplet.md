@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate semantic triplets with specified similarity scores using a Singleton
-  pattern in Python.
+description: Generate semantic triplets using specified similarity scores for textual
+  units with a Python example.
 tags:
-- semantic triplet
+- semantic analysis
+- NLP
 - JSON
 - Python
-- semantic similarity
-- AI generation
+- text generation
 ---
 
 # SemanticTriplet

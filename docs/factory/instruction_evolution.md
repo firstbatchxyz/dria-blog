@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: EvolveInstruct mutates prompts using various methods, enhancing AI-generated
-  content depth, breadth, and reasoning.
+description: 'EvolveInstruct: A Singleton task for mutating prompts using various
+  techniques like FRESH_START and DEEPEN with model support.'
 tags:
+- prompt mutation
+- AI models
+- mutation techniques
 - EvolveInstruct
-- Prompt Generation
-- AI Mutation
-- Machine Learning
-- Deep Learning
+- GEMMA2
 ---
 
 # EvolveInstruct

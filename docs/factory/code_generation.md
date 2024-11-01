@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate code efficiently with a SingletonTemplate task that interprets
-  user instructions using coder models.
+description: 'GenerateCode: A SingletonTemplate for generating code based on instructions
+  in various programming languages.'
 tags:
 - code generation
+- singleton template
 - programming
-- software development
-- AI
-- coder models
+- QWEN2_5_CODER
+- coding instruction
 ---
 
 # GenerateCode

@@ -1,13 +1,13 @@
 ---
 categories:
 - Software Engineering
-description: Quickstart guide to install Dria SDK, set up RPC keys, and start using
-  the Dria Network for synthetic data generation.
+description: Quickstart guide to installing and setting up the Dria SDK, including
+  RPC key acquisition and troubleshooting tips.
 tags:
 - Dria SDK
-- RPC Token
-- Python
 - Installation Guide
+- RPC Token
+- Python SDK
 - Synthetic Data
 ---
 

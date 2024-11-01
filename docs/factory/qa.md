@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Discover the QAPipeline class for creating personas in AI and generating
+  interactive Q&A simulations.
+tags:
+- QAPipeline
+- AI Personas
+- Question-Answer System
+- Simulation
+- Natural Language Processing
+---
+
 # QAPipeline
 
 `QAPipeline` is a class that creates a pipeline for generating personas and simulating question-answer interactions. 
