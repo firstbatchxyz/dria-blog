@@ -110,6 +110,7 @@ nav:
     - Search Pipeline: "factory/search.md"
     - QA Pipeline: "factory/qa.md"
 plugins:
+  - search
   - mkdocstrings:
       handlers:
         python:
