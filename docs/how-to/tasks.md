@@ -23,7 +23,11 @@ A task in Dria consists of a [workflow](workflows.md) and a set of [models](mode
 
 Tasks are executed asynchronously by nodes in the Dria network. When you create a task, you're essentially publishing it to the network for execution.
 
-![](./img/diagram_1.svg)
+```mermaid
+flowchart LR
+    A[Dria SDK] -- Tasks --> B[Dria Knowledge Network]
+    B -- Results --> A
+```
 
 Nodes in the network listens to P2P messages and execute tasks based on their capabilities and availability. 
 We can think each [compute-node](https://github.com/firstbatchxyz/dkn-compute-node) as processor in [LLM OS](https://x.com/karpathy/status/1723140519554105733).

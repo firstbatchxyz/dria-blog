@@ -71,15 +71,14 @@ nav:
     - Installation: "quickstart.md"
     - Run a Node (Optional): "node.md"
   - How-To Guides:
-    - Simple:
-      - Tasks: "how-to/tasks.md"
-      - Singletons: "how-to/singletons.md"
-      - Selecting Models: "how-to/models.md"
-      - Batches: "how-to/batches.md"
+    - Tasks: "how-to/tasks.md"
+    - Singletons: "how-to/singletons.md"
+    - Selecting Models: "how-to/models.md"
+    - Batches: "how-to/batches.md"
     - Advanced:
       - Writing Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"
-      - Pipelines: "how-to/pipelines.md"
+      - Creating Pipelines: "how-to/pipelines.md"
   - Singletons:
     - Simple: "factory/simple.md"
     - CLAIR: "factory/clair.md"
@@ -111,8 +110,10 @@ nav:
     - QA Pipeline: "factory/qa.md"
   - Cookbook:
       - Evaluating RAG Systems with Synthetic Data: "cookbook/eval.md"
+      - Generating Preference Data: "cookbook/preference_data.md"
 plugins:
   - search
+  - mermaid2:
   - mkdocstrings:
       handlers:
         python:
