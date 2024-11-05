@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to select and manage various LLM models using the Dria Network
-  infrastructure for efficient task execution.
+- Applied AI
+description: Learn how to select and manage models in the Dria Network for your LLM
+  tasks using the MoA infrastructure effectively.
 tags:
 - LLM
 - Dria Network
-- model selection
-- MoA
-- task execution
+- Model Selection
+- Mixture-of-Agents
+- AI Infrastructure
 ---
 
 # Selecting Models

@@ -1,12 +1,12 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to effectively call functions in code to enhance modularity
-  and efficiency in programming.
+description: Learn about function calling in programming, including syntax, examples,
+  and best practices.
 tags:
-- function calling
-- programming concepts
-- modularity
-- coding best practices
+- function
+- programming
+- coding
 - software development
+- best practices
 ---

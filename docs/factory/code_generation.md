@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: 'GenerateCode: A SingletonTemplate for generating code based on instructions
-  in various programming languages.'
+description: Learn how to use the GenerateCode task for generating code based on instructions
+  in various programming languages.
 tags:
 - code generation
-- singleton template
 - programming
-- QWEN2_5_CODER
-- coding instruction
+- coding tasks
+- software development
+- AI programming
 ---
 
 # GenerateCode

@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to quickly set up a Node on the Dria decentralized AI collaboration
-  network with our easy-to-follow guide.
+- RAG
+description: Quickly set up a Node on Dria with our guide. Minimal requirements, just
+  your ETH wallet private key.
 tags:
 - Node Setup
-- Decentralized AI
-- Dria Network
-- FirstBatch
+- Decentralized Network
 - AI Collaboration
+- Dria
+- FirstBatch
 ---
 
 # Run a Node

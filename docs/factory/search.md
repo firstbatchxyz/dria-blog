@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Create an optimized SearchPipeline for web data retrieval on any topic,
-  enhancing efficiency with optional page summarization.
+- Applied AI
+description: Explore the SearchPipeline class for efficient data retrieval and summarization
+  on the web using entropy-based methods.
 tags:
 - SearchPipeline
 - Data Retrieval
-- Web Summarization
-- Python
-- Machine Learning
+- Summarization
+- Applied AI
+- Web Scraping
 ---
 
 # SearchPipeline

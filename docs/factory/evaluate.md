@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Evaluate predictions using context and questions with a Singleton task.
-  Check semantic and contextual accuracy seamlessly.
+description: Evaluate contextually correct answers using the EvaluatePrediction singleton
+  task, leveraging the Dria framework.
 tags:
-- Evaluation
-- Prediction
-- AI Task
-- Contextual Analysis
-- Semantic Accuracy
+- evaluation
+- contextual understanding
+- AI models
+- Dria framework
+- prediction accuracy
 ---
 
 # EvaluatePrediction

@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Discover task management in the Dria network, understanding execution,
-  model selection, and scalable operations.
+description: Explore tasks in the Dria network, their lifecycle, features, and how
+  to send them for asynchronous execution.
 tags:
-- Dria
-- task management
-- asynchronous execution
-- network scalability
-- compute nodes
+- Dria network
+- Asynchronous tasks
+- Software development
+- Models
+- Task execution
 ---
 
 # Tasks

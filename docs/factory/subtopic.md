@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore the SubTopicPipeline class for recursively generating subtopics
-  with a specified depth for any main topic.
+- Applied AI
+description: Discover the SubTopicPipeline class for recursively generating AI subtopics
+  with specified depth. Enhance your content creation process!
 tags:
-- SubTopicPipeline
 - AI
-- Machine Learning
-- Topic Generation
+- Subtopics
+- Content Generation
 - Deep Learning
+- Machine Learning
 ---
 
 # SubTopicPipeline

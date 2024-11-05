@@ -1,8 +1,8 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to run instructions concurrently using Batches with the ParallelSingletonExecutor
-  in Dria, perfect for efficient task management.
+description: Learn how to execute multiple instructions in parallel using the Batches
+  feature with Dria, a powerful tool for concurrent task execution.
 tags:
 - Batches
 - Parallel Execution

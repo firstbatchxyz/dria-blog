@@ -110,7 +110,6 @@ nav:
     - QA Pipeline: "factory/qa.md"
   - Cookbook:
       - Evaluating RAG Systems with Synthetic Data: "cookbook/eval.md"
-      - Generating Preference Data: "cookbook/preference_data.md"
 plugins:
   - search
   - mermaid2:

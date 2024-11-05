@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Explore the ListExtender class to generate new items based on existing
-  lists, enhancing organization and categorization.
+description: ListExtenderPipeline class generates new items by extending existing
+  lists, ideal for data organization and analytics.
 tags:
-- List Management
-- Python
-- Data Handling
-- Pipeline
-- Subcategories
+- list extension
+- data pipeline
+- category generation
+- async programming
+- data analytics
 ---
 
 # ListExtender

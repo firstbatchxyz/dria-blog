@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: ScoreComplexity ranks instructions by complexity using the GEMMA2_9B_FP16
-  model, helping to analyze task difficulty effectively.
+description: Rank instructions by complexity using the ScoreComplexity task with the
+  GEMMA2_9B_FP16 model for enhanced AI understanding.
 tags:
-- complexity
-- ranking
-- instructions
-- GEMMA2_9B_FP16
-- machine learning
+- complexity scoring
+- AI model
+- instruction ranking
+- Software Engineering
+- GEMMA2
 ---
 
 # ScoreComplexity

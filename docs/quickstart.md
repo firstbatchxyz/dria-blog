@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Quickstart guide to installing and setting up the Dria SDK, including
-  RPC key acquisition and troubleshooting tips.
+description: Get started with Dria SDK installation including environment setup, RPC
+  key retrieval, and troubleshooting tips.
 tags:
 - Dria SDK
-- Installation Guide
+- Installation
 - RPC Token
-- Python SDK
-- Synthetic Data
+- Python
+- Coincurve
 ---
 
 # Installation

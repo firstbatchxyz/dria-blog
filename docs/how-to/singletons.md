@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn about singletons, a powerful tool for executing tasks without custom
-  code, using simple Python examples.
+description: Learn how to implement and use singletons for task automation with examples
+  and create custom singletons in Python.
 tags:
 - Python
 - Singletons
-- SoftwareDevelopment
-- TaskAutomation
-- CodeExamples
+- Task Automation
+- Dria SDK
+- Workflow
 ---
 
 # Singletons

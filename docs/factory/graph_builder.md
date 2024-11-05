@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate a graph of concepts and their relationships using a Singleton
-  task in Dria client.
+description: Generate a graph of concepts and relationships in AI using the GenerateGraph
+  tool with Python and Dria.
 tags:
-- graph generation
+- GenerateGraph
 - Artificial Intelligence
-- concept mapping
-- Dria client
-- machine learning
+- Python
+- Data Visualization
+- Ontology
 ---
 
 # GenerateGraph

@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: EvolveComplexity is a singleton task that enhances instruction complexity
-  using advanced AI models like GEMMA2_9B_FP16.
+description: Evolve complexity in instructions using a Singleton task with the GEMMA2_9B_FP16
+  model for advanced text generation.
 tags:
 - EvolveComplexity
+- TextGeneration
 - AI
-- Instruction
-- Text Generation
-- Complexity
+- SingletonTask
+- GEMMA2
 ---
 
 # EvolveComplexity

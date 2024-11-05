@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: WebMultiChoice offers a Singleton task for answering multiple-choice
-  questions via web search and analysis, enhancing decision-making.
+- Software Engineering
+description: WebMultiChoice provides a framework to answer multiple-choice questions
+  using web search and evaluation for accurate results.
 tags:
 - web search
-- multiple choice
-- AI analysis
-- decision making
-- education
+- multiple-choice questions
+- AI evaluation
+- software engineering
+- model
 ---
 
 # WebMultiChoice

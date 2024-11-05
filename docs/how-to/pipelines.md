@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to create and manage pipelines using the Dria library to execute
-  workflows efficiently with parallel processing.
+description: Learn to create efficient pipelines using workflows with asynchronous
+  processing for generating complex outputs in parallel.
 tags:
 - pipelines
 - workflows
-- Dria
-- parallel processing
-- Python
+- asynchronous processing
+- data generation
+- programming
 ---
 
 # Creating Pipelines

@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Learn how to evaluate Retrieval-Augmented Generation systems using synthetic
+  data, ensuring efficient AI-driven question-answering solutions.
+tags:
+- RAG Systems
+- Synthetic Data
+- AI Evaluation
+- Question Answering
+- Data Science
+---
+
 # Evaluating RAG Systems with Synthetic Data 
 
 Retrieval-Augmented Generation systems are powerful tools for building AI-powered question-answering applications. 

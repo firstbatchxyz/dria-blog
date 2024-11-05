@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: ValidatePrediction is a singleton task for verifying if a predicted answer
-  matches a correct answer semantically and contextually.
+- Applied AI
+description: Learn how to validate predictions against correct answers using the ValidatePrediction
+  singleton task in Python.
 tags:
 - validation
+- AI
 - prediction
-- model evaluation
-- AI tasks
-- contextual analysis
+- Python
+- data science
 ---
 
 # ValidatePrediction

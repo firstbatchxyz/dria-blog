@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Explore the PersonaPipeline class for generating unique personas based
-  on simulation descriptions and random variables.
+description: Explore the PersonaPipeline class for generating diverse personas based
+  on simulation descriptions in a cyberpunk world.
 tags:
-- personas
-- simulation
-- cyberpunk
+- Persona Generation
+- Cyberpunk Simulation
 - AI
-- data generation
+- Game Development
+- Backstory Creation
 ---
 
 # PersonaPipeline

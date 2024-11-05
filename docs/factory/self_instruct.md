@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate diverse user queries for AI applications using the SelfInstruct
-  singleton task in Python.
+description: SelfInstruct generates tailored user queries for AI applications in various
+  contexts, enhancing task management efficiency.
 tags:
-- AI
-- query generation
+- AI query generation
 - task management
-- GEMMA2_9B
-- Python
+- user instructions
+- SelfInstruct
+- GEMMA2
 ---
 
 # SelfInstruct

@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: IterateCode enhances code quality through specific instructions in various
-  programming languages, improving functionality and robustness.
+description: IterateCode is a Singleton task that enhances existing code by following
+  user instructions, improving code quality and efficiency.
 tags:
 - code improvement
 - software engineering
-- error handling
-- programming
-- AI code generation
+- singleton pattern
+- code iteration
+- async programming
 ---
 
 # IterateCode

@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to generate text matching examples using the GEMMA2_9B_FP16
-  model with this comprehensive guide.
+description: Learn how to generate JSON examples for text matching tasks using Python
+  and the GEMMA2 model in this comprehensive guide.
 tags:
-- text matching
-- GEMMA2_9B_FP16
-- JSON generation
+- Text Matching
 - Python
-- NLP
+- JSON
+- GEMMA2
+- Natural Language Processing
 ---
 
 # TextMatching

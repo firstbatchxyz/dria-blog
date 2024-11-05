@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate JSON for text retrieval tasks including user queries and related
-  documents with the TextRetrieval task.
+description: Learn to generate JSON objects for text retrieval tasks with clear user
+  queries and relevant documents using Python and the Dria framework.
 tags:
-- text retrieval
-- JSON generation
-- machine learning
-- data processing
-- information retrieval
+- Text Retrieval
+- JSON Generation
+- AI Framework
+- Python Programming
+- Data Tasks
 ---
 
 # TextRetrieval
