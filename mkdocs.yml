@@ -109,6 +109,8 @@ nav:
     - Sub-Topic Pipeline: "factory/subtopic.md"
     - Search Pipeline: "factory/search.md"
     - QA Pipeline: "factory/qa.md"
+  - Cookbook:
+      - Evaluating RAG Systems with Synthetic Data: "cookbook/eval.md"
 plugins:
   - search
   - mkdocstrings:
