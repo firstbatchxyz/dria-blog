@@ -22,7 +22,7 @@ This pipeline generates personas by creating random variables that fit into the 
 #### Inputs
 
 - `simulation_description` (`str`): The description of the simulation for which personas are to be generated.
-- `num_personas` (`int`): The number of personas to be generated.
+- `num_samples` (`int`): The number of backstories to generate. Each backstory will ask 2-3 questions to a chunk of text.
 
 
 ```python

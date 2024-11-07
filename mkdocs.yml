@@ -73,11 +73,12 @@ nav:
   - How-To Guides:
     - Tasks: "how-to/tasks.md"
     - Singletons: "how-to/singletons.md"
-    - Selecting Models: "how-to/models.md"
+    - Selecting Models: "how-to/selecting_models.md"
     - Batches: "how-to/batches.md"
     - Advanced:
       - Writing Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"
+      - Structured Outputs: "how-to/structured_outputs.md"
       - Creating Pipelines: "how-to/pipelines.md"
   - Singletons:
     - Simple: "factory/simple.md"
@@ -110,6 +111,9 @@ nav:
     - QA Pipeline: "factory/qa.md"
   - Cookbook:
       - Evaluating RAG Systems with Synthetic Data: "cookbook/eval.md"
+      - Implementing Nvidia's Preference Data Pipeline using Dria Network: "cookbook/nemotron_qa.md"
+  - Resource:
+      - Available Models: "how-to/models.md"
 plugins:
   - search
   - mermaid2:

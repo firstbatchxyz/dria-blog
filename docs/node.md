@@ -26,7 +26,7 @@ Check node requirements [here](https://github.com/firstbatchxyz/dkn-compute-node
 
 **Setup Steps**
 
-1. Download launcher from [Dria website](https://dria.co/earn)
+1. Download launcher from [Dria website](https://dria.co/join)
 2. Unzip the node file
 3. Run the launcher:
     ```commandline

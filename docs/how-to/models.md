@@ -1,114 +1,47 @@
----
-categories:
-- Applied AI
-description: Learn how to select and manage models in the Dria Network for your LLM
-  tasks using the MoA infrastructure effectively.
-tags:
-- LLM
-- Dria Network
-- Model Selection
-- Mixture-of-Agents
-- AI Infrastructure
----
+# Models
 
-# Selecting Models
+See available models in Dria Network below:
 
-Dria Network is a network of LLMs, a MoA (Mixture-of-Agents) infrastructure by nature. 
-When a task is published to the network, you can specify which models you want to assign your task to.
+### Available Models
 
-`Model` enum provides a list of models that you can use in your tasks.
-
-```python
-from dria.models import Model
-```
-
-`Task` has `models`param to assign models to your task.
-
-Following task will be execued by `LLAMA3_1_8B_FP16` model. If the model is not available within network, SDK will poll the network until it finds an available `LLAMA3_1_8B_FP16` model.
-```python
-Task(
-    workflow=simple.workflow(prompt="Hey there!").model_dump(),
-    models=[Model.LLAMA3_1_8B_FP16],
-)
-```
-
-**Model Availability?**
-
-Dria Network consists of multiple nodes, each running one or more available models. When a task is published, nodes with the selected model execute the task asynchronously.
-
-For example, if the network has 100 `Llama3.2-3B` models, publishing a task with the `Llama3.2-3B` model will be handled by one of those models. 
-Publishing 100 tasks will distribute each to one of the 100 available models. 
-However, if you publish a 101st task, task will wait in queue until a `Llama3.2-3B` model becomes available.
-
-**Singe Task, Multiple Models**
-
-Dria SDK enables you to publish a single task to multiple models. 
-This is useful when you want to compare the results of different models on the same task.
-Following example asks the same question to 10 available open-source LLM and returns the results.
-
-
-```python
-async def evaluate():
-    simple = Simple()
-    task = Task(
-        workflow=simple.workflow(
-            prompt="What is Solomonoff Induction? Explain shortly."
-        ).model_dump(),
-        models=[Model.OLLAMA],
-    )
-    res = await dria.execute(
-        task=[task] * 10,
-        timeout=200,
-    )
-    return simple.parse_result(res)
-```
-
-Here is a list of models that you can use in your tasks:
-
-```python
-# Ollama models
-NOUS_THETA = "finalend/hermes-3-llama-3.1:8b-q8_0"
-PHI3_MEDIUM = "phi3:14b-medium-4k-instruct-q4_1"
-PHI3_MEDIUM_128K = "phi3:14b-medium-128k-instruct-q4_1"
-PHI3_5_MINI = "phi3.5:3.8b"
-PHI3_5_MINI_FP16 = "phi3.5:3.8b-mini-instruct-fp16"
-GEMMA2_9B = "gemma2:9b-instruct-q8_0"
-GEMMA2_9B_FP16 = "gemma2:9b-instruct-fp16"
-LLAMA3_1 = "llama3.1:latest"
-LLAMA3_1_8BQ8 = "llama3.1:8b-instruct-q8_0"
-LLAMA3_1_8B_FP16 = "llama3.1:8b-instruct-fp16"
-LLAMA3_1_70B = "llama3.1:70b-instruct-q4_0"
-LLAMA3_1_70BQ8 = "llama3.1:70b-instruct-q8_0"
-LLAMA3_2_1B = "llama3.2:1b"
-LLAMA3_2_3B = "llama3.2:3b"
-QWEN2_5_7B = "qwen2.5:7b-instruct-q5_0"
-QWEN2_5_7B_FP16 = "qwen2.5:7b-instruct-fp16"
-QWEN2_5_32B_FP16 = "qwen2.5:32b-instruct-fp16"
-QWEN2_5_CODER_1_5B = "qwen2.5-coder:1.5b"
-DEEPSEEK_CODER_6_7B = "deepseek-coder:6.7b"
-MIXTRAL_8_7B = "mixtral:8x7b"
-
-# Gemini models
-GEMINI_15_PRO = "gemini-1.5-pro"
-GEMINI_15_FLASH = "gemini-1.5-flash"
-GEMINI_10_PRO = "gemini-1.0-pro"
-GEMMA_2_2B_IT = "gemma-2-2b-it"
-GEMMA_2_9B_IT = "gemma-2-9b-it"
-GEMMA_2_27B_IT = "gemma-2-27b-it"
-
-# OpenAI models
-GPT4_TURBO = "gpt-4-turbo"
-GPT4O = "gpt-4o"
-GPT4O_MINI = "gpt-4o-mini"
-O1_MINI = "o1-mini"
-O1_PREVIEW = "o1-preview"
-```
-
-You can also select providers as your models.
-```python
-# Providers
-OLLAMA = "ollama"  # Open source models
-OPENAI = "openai"  # OpenAI models
-GEMINI = "gemini"  # Gemini models
-CODER = "coder"  # Coder models
-```
+|      Enum      |     Serialized Name     | Description |
+| :---: | :---: | :---: |
+| `NousTheta` | `finalend/hermes-3-llama-3.1:8b-q8_0` | Nous's Hermes-2-Theta model, q8_0 quantized |
+| `Phi3Medium` | `phi3:14b-medium-4k-instruct-q4_1` | Microsoft's Phi3 Medium model, q4_1 quantized |
+| `Phi3Medium128k` | `phi3:14b-medium-128k-instruct-q4_1` | Microsoft's Phi3 Medium model, 128k context length, q4_1 quantized |
+| `Phi3_5Mini` | `phi3.5:3.8b` | Microsoft's Phi3.5 Mini model, 3.8b parameters |
+| `Phi3_5MiniFp16` | `phi3.5:3.8b-mini-instruct-fp16` | Microsoft's Phi3.5 Mini model, 3.8b parameters |
+| `Gemma2_9B` | `gemma2:9b-instruct-q8_0` | Google's Gemma2 model, 9B parameters |
+| `Gemma2_9BFp16` | `gemma2:9b-instruct-fp16` | Google's Gemma2 model, 9B parameters, fp16 |
+| `Llama3_1_8B` | `llama3.1:latest` | Meta's Llama3.1 model, 8B parameters |
+| `Llama3_1_8Bq8` | `llama3.1:8b-instruct-q8_0` | Meta's Llama3.1 model q8 |
+| `Llama3_1_8Bf16` | `llama3.1:8b-instruct-fp16` | Meta's Llama3.1 model fp16 |
+| `Llama3_1_8BTextQ4KM` | `llama3.1:8b-text-q4_K_M` | Meta's Llama3.1 model q4 |
+| `Llama3_1_8BTextQ8` | `llama3.1:8b-text-q8_0` | Meta's Llama3.1 model q8 |
+| `Llama3_1_70B` | `llama3.1:70b-instruct-q4_0` | Meta's Llama3.1 model, 70B parameters |
+| `Llama3_1_70Bq8` | `llama3.1:70b-instruct-q8_0` | Meta's Llama3.1 model q8 |
+| `Llama3_1_70BTextQ4KM` | `llama3.1:70b-text-q4_0` | Meta's LLama3.1 model fp16 |
+| `Llama3_2_1B` | `llama3.2:1b` | Meta's LLama3.2 Edge models, 1B parameters |
+| `Llama3_2_3B` | `llama3.2:3b` | Meta's LLama3.2 Edge models, 3B parameters |
+| `Llama3_2_1BTextQ4KM` | `llama3.2:1b-text-q4_K_M` | Meta's LLama3.2 Edge models, 1B parameters, q4 |
+| `Qwen2_5_7B` | `qwen2.5:7b-instruct-q5_0` | Alibaba's Qwen2.5 model, 7B parameters |
+| `Qwen2_5_7Bf16` | `qwen2.5:7b-instruct-fp16` | Alibaba's Qwen2.5 model, 7B parameters, fp16 |
+| `Qwen2_5_32Bf16` | `qwen2.5:32b-instruct-fp16` | Alibaba's Qwen2.5 model, 32B parameters, fp16 |
+| `Qwen2_5Coder1_5B` | `qwen2.5-coder:1.5b` | Alibaba's Qwen2.5 Coder |
+| `Qwen2_5coder7B` | `qwen2.5-coder:7b-instruct` | AliBaba's Qwen2.5 7b |
+| `Qwen2_5oder7Bq8` | `qwen2.5-coder:7b-instruct-q8_0` | AliBaba's Qwen2.5 7b 8bit |
+| `Qwen2_5coder7Bf16` | `qwen2.5-coder:7b-instruct-fp16` | AliBaba's Qwen2.5 7b 16bit |
+| `DeepSeekCoder6_7B` | `deepseek-coder:6.7b` | DeepSeek Coding models |
+| `Mixtral8_7b` | `mixtral:8x7b` | Mistral's MoE Models |
+| `GPT4Turbo` | `gpt-4-turbo` | OpenAI's GPT-4 Turbo model |
+| `GPT4o` | `gpt-4o` | OpenAI's GPT-4o model |
+| `GPT4oMini` | `gpt-4o-mini` | OpenAI's GPT-4o mini model |
+| `O1Mini` | `o1-mini` | OpenAI's o1 mini model |
+| `O1Preview` | `o1-preview` | OpenAI's o1 preview model |
+| `Gemini15ProExp0827` | `gemini-1.5-pro-exp-0827` | Gemini 1.5 Pro model |
+| `Gemini15Pro` | `gemini-1.5-pro` | Gemini 1.5 Pro model |
+| `Gemini15Flash` | `gemini-1.5-flash` | Gemini 1.5 Flash model |
+| `Gemini10Pro` | `gemini-1.0-pro` | Gemini 1.0 Pro model |
+| `Gemma2_2bIt` | `gemma-2-2b-it` | Gemma 2 2B IT model |
+| `Gemma2_9bIt` | `gemma-2-9b-it` | Gemma 2 9B IT model |
+| `Gemma2_27bIt` | `gemma-2-27b-it` | Gemma 2 27B IT model |
