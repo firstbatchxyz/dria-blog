@@ -53,7 +53,7 @@ flowchart LR
 To start with implementation, we'll create a folder structure as follows:
 
 ```
-- synthethic_preference_data
+- nemotron_qa
     - topics
         - __init__.py
         - task.py
@@ -355,6 +355,14 @@ We'll define a `build` method which will connect the steps to the pipeline.
 
 External parameters for this pipeline (i.e the ones that are not generated) are pipelines set as the input parameters of `NemotronQA` pipeline.
 
+Even though Pipeline has three external params, first step only requires `topic` and `n_subtopics` as input.
+
+See the flow of data [section](#understanding-the-flow-of-data)
+
+That's why we are setting our pipeline input as `(topic=topic, n_subtopics=n_subtopics` and feeding n_questions as a parameter to the first step.
+
+`NemotronSubtopicStep` inputs this parameter to second step. See [subtopic callback](#implementing-the-nemotronsubtopicstep).
+
 ```python
     def build(self, topic: str, n_subtopics: str, n_questions: str) -> Pipeline:
 
@@ -371,7 +379,40 @@ External parameters for this pipeline (i.e the ones that are not generated) are 
         return self.pipeline.build()
 ```
 
+Dria connects Steps to the pipeline using `<<` notation. The order of the steps determines the order of execution.
 
+Phew, that's it! We've implemented the pipeline.
+
+## Running the Pipeline
+
+Running the pipeline is pretty straight forward.
+
+```python
+import os
+from dria.client import Dria
+import asyncio
+import json
+from nemotron_qa import NemotronQA
+
+dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
+
+
+async def run_pipeline():
+
+    await dria.initialize()
+    pipeline = NemotronQA(dria).build(
+        topic="Machine Learning", n_subtopics="10", n_questions="5"
+    )
+
+    result = await pipeline.execute(return_output=True)
+    with open("output.json", "w") as f:
+        json.dump(result, f, indent=4)
+
+
+if __name__ == "__main__":
+    asyncio.run(run_pipeline())
+
+```
 
 ## Code
 
