@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore how to create synthetic preference data using Dria for enhanced
-  data analysis and modeling.
+- Synthetic Data
+description: Learn how to generate synthetic preference data using Dria for improved
+  machine learning applications.
 tags:
 - synthetic data
-- preference data
-- Dria
 - data generation
-- data analysis
+- machine learning
+- Dria
+- preference modeling
 ---
 
 # Synthetic Preference Data Generation Using Dria

@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Discover how to mutate prompts with EvolveInstruct using different mutation
-  types for enhanced AI instruction generation.
+- Workflows
+description: EvolveInstruct mutates prompts using various mutation types, enhancing
+  instructions for improved model outcomes.
 tags:
-- AI
 - prompt mutation
-- EvolveInstruct
-- Deep Learning
-- natural language processing
+- instruction enhancement
+- AI workflows
+- GEMMA model
+- deep learning
 ---
 
 # EvolveInstruct

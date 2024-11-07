@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore the SearchPipeline class for efficient data retrieval and summarization
-  on the web using entropy-based methods.
+- Workflows
+description: Create a search pipeline for efficient web data retrieval and summarization
+  with the SearchPipeline class in Python.
 tags:
 - SearchPipeline
 - Data Retrieval
-- Summarization
-- Applied AI
-- Web Scraping
+- Web Summarization
+- Python
+- Machine Learning
 ---
 
 # SearchPipeline

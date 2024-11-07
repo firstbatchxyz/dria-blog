@@ -1,12 +1,12 @@
 ---
 categories:
-- Writing and Communication
-description: Explore insightful dialogues between patients and healthcare professionals,
-  enhancing communication in medical contexts.
+- Applied AI
+description: Explore real-life patient dialogues to enhance understanding of healthcare
+  communication and improve patient care outcomes.
 tags:
-- patient dialogue
-- healthcare communication
-- medical conversations
-- doctor-patient relationship
-- communication skills
+- patient communication
+- healthcare
+- medical dialogues
+- AI in healthcare
+- patient care
 ---

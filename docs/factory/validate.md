@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn how to validate predictions against correct answers using the ValidatePrediction
-  singleton task in Python.
+description: Validate predictions for contextual and semantic correctness using a
+  Singleton task for precise evaluation.
 tags:
 - validation
-- AI
-- prediction
-- Python
-- data science
+- AI predictions
+- semantic correctness
+- machine learning
+- singleton pattern
 ---
 
 # ValidatePrediction

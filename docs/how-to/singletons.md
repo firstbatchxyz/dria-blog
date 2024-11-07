@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to implement and use singletons for task automation with examples
-  and create custom singletons in Python.
+- Workflows
+description: Learn how to use and create singletons in Dria SDK for efficient task
+  execution without custom coding.
 tags:
-- Python
 - Singletons
-- Task Automation
 - Dria SDK
-- Workflow
+- Custom Workflows
+- Task Management
+- Code Reusability
 ---
 
 # Singletons

@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to execute multiple instructions in parallel using the Batches
-  feature with Dria, a powerful tool for concurrent task execution.
+- Workflows
+description: Learn how to execute parallel instructions using Batches with Dria, optimizing
+  your workflow with concurrent processing.
 tags:
-- Batches
-- Parallel Execution
+- parallel execution
 - Dria
-- Concurrency
-- Async Programming
+- async programming
+- Batches
+- Python
 ---
 
 # Batches

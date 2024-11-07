@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Generate a graph of concepts and relationships in AI using the GenerateGraph
-  tool with Python and Dria.
+- Workflows
+description: Generate a graph of concepts and their relationships using a Singleton
+  task for AI context extraction and visualization.
 tags:
-- GenerateGraph
-- Artificial Intelligence
-- Python
-- Data Visualization
-- Ontology
+- graph generation
+- AI concepts
+- data visualization
+- Singleton task
+- ontology extraction
 ---
 
 # GenerateGraph

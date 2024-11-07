@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate text using the Simple singleton task with the GEMMA2_9B_FP16
-  model for efficient instructions.
+description: Explore the Simple Singleton task that generates text using prompts,
+  featuring code examples and output guidance.
 tags:
 - text generation
 - singleton pattern
-- GEMMA2_9B_FP16
-- Python
+- Python code
 - AI models
+- dria
 ---
 
 # Simple

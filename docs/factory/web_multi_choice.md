@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: WebMultiChoice provides a framework to answer multiple-choice questions
-  using web search and evaluation for accurate results.
+- Workflows
+description: WebMultiChoice is a singleton task for answering multiple-choice questions
+  using web searches and evaluations based on user inputs.
 tags:
 - web search
 - multiple-choice questions
 - AI evaluation
-- software engineering
-- model
+- singleton task
+- surfactant production
 ---
 
 # WebMultiChoice

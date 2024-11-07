@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore tasks in the Dria network, their lifecycle, features, and how
-  to send them for asynchronous execution.
+- Workflows
+description: Discover the tasks in the Dria network, including execution, model selection,
+  and scalability in distributed systems.
 tags:
-- Dria network
-- Asynchronous tasks
-- Software development
-- Models
-- Task execution
+- Dria Network
+- Task Management
+- Asynchronous Execution
+- Workflow
+- Distributed Computing
 ---
 
 # Tasks

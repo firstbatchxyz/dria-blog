@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Evolve complexity in instructions using a Singleton task with the GEMMA2_9B_FP16
-  model for advanced text generation.
+- Workflows
+description: EvolveComplexity enhances instruction complexity using the GEMMA2 model.
+  Perfect for creative writing and instruction evolution.
 tags:
-- EvolveComplexity
-- TextGeneration
-- AI
-- SingletonTask
-- GEMMA2
+- instruction enhancement
+- complexity evolution
+- creative writing
+- AI models
+- task automation
 ---
 
 # EvolveComplexity

@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore Dria's functions for built-in and custom tool creation in workflows,
-  including HTTP requests and mathematical operations.
+- Workflows
+description: Explore Dria Nodes' built-in and custom function tools for creating dynamic
+  workflows with ease.
 tags:
-- Dria
+- Dria Nodes
 - Custom Functions
-- Workflow Automation
+- Workflows
 - HTTP Requests
-- Software Development
+- Python
 ---
 
 # Functions

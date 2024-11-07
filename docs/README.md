@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Dria is a synthetic data infrastructure that accelerates AI projects
-  with scalable pipelines and extensive tools leveraging decentralization.
+- Synthetic Data
+description: Dria is a cutting-edge synthetic data infrastructure for AI projects,
+  featuring custom pipelines and decentralized compute power.
 tags:
 - synthetic data
 - AI infrastructure
-- machine learning
-- data pipelines
+- data generation
 - decentralization
+- machine learning
 ---
 
 # Dria

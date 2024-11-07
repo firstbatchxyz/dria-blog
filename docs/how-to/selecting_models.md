@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Learn how to select and manage models in the Dria Network for your LLM
-  tasks using the MoA infrastructure effectively.
+- Workflows
+description: Discover model selection in Dria Network's LLMs, enabling efficient task
+  execution across multiple models for optimal results.
 tags:
 - LLM
-- Dria Network
 - Model Selection
-- Mixture-of-Agents
-- AI Infrastructure
+- Dria Network
+- Task Execution
+- Asynchronous Tasks
 ---
 
 # Selecting Models

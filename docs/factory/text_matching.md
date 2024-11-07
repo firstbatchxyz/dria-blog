@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to generate JSON examples for text matching tasks using Python
-  and the GEMMA2 model in this comprehensive guide.
+- Embeddings
+description: Learn about TextMatching, a Singleton task for generating JSON objects
+  for text matching tasks using GEMMA2_9B_FP16.
 tags:
-- Text Matching
-- Python
-- JSON
-- GEMMA2
-- Natural Language Processing
+- text matching
+- JSON generation
+- GEMMA2_9B_FP16
+- NLP
+- singleton pattern
 ---
 
 # TextMatching

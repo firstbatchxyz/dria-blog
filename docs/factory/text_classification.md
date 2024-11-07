@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to create a JSON example for text classification using the
-  GEMMA2_9B_FP16 model in Python.
+- Applied AI
+description: Learn how to generate examples for text classification tasks using the
+  GEMMA2 model in Python.
 tags:
 - text classification
-- Python
-- JSON
+- AI models
+- GEMMA
 - machine learning
-- NLP
+- data science
 ---
 
 # TextClassification

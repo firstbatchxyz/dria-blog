@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate dialogues between personas using the MagPie task with Python.
-  Ideal for creating interactive conversational models.
+- Data Generation
+description: MagPie generates dialogues between personas using AI models. Perfect
+  for creating engaging conversational simulations.
 tags:
-- dialogue generation
-- AI conversations
-- Python
+- AI dialogue generation
+- Conversational AI
+- Persona simulation
+- GPT dialogue
 - MagPie
-- interactive models
 ---
 
 # MagPie

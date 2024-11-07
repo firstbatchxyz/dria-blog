@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Evaluate contextually correct answers using the EvaluatePrediction singleton
-  task, leveraging the Dria framework.
+- Workflows
+description: Evaluate predictions for contextual correctness using the `EvaluatePrediction`
+  Singleton task with Python.
 tags:
 - evaluation
-- contextual understanding
-- AI models
-- Dria framework
-- prediction accuracy
+- machine learning
+- contextual correctness
+- predictions
+- singleton task
 ---
 
 # EvaluatePrediction

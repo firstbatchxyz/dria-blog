@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: SelfInstruct generates tailored user queries for AI applications in various
-  contexts, enhancing task management efficiency.
+description: Generate user queries for AI applications with SelfInstruct, utilizing
+  diverse criteria in various contexts.
 tags:
-- AI query generation
-- task management
-- user instructions
 - SelfInstruct
+- AI queries
+- task management
 - GEMMA2
+- user input generation
 ---
 
 # SelfInstruct

@@ -1,3 +1,16 @@
+---
+categories:
+- Workflows
+description: Explore how to use structured outputs with Dria SDK for generating valid
+  JSON responses with comprehensive code examples.
+tags:
+- structured outputs
+- Dria SDK
+- book review generation
+- JSON Schema
+- function calling
+---
+
 # Structured Outputs
 
 > Structured Outputs supported after version dria==0.0.65
@@ -177,4 +190,3 @@ if __name__ == "__main__":
     print(json.dumps(asyncio.run(execute_workflow(dria)), indent=4))
 
 ```
-

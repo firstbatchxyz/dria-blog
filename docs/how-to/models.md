@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Discover a comprehensive list of available AI models within the Dria
+  Network, including details on each model's features and capabilities.
+tags:
+- AI Models
+- Machine Learning
+- Dria Network
+- Model Features
+- Quantized Models
+---
+
 # Models
 
 See available models in Dria Network below:

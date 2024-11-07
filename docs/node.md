@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Quickly set up a Node on Dria with our guide. Minimal requirements, just
-  your ETH wallet private key.
+- Decentralized Network
+description: Set up a Node on Dria for decentralized AI collaboration quickly and
+  easily, with minimal requirements.
 tags:
 - Node Setup
 - Decentralized Network
 - AI Collaboration
-- Dria
 - FirstBatch
+- Dria
 ---
 
 # Run a Node

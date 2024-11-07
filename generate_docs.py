@@ -43,11 +43,13 @@ async def generate_ai_frontmatter(
             Literal[
                 "RAG",
                 "Applied AI",
-                "Losing my Hands",
-                "Entrepreneurship",
-                "Personal Growth",
+                "Synthetic Data",
+                "Workflows",
+                "Data Generation",
                 "Software Engineering",
-                "Writing and Communication",
+                "Decentralized Network",
+                "Preference Data",
+                "Embeddings",
             ]
         ]
 

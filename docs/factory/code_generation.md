@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to use the GenerateCode task for generating code based on instructions
-  in various programming languages.
+description: GenerateCode is a SingletonTemplate task for generating code based on
+  instructions in various programming languages.
 tags:
 - code generation
 - programming
-- coding tasks
-- software development
-- AI programming
+- singleton template
+- coder models
+- AI model
 ---
 
 # GenerateCode

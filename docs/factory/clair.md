@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Clair is a SingletonTemplate for correcting student solutions, providing
-  reasoning and improved code with AI assistance.
+- Workflows
+description: Clair is a SingletonTemplate task that corrects student coding solutions
+  with enhanced reasoning and outputs for programming tasks.
 tags:
-- AI Education
-- Code Correction
-- Student Solutions
-- Programming Assistance
-- Machine Learning
+- code correction
+- student solutions
+- programming tasks
+- AI education
+- automated feedback
 ---
 
 # Clair

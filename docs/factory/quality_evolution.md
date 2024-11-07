@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to evolve response quality using methods like helpfulness and
-  creativity with EvolveQuality in Python.
+- Workflows
+description: Evolve the quality of responses to prompts using various methods for
+  enhanced clarity and engagement with EvolveQuality.
 tags:
+- response quality
 - EvolveQuality
-- Response Improvement
-- AI Techniques
-- Python Development
-- Machine Learning
+- prompt evolution
+- AI enhancement
+- content improvement
 ---
 
 # EvolveQuality

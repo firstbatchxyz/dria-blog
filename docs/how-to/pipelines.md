@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn to create efficient pipelines using workflows with asynchronous
-  processing for generating complex outputs in parallel.
+- Workflows
+description: Learn to create efficient pipelines using asynchronous processing to
+  generate complex outputs from multiple workflows.
 tags:
-- pipelines
-- workflows
-- asynchronous processing
-- data generation
-- programming
+- Pipelines
+- Workflows
+- Asynchronous Processing
+- Data Generation
+- QA Pairs
 ---
 
 # Creating Pipelines

@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore the QAPipeline for generating personas and simulating Q&A interactions
-  effectively.
+- Workflows
+description: Explore the QAPipeline class for generating personas and simulating rich
+  Q&A interactions effectively.
 tags:
 - QAPipeline
-- AI Personas
-- Question Answering
-- Simulation
-- Text Generation
+- question-answering
+- personas
+- AI pipelines
+- data simulation
 ---
 
 # QAPipeline

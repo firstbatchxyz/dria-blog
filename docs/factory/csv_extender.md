@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Extend CSV data with new rows using the CSVExtenderPipeline class in
-  Python, enhancing your data processing capabilities.
+- Data Generation
+description: CSVExtenderPipeline class allows easy extension of CSV files by generating
+  new rows from existing data with specified subcategories.
 tags:
 - CSV
 - Data Processing
-- Python
-- Asynchronous
-- Data Pipeline
+- Pipeline
+- Async Programming
+- Data Generation
 ---
 
 # CSVExtenderPipeline

@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate semantic triplets with specified similarity scores using a Singleton
-  task to create JSON objects containing textual units.
+- Data Generation
+description: Generate semantic triplets with specified similarity scores using the
+  SemanticTriplet singleton task in Python.
 tags:
 - semantic triplet
-- JSON
-- similarity scores
-- text generation
-- NLP
+- text similarity
+- JSON generation
+- natural language processing
+- Python
 ---
 
 # SemanticTriplet
