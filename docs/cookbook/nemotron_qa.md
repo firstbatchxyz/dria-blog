@@ -88,6 +88,7 @@ Each directory is for a specific step in the pipeline. The `task.py` in each dir
 
 ### Prompts
 
+From Nvidia's cookbook:
 
 *Prompt for the first step: `NemotronSubtopicStep`*
 
@@ -124,7 +125,7 @@ Please note that variables are enclosed in double curly braces `{{}}`.
 ### Understanding the Flow of Data
 
 It's important to note that prompts for each step has parameters that are passed from the previous step which creates a flow of data.
-Prompts from Nvidia's cookbook are as follows:
+Inputs for a step are defined in the prompt and are passed from the previous step or explicitly set as user input.
 
 ```mermaid
 flowchart TD
