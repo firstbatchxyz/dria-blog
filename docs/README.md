@@ -18,7 +18,7 @@ Dria is a __complete__ synthetic data infrastructure, featuring:
 - A framework for creating, managing, and orchestrating synthetic data pipelines.
 - A multi-agent network that can synthesize data from web and siloed sources.
 
-- **Note**: Dria Network is currently in alpha release. Network capacity and data generation volumes are limited during this phase.
+- **Note**: Network capacity and data generation volumes are limited during the current phase of Dria.
 
 ### Why use Dria?
 
