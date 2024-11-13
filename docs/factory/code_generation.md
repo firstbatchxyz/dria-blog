@@ -47,7 +47,7 @@ async def evaluate():
             workflow=generate_code.workflow(
                 instruction="Write a function to calculate the factorial of a number",
                 language="python"
-            ).model_dump(),
+            ),
             models=[Model.QWEN2_5_CODER_1_5B],
         ),
         timeout=45,

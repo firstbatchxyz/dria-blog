@@ -22,6 +22,8 @@ This pipeline extends a given `csv` by generating new rows based on the existing
 #### Input
 
 - `csv` (`str`): The csv data to be extended.
+- `num_values` (`int`): The number of columns for extended csv.
+- `num_rows` (`int`): The number of rows for extended csv.
 
 ```python
 import asyncio
@@ -47,7 +49,7 @@ File System, File, Rename a File"""
 
 async def evaluate():
     await dria.initialize()
-    pipeline = CSVExtenderPipeline(dria, PipelineConfig()).build(csv=data)
+    pipeline = CSVExtenderPipeline(dria, PipelineConfig()).build(csv=data, num_values=10, num_rows=10)
     res = await pipeline.execute(return_output=True)
     print("Done")
     with open("csv.json", "w") as f:

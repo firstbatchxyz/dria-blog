@@ -50,7 +50,7 @@ async def evaluate():
 
     res = await dria.execute(
         Task(
-            workflow=mhop.workflow(chunks=chunks).model_dump(),
+            workflow=mhop.workflow(chunks=chunks),
             models=[Model.GEMINI_15_FLASH],
         ),
         timeout=45,

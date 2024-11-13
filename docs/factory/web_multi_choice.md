@@ -52,7 +52,7 @@ async def evaluate():
 
     res = await dria.execute(
         Task(
-            workflow=web_multi_choice.workflow(question=question, choices=choices).model_dump(),
+            workflow=web_multi_choice.workflow(question=question, choices=choices),
             models=[Model.QWEN2_5_7B_FP16],
         ),
         timeout=200,

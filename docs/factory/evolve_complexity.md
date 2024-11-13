@@ -41,7 +41,7 @@ async def evaluate():
     evolve = EvolveComplexity()
     res = await dria.execute(
         Task(
-            workflow=evolve.workflow(instruction="Write a short story about a cat.").model_dump(),
+            workflow=evolve.workflow(instruction="Write a short story about a cat."),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=45,

@@ -62,7 +62,7 @@ async def evaluate():
     simple = Simple()
     res = await dria.execute(
         Task(
-            workflow=simple.workflow(prompt="Hey there!").model_dump(),
+            workflow=simple.workflow(prompt="Hey there!"),
             models=[Model.LLAMA3_1_8B_FP16],
         ),
         timeout=45,

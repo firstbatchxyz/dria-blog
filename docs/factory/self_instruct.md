@@ -47,7 +47,7 @@ async def evaluate():
                 criteria_for_query_generation="Diverse queries related to task management",
                 application_description="A task management AI assistant",
                 context="Professional work environment"
-            ).model_dump(),
+            ),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=45,

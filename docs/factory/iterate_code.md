@@ -50,7 +50,7 @@ async def evaluate():
     
     res = await dria.execute(
         Task(
-            workflow=iterate_code.workflow(code=original_code, instruction=instruction, language="python").model_dump(),
+            workflow=iterate_code.workflow(code=original_code, instruction=instruction, language="python"),
             models=[Model.DEEPSEEK_CODER_6_7B],
         ),
         timeout=45,
