@@ -45,7 +45,7 @@ async def evaluate():
                 prediction="The capital of France is Paris.",
                 question="What is the capital of France?",
                 context="France is a country in Western Europe. Its capital city is Paris."
-            ).model_dump(),
+            ),
             models=[Model.GPT4O]
         ),
         timeout=45,

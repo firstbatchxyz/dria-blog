@@ -49,7 +49,7 @@ async def evaluate():
                 high_score=4,
                 low_score=2,
                 difficulty="college"
-            ).model_dump(),
+            ),
             models=[Model.LLAMA3_2_3B],
         ),
         timeout=45,

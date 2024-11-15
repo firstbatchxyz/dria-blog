@@ -45,7 +45,7 @@ async def evaluate():
                 instructor_persona="A curious scientist",
                 responding_persona="An AI assistant",
                 num_turns=3
-            ).model_dump(),
+            ),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=60,

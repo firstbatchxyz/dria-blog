@@ -56,7 +56,7 @@ async def evaluate():
                 num_words=100,
                 language="English",
                 difficulty="high school"
-            ).model_dump(),
+            ),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=45,

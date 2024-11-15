@@ -43,7 +43,7 @@ async def evaluate():
             workflow=validate_prediction.workflow(
                 prediction="The capital of France is Paris.",
                 correct_answer="Paris is the capital city of France."
-            ).model_dump(),
+            ),
             models=[Model.QWEN2_5_32B_FP16],
         ),
         timeout=45,

@@ -406,7 +406,7 @@ import os
 from dria.client import Dria
 import asyncio
 import json
-from nemotron_qa import NemotronQA
+from dria.factory import NemotronQA
 
 dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
 

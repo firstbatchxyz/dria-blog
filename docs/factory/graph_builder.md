@@ -41,7 +41,7 @@ async def evaluate():
     context = "Artificial Intelligence is a broad field that includes machine learning and deep learning. Neural networks are a key component of deep learning systems."
     res = await dria.execute(
         Task(
-            workflow=generate_graph.workflow(context=context).model_dump(),
+            workflow=generate_graph.workflow(context=context),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=75,

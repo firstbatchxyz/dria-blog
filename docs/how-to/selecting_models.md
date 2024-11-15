@@ -29,7 +29,7 @@ from dria.models import Model
 Following task will be execued by `LLAMA3_1_8B_FP16` model. If the model is not available within network, SDK will poll the network until it finds an available `LLAMA3_1_8B_FP16` model.
 ```python
 Task(
-    workflow=simple.workflow(prompt="Hey there!").model_dump(),
+    workflow=simple.workflow(prompt="Hey there!"),
     models=[Model.LLAMA3_1_8B_FP16],
 )
 ```
@@ -55,7 +55,7 @@ async def evaluate():
     task = Task(
         workflow=simple.workflow(
             prompt="What is Solomonoff Induction? Explain shortly."
-        ).model_dump(),
+        ),
         models=[Model.OLLAMA],
     )
     res = await dria.execute(

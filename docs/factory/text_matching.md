@@ -44,7 +44,7 @@ async def evaluate():
             workflow=text_matching.workflow(
                 task_description="Generate a text matching example for sentiment analysis",
                 language="English"
-            ).model_dump(),
+            ),
             models=[Model.GEMMA2_9B_FP16],
         ),
         timeout=45,
