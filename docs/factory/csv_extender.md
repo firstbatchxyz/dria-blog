@@ -22,6 +22,11 @@ This pipeline extends a given `csv` by generating new rows based on the existing
 #### Input
 
 - `csv` (`str`): The csv data to be extended.
+- `num_values` (`int`): The number of new independent values
+- `num_rows` (`int`): The number of rows to be generated for each value
+
+> You'll get num_values * num_rows new entries in the output.
+
 
 ```python
 import asyncio
@@ -42,20 +47,51 @@ File System, File, Read the contents of a File
 File System, File, Delete a File
 File System, File, Copy a File
 File System, File, Move a File
-File System, File, Rename a File"""
+File System, File, Rename a File
+File Syste, Folder, Create a new Folder
+File System, Folder, Delete a Folder
+File System, Folder, Copy a Folder
+File System, Folder, Move a Folder
+File System, Folder, Rename a Folder
+File System, Folder, List the contents of a Folder
+File System, Folder, Move a File to a Folder
+File System, Folder, Copy a File to a Folder
+Web Browser, Search, Search over a query
+Web Browser, Search, Search for images
+Web Browser, Search, Search for news
+Web Browser, Access, Scrape the content of a website
+Web Browser, Access, Take a screenshot of a website
+Web Browser, Access, Download a file/files from a website
+Web Browser, Access, Fill out forms
+Communication, Email, Send an email
+Communication, Email, Read the contents of an email
+Communication, Email, Retrieve the last n emails
+Scheduling, To-Do List, Create a task
+Scheduling, To-Do List, Edit a task
+Scheduling, To-Do List, Delete a task
+Scheduling, To-Do List, Mark a task as completed
+Scheduling, To-Do List, Retrieve the tasks of a day
+Scheduling, To-Do List, Retrieve the tasks of a week
+Scheduling, To-Do List, Retrieve the tasks of a month
+Daily Life, Weather, Retrieve the weather forecast of a location for a day
+Daily Life, Weather, Retrieve the weekly weather forecast of a location"""
 
 
 async def evaluate():
     await dria.initialize()
-    pipeline = CSVExtenderPipeline(dria, PipelineConfig()).build(csv=data)
+    pipeline = CSVExtenderPipeline(dria, PipelineConfig()).build(
+        csv=data, num_rows=3, num_values=4
+    )
     res = await pipeline.execute(return_output=True)
     print("Done")
     with open("csv.json", "w") as f:
         f.write(json.dumps(res, indent=2))
     print(res)
 
+
 if __name__ == "__main__":
     asyncio.run(evaluate())
+
 ```
 
 Expected output (probably a large file)
