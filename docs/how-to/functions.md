@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Explore Dria Nodes' built-in and custom function tools for creating dynamic
-  workflows with ease.
+description: Explore Dria's built-in and custom functions for efficient workflow automation
+  using Python tools.
 tags:
-- Dria Nodes
-- Custom Functions
-- Workflows
-- HTTP Requests
+- Dria
+- Workflow Automation
 - Python
+- Custom Functions
+- HTTP Requests
 ---
 
 # Functions

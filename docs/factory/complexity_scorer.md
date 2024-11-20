@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Rank instructions by complexity using ScoreComplexity with the GEMMA2_9B
-  model in a Python async environment.
+- Workflows
+description: ScoreComplexity ranks instructions by complexity using the GEMMA2_9B_FP16
+  model, providing essential insights for task evaluation.
 tags:
 - complexity scoring
-- AI instructions
-- async Python
-- GEMMA2 model
 - instruction ranking
+- AI models
+- GEMMA2
+- task evaluation
 ---
 
 # ScoreComplexity

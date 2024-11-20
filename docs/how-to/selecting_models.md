@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Discover model selection in Dria Network's LLMs, enabling efficient task
-  execution across multiple models for optimal results.
+description: Discover how to select and manage models in Dria Network for efficient
+  task execution using LLMs and asynchronous processing.
 tags:
 - LLM
-- Model Selection
 - Dria Network
-- Task Execution
-- Asynchronous Tasks
+- model selection
+- task execution
+- asynchronous processing
 ---
 
 # Selecting Models

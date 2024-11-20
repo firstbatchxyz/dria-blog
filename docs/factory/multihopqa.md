@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate multi-hop questions requiring reasoning across three documents
-  using the MultiHopQuestion task with Dria.
+description: Generate multi-hop questions from three input documents using the MultiHopQuestion
+  singleton task for efficient reasoning.
 tags:
-- MultiHopQA
-- Question Generation
-- Applied AI
-- NLP
-- Dria
+- multi-hop questions
+- question generation
+- AI reasoning
+- document processing
+- data extraction
 ---
 
 # MultiHopQuestion 

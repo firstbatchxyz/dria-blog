@@ -1,12 +1,12 @@
 ---
 categories:
-- Applied AI
-description: Explore real-life patient dialogues to enhance understanding of healthcare
-  communication and improve patient care outcomes.
+- Workflows
+description: Explore patient dialogues for insights on healthcare conversations and
+  improving patient experience in medical settings.
 tags:
-- patient communication
-- healthcare
-- medical dialogues
-- AI in healthcare
-- patient care
+- patient experience
+- healthcare dialogue
+- medical communication
+- patient safety
+- clinical interactions
 ---

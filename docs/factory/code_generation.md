@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: GenerateCode is a SingletonTemplate task for generating code based on
-  instructions in various programming languages.
+description: Generate code from instructions using SingletonTemplate. Supports multiple
+  languages with model integration for optimal output.
 tags:
 - code generation
 - programming
-- singleton template
-- coder models
-- AI model
+- AI
+- software development
+- singleton pattern
 ---
 
 # GenerateCode

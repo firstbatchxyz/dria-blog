@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Validate predictions for contextual and semantic correctness using a
-  Singleton task for precise evaluation.
+- Workflows
+description: Validate predictions against correct answers using the ValidatePrediction
+  singleton task with the Dria framework.
 tags:
-- validation
-- AI predictions
-- semantic correctness
-- machine learning
-- singleton pattern
+- AI Validation
+- Predictive Modeling
+- Dria Framework
+- Semantic Analysis
+- Machine Learning
 ---
 
 # ValidatePrediction

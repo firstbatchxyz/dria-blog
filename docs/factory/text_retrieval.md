@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Generate user queries and documents for text retrieval tasks using specifications
-  like clarity, length, and difficulty.
+description: Generate JSON objects for text retrieval tasks, including user queries
+  and relevant documents for various scenarios.
 tags:
 - text retrieval
 - JSON generation
-- query generation
-- information retrieval
-- document generation
+- AI workflows
+- data generation
+- NLP
 ---
 
 # TextRetrieval

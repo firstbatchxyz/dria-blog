@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate user queries for AI applications with SelfInstruct, utilizing
-  diverse criteria in various contexts.
+- RAG
+description: 'SelfInstruct: Generate diverse user queries using AI for task management
+  in professional settings with the GEMMA2_9B_FP16 model.'
 tags:
-- SelfInstruct
-- AI queries
-- task management
-- GEMMA2
-- user input generation
+- AI
+- Query Generation
+- Task Management
+- User Interaction
+- Gemma
 ---
 
 # SelfInstruct

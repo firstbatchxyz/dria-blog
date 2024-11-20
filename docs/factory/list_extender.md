@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: ListExtenderPipeline generates new item subcategories from an existing
-  list, enhancing categorization and organization of topics.
+- Workflows
+description: ListExtenderPipeline class creates a dynamic pipeline to enhance lists
+  of items with new subcategories effectively.
 tags:
-- List Extension
-- Data Generation
-- Item Categorization
-- Pipeline
-- Topic Management
+- list management
+- data processing
+- pipeline
+- subcategories
+- dynamic lists
 ---
 
 # ListExtender

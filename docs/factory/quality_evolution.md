@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Evolve the quality of responses to prompts using various methods for
-  enhanced clarity and engagement with EvolveQuality.
+- Applied AI
+description: EvolveQuality enhances response quality using specified methods like
+  Helpfulness and Creativity in AI-generated content.
 tags:
-- response quality
 - EvolveQuality
-- prompt evolution
-- AI enhancement
-- content improvement
+- AI
+- Response Enhancement
+- Natural Language Processing
+- Prompt Engineering
 ---
 
 # EvolveQuality

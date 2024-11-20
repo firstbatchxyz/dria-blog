@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Explore the Simple Singleton task that generates text using prompts,
-  featuring code examples and output guidance.
+- Workflows
+description: Single `Simple` task generates text from prompts using models like `GEMMA2_9B_FP16`.
+  Learn to implement it in Python!
 tags:
 - text generation
-- singleton pattern
-- Python code
-- AI models
-- dria
+- Python
+- GEMMA2
+- AI
+- asyncio
 ---
 
 # Simple

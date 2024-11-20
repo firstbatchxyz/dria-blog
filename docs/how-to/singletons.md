@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Learn how to use and create singletons in Dria SDK for efficient task
-  execution without custom coding.
+- Software Engineering
+description: Learn about singletons in programming, their implementation, and how
+  to create custom singletons in the Dria SDK.
 tags:
-- Singletons
+- singletons
 - Dria SDK
-- Custom Workflows
-- Task Management
-- Code Reusability
+- custom singletons
+- programming
+- software design
 ---
 
 # Singletons

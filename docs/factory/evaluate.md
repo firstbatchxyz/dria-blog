@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Evaluate predictions for contextual correctness using the `EvaluatePrediction`
-  Singleton task with Python.
+- RAG
+description: Evaluate predictions against context and questions using a Singleton
+  task in machine learning models.
 tags:
-- evaluation
+- prediction evaluation
 - machine learning
-- contextual correctness
-- predictions
+- semantic context
 - singleton task
+- model assessment
 ---
 
 # EvaluatePrediction

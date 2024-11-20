@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Quickstart guide for installing the Dria SDK, obtaining RPC keys, and
-  troubleshooting setup issues for data generation.
+description: Quickstart guide for installing Dria SDK, obtaining RPC token, and setting
+  up the environment for interaction with Dria Network.
 tags:
 - Dria SDK
-- RPC token
-- data generation
-- installation guide
+- RPC Token
+- Installation Guide
 - Python
+- Machine Learning
 ---
 
 # Installation
@@ -52,12 +52,12 @@ To interact with the Dria Network, you'll need an RPC token.
 
 ### Community Network
 
-Dria Community Network consists of thousands of nodes (and counting) with LLMs and tool usage capabilities.
+Dria Community Network consists of community nodes with LLMs and tool usage capabilities.
 Visit the [Dria Login API](https://dkn.dria.co/auth/generate-token) and get your unique RPC token.
 
 ### Pro Network
 
-Dria Pro Network consists of ~100 high performance nodes, equipped with even more powerful LLMs, compute and 99.9% reliability.
+Dria Pro Network consists of high performance nodes, equipped with even more powerful LLMs, compute and 99.9% reliability.
 Pro Network is more suitable for production-grade applications and partners in the ecosystem. 
 Please fill out the [form](https://forms.gle/yGtLZw3HPW7kgD427) to get access to the Pro Network:
 

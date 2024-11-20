@@ -1,3 +1,16 @@
+---
+categories:
+- Workflows
+description: A Python example demonstrating asynchronous execution of multiple AI
+  models using the Dria library.
+tags:
+- Python
+- Dria
+- AI Models
+- Asynchronous Programming
+- Parallel Execution
+---
+
 # Example Run
 
 
@@ -23,4 +36,3 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-

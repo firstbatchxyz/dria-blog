@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn how to generate examples for text classification tasks using the
-  GEMMA2 model in Python.
+description: Learn how to implement text classification using JSON format with example
+  code in Python and the GEMMA2 model.
 tags:
 - text classification
-- AI models
-- GEMMA
+- JSON
+- Python
 - machine learning
-- data science
+- GEMMA2
 ---
 
 # TextClassification

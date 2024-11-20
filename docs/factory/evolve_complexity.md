@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: EvolveComplexity enhances instruction complexity using the GEMMA2 model.
-  Perfect for creative writing and instruction evolution.
+- Applied AI
+description: EvolveComplexity is a Singleton task designed to enhance instruction
+  complexity using advanced language models like GEMMA2.
 tags:
-- instruction enhancement
-- complexity evolution
-- creative writing
-- AI models
-- task automation
+- EvolveComplexity
+- AI Instruction
+- Language Model
+- GEMMA2
+- Complexity Generation
 ---
 
 # EvolveComplexity

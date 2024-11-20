@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Explore available models in Dria Network, including Nous, Phi, Llama,
+  Gemma, and OpenAI's latest innovations.
+tags:
+- AI Models
+- Dria Network
+- OpenAI
+- Model List
+- Machine Learning
+---
+
 # Models
 
 See available models in Dria Network below:

@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore the SubTopicPipeline class for generating subtopics recursively,
-  allowing deep dives into topics like AI and machine learning.
+- Applied AI
+description: Explore the SubTopicPipeline class for generating hierarchical subtopics
+  recursively from a main topic using Python.
 tags:
-- Subtopic Generation
+- subtopics
 - AI
-- Machine Learning
-- Pipelines
-- Recursive Algorithms
+- data generation
+- recursive functions
+- Python
 ---
 
 # SubTopicPipeline

@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Create a search pipeline for efficient web data retrieval and summarization
-  with the SearchPipeline class in Python.
+description: Explore the SearchPipeline class for efficient web data retrieval and
+  summarization based on user-defined topics.
 tags:
-- SearchPipeline
-- Data Retrieval
-- Web Summarization
-- Python
-- Machine Learning
+- search
+- data retrieval
+- web scraping
+- summarization
+- AI pipelines
 ---
 
 # SearchPipeline

@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Generate a graph of concepts and their relationships using a Singleton
-  task for AI context extraction and visualization.
+- Applied AI
+description: Generate a graph of concepts and relationships using AI with the GenerateGraph
+  singleton task in Dria.
 tags:
 - graph generation
 - AI concepts
-- data visualization
-- Singleton task
-- ontology extraction
+- Dria client
+- machine learning
+- deep learning
 ---
 
 # GenerateGraph

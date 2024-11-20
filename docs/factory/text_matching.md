@@ -1,14 +1,14 @@
 ---
 categories:
-- Embeddings
-description: Learn about TextMatching, a Singleton task for generating JSON objects
-  for text matching tasks using GEMMA2_9B_FP16.
+- Applied AI
+description: Explore the TextMatching task for generating JSON examples for text matching
+  in NLP, using the GEMMA2_9B_FP16 model.
 tags:
-- text matching
-- JSON generation
-- GEMMA2_9B_FP16
-- NLP
-- singleton pattern
+- Text Matching
+- Natural Language Processing
+- JSON Generation
+- GEMMA2 Model
+- AI Tasks
 ---
 
 # TextMatching

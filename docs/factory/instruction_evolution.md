@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: EvolveInstruct mutates prompts using various mutation types, enhancing
-  instructions for improved model outcomes.
+description: EvolveInstruct mutates prompts with specified types to enhance prompt
+  depth and relevance using advanced AI models.
 tags:
-- prompt mutation
-- instruction enhancement
-- AI workflows
-- GEMMA model
-- deep learning
+- prompt evolution
+- AI models
+- mutation types
+- EvolveInstruct
+- natural language processing
 ---
 
 # EvolveInstruct

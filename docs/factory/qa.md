@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Explore the QAPipeline class for generating personas and simulating rich
-  Q&A interactions effectively.
+description: Explore the QAPipeline class for generating personas and simulating Q&A
+  interactions to enhance AI conversations.
 tags:
 - QAPipeline
-- question-answering
-- personas
-- AI pipelines
-- data simulation
+- AI personas
+- Question answering
+- Simulation
+- Data generation
 ---
 
 # QAPipeline

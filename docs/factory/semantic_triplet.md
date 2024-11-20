@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
+- RAG
 description: Generate semantic triplets with specified similarity scores using the
-  SemanticTriplet singleton task in Python.
+  SemanticTriplet singleton task.
 tags:
 - semantic triplet
+- NLP
 - text similarity
-- JSON generation
-- natural language processing
-- Python
+- JSON
+- educational tools
 ---
 
 # SemanticTriplet

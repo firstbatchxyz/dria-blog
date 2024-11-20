@@ -43,8 +43,11 @@ def models(models_content: str) -> ModelsList:
                 "content": "You are a world class information extraction tool.",
             },
             {"role": "user", "content": f"{models_content}"},
-            {"role": "user", "content": f"Extract the models info from the given content."},
-        ]
+            {
+                "role": "user",
+                "content": f"Extract the models info from the given content.",
+            },
+        ],
     )
 
 
@@ -59,5 +62,6 @@ if __name__ == "__main__":
         file.write("|      Enum      |     Serialized Name     | Description |\n")
         file.write("| :---: | :---: | :---: |\n")
         for model in models_list.models:
-            file.write(f"| `{model.enum}` | `{model.serialized_name}` | {model.description} |\n")
-
+            file.write(
+                f"| `{model.enum}` | `{model.serialized_name}` | {model.description} |\n"
+            )

@@ -1,14 +1,14 @@
 ---
 categories:
 - Synthetic Data
-description: Explore the PersonaPipeline class for generating unique personas based
-  on simulation descriptions and tailored backstories.
+description: Generate detailed personas for simulations with the PersonaPipeline class,
+  featuring unique backstories and cyberpunk settings.
 tags:
-- Personas
-- Synthetic Data
-- Backstory Generation
-- AI Simulation
-- Cyberpunk
+- personas
+- simulation
+- cyberpunk
+- data generation
+- AI
 ---
 
 # PersonaPipeline

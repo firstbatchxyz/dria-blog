@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore methods for evaluating RAG systems using synthetic data to enhance
-  question-answering applications performance.
+- RAG
+description: Learn how to effectively evaluate RAG systems using synthetic data, enhancing
+  performance and optimization in AI applications.
 tags:
-- RAG Systems
+- RAG
 - Synthetic Data
 - AI Evaluation
-- Question-Answering
-- Deep Learning
+- Data Quality
+- Performance Metrics
 ---
 
 # Evaluating RAG Systems with Synthetic Data 
