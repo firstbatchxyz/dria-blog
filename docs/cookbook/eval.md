@@ -16,7 +16,8 @@ tags:
 Retrieval-Augmented Generation systems are powerful tools for building AI-powered question-answering applications. 
 Creating a diverse dataset of question & answer pairs that includes complex queries will help you quickly evaluate your RAG pipeline and generate metrics.
 
-Evaluation is crucial to understanding the performance of your RAG system and identifying areas for improvement. There are multiple parameters to consider when evaluating a RAG system, including but not limited to:
+Evaluation is crucial to understanding the performance of your RAG system and identifying areas for improvement. 
+There are multiple parameters to consider when evaluating a RAG system, including but not limited to:
 
 - Embedding model choice
 - Retrieval method (BM25, VectorDB, hybrid)
@@ -25,7 +26,6 @@ Evaluation is crucial to understanding the performance of your RAG system and id
 - Chunking strategy
 
 Synthetic baseline data can help you evaluate your RAG system's performance across these parameters.
-For instance, you can try different embedding models and evaluate their impact on the system's performance.
 
 This guide demonstrates how to evaluate RAG systems using synthetic data, providing a practical approach to testing and improving your implementation. 
 
@@ -47,161 +47,38 @@ conda create -n rag python=3.10 conda activate rag
 
 Install the required dependencies: 
 ```bash 
-pip install -U langchain-core langchain-openai langchain_community instructor dria 
+pip install -U RAGatouille instructor dria datasets
 ``` 
 
-### Document Chunking 
+#### For this cookbook, we'll work with HuggingFace [Docs](https://huggingface.co/datasets/m-ric/huggingface_doc) as our RAG dataset.
 
-For this cookbook, we'll work with Jason Liu's [blog](https://jxnl.co/) repository. Clone the repository to project root directory.
-
-```commandline
-git clone https://github.com/jxnl/blog/
-```
-
-Repository by `jxnl` consists of multiple markdown files. 
-
-First, we'll create a `ReadmeChunker` class to process markdown documents into manageable chunks: 
-
-```python
-class ReadmeChunker:
-    def __init__(self, docs_dir: str, min_chunk_size: int = 500):
-        self.docs_dir = Path(docs_dir)
-        self.min_chunk_size = min_chunk_size
-        self.chunks = self._process_markdown_files()
-```
-
-We'll chunk these files using `#` header tags to create meaningful chunks for our RAG pipeline. 
-Check full implementation [here](#code).
-
-
-```python
-def _chunk_by_headers(self, markdown_text: str) -> List[str]:
-    """
-    Split markdown text into chunks based on headers.
-
-    Args:
-        markdown_text (str): The markdown text to chunk
-
-    Returns:
-        List[str]: List of text chunks
-    """
-    header_pattern = r'^#{1,6}\s.*$'
-    chunks = []
-    current_chunk = []
-    current_size = 0
-
-    for line in markdown_text.split('\n'):
-        if (re.match(header_pattern, line) and
-            current_size > self.min_chunk_size):
-            if current_chunk:
-                chunks.append('\n'.join(current_chunk))
-            current_chunk = [line]
-            current_size = len(line)
-        else:
-            current_chunk.append(line)
-            current_size += len(line) + 1
-
-    # Add the last chunk if it exists
-    if current_chunk:
-        chunks.append('\n'.join(current_chunk))
-
-    return chunks
-```
-
-The `ReadmeChunker` class handles:
-
-- Processing markdown files from a specified directory
-- Splitting content into chunks based on headers
-- Maintaining minimum chunk sizes for optimal processing
-
-
-### *Creating a VectorDB*
-
-Next, we implement the vector store for efficient document retrieval using `InMemoryVectorStore` from `langchain_core.vectorstores`. 
-It's an in-memory implementation of VectorStore using a dictionary. Uses numpy to compute cosine similarity for search. 
-We'll use OpenAI's embeddings for our case. 
-
-
-```python
-class VectorStore:
-    def __init__(self, embedding_model: Optional[Any] = None):
-        self.embedding_model = embedding_model or OpenAIEmbeddings()
-        self.vector_store = InMemoryVectorStore(self.embedding_model)
-```
-
-Add documents with metadata to the vector store along with search:
-
-```python
-    def add_documents(self, documents: List[Document]) -> None:
-          self.vector_store.add_documents(documents)
-    
-    def search(self, query: str, top_k=3):
-        return self.vector_store.similarity_search(
-                    query=query,
-                    k=top_k
-                )
-```
-
-That's it! VectorDB is ready for use in our RAG pipeline.
 
 ### RAG Implementation
 
-RAG is implemented in the `NaiveRAG` class using both the `ReadmeChunker` and `VectorStore` classes.
+RAG is implemented in the `RAG` class using [RAGatouille](https://github.com/AnswerDotAI/RAGatouille) as the backbone for retrieval, a library focuses on making ColBERT simple to use for developers.
+
 We'll use the `instructor` library to interact with OpenAI's API for chat completions for structured outputs.
 
 Code taken from Instructor's [cookbook](https://python.useinstructor.com/examples/exact_citations/#validation-method-validate_sources).
 Pydantic classes structures the responses returned from `OpenAI` API. 
 
-*From the blog*:
+To implement the RAG pipeline, we'll use the `RAG` class:
 
-_This example shows how to use Instructor with validators to not only add citations to answers generated but also prevent hallucinations by ensuring that every statement made by the LLM is backed up by a direct quote from the context provided, and that those quotes exist!
-Two Python classes, Fact and QuestionAnswer, are defined to encapsulate the information of individual facts and the entire answer, respectively._
+#### The `RAG` Class
 
-
-#### The `Fact` Class
-The Fact class encapsulates a single statement or fact. It contains two fields:
-
-- `fact`: A string representing the body of the fact or statement.
-- `substring_quote`: A list of strings. Each string is a direct quote from the context that supports the fact.
-
-
-#### The `QuestionAnswer` Class
-This class encapsulates the question and its corresponding answer. It contains two fields:
-
-- `question`: The question asked.
-- `answer`: A list of Fact objects that make up the answer.
-
-
-```python
-class QuestionAnswer(BaseModel):
-    question: str = Field(...)
-    answer: List[Fact] = Field(...)
-
-    @model_validator(mode="after")
-    def validate_sources(self) -> "QuestionAnswer":
-        self.answer = [fact for fact in self.answer if len(fact.substring_quote) > 0]
-        return self
-```
-
-To implement the RAG pipeline, we'll use the `NaiveRAG` class:
-
-#### The `NaiveRAG` Class
-
-- `chunker`: ReadmeChunker instance to process markdown files.
-- `vectorstore`: VectorStore instance to manage vector storage and similarity search operations.
+- `rag`: RAGPretrainedModel for ColBERT based retrieval.
 - `client`: Instructor client to interact with OpenAI's API.
 
 
 ```python
 import instructor
-from langchain_core.documents import Document
+from ragatouille import RAGPretrainedModel
 from openai import OpenAI
 
-class NaiveRAG:
-    def __init__(self):
-        self.chunker = ReadmeChunker("blog/docs")
-        self.vectorstore = VectorStore()
-        self.vectorstore.add_documents([Document(id=str(i), page_content=chunk["chunk"], metadata={"path": chunk["path"]}) for i, chunk in enumerate(chunker.get_chunks())])
+class RAG:
+    def __init__(self, chunks):
+        self.rag = RAGPretrainedModel.from_pretrained("colbert-ir/colbertv2.0")
+        self.index_path = self.rag.index(index_name="my_index", collection=chunks)
         self.client = instructor.from_openai(OpenAI())
 ```
 
@@ -213,25 +90,30 @@ Now we need `search` and `answer` methods to complete RAG pipeline.
 We'll use `QuestionAnswer` pydantic model to structure the data for validation and processing.
 
 ```python
-def search(self, query: str, top_k=3):
-    results = self.vectorstore.similarity_search(query=query, k=top_k)
-    return [doc.page_content for doc in results]
+    def search(self, questions: Union[List[str], str], top_k=3) -> Union[List[List[str]], List[str]]:
+        res = self.rag.search(questions)
+        return [r[:top_k] for r in res]
 
-def answer(self, query: str, context: str) -> QuestionAnswer:
-  return self.client.chat.completions.create(
-      model="gpt-4o-mini",
-      temperature=0,
-      response_model=QuestionAnswer,
-      messages=[
-          {
-              "role": "system",
-              "content": "You are a world class algorithm to answer questions with correct and exact citations.",
-          },
-          {"role": "user", "content": f"{context}"},
-          {"role": "user", "content": f"Question: {query}"},
-      ],
-      validation_context={"text_chunk": context},
-  )
+    def answer(self, question: str) -> QuestionAnswer:
+
+        docs = self.search(question)
+        context = "\n".join(docs)
+
+        return self.client.chat.completions.create(
+            model="gpt-4o-mini",
+            temperature=0,
+            response_model=QuestionAnswer,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a world class algorithm to answer questions with correct and exact citations.",
+                },
+                {"role": "user", "content": f"{context}"},
+                {"role": "user", "content": f"Question: {question}"},
+            ],
+            validation_context={"text_chunk": context},
+        )
+
 ```
 
 And that's it! We have a complete RAG pipeline ready for evaluation.
@@ -259,52 +141,47 @@ from dria.factory import QAPipeline
 ```
 
 We define our *simulation* as:
-> "People from different backgrounds trying to learn how to build an efficient RAG pipeline. Developers, developers in big corporations, businesses that try to implement RAG in to their custom docs, AI researchers."
+> AI developers and researchers learning Huggingface. Some focus on fine-tuning and post-training, others on RAG systems, retrieval problems, image models, or dataset work.
 
 Description of simulation determines the backstories for the generated questions.
 
 Along with it, we specify the persona for the pipeline. 
 
-> "A researcher that is concise and direct"
+> A researcher that is concise and direct
 
 Persona determines how answers are generated based on the context provided.
 
 We'll use existing chunks as our context to generate questions.
 
-```python
-file_chunks = ["\n".join(v) for k,v in chunker.get_files().items()]
-```
-
 Instead of using chunks directly, we are merging them as files, and using files as whole to boost pipelines ability to generate coherent questions.
 
 ```python
 pipeline = QAPipeline(dria, config=PipelineConfig()).build(
-    simulation_description="People from different backgrounds trying to learn how to build an efficient RAG pipeline. Developers, developers in big corporations, businesses that try to implement RAG in to their custom docs, AI researchers.",
-    num_samples=2,
-    persona="A researcher that is concise and direct",
-    chunks=file_chunks
+    simulation_description="AI developers and researchers learning Huggingface. "
+                           "Some focus on fine-tuning and post-training, others on RAG systems, "
+                           "retrieval problems, image models, or dataset work.",
+    num_samples=1,
+    persona="A HuggingFace expert that is concise and direct",
+    chunks=file_chunks,
 )
 ```
 
 We can now execute the pipeline to generate question-answer pairs.
 
 ```python
-async def run_pipeline(dria: Dria, chunker: ReadmeChunker):
-    # read each chunk belonging to a file and merge them into a single string
-    file_chunks = ["\n".join(v) for k,v in chunker.get_files().items()]
-    print(f"num_files: {len(file_chunks)}")
+async def run_qa_pipeline(dria: Dria, file_chunks):
     await dria.initialize()
 
     pipeline = QAPipeline(dria, config=PipelineConfig()).build(
-        simulation_description="People from different backgrounds trying to learn how to build an efficient RAG pipeline. Developers, developers in big corporations, businesses that try to implement RAG in to their custom docs, AI researchers.",
-        num_samples=2,
-        persona="A researcher that is concise and direct",
-        chunks=file_chunks
+        simulation_description="AI developers and researchers learning Huggingface. "
+                               "Some focus on fine-tuning and post-training, others on RAG systems, "
+                               "retrieval problems, image models, or dataset work.",
+        num_samples=1,
+        persona="A HuggingFace expert that is concise and direct",
+        chunks=file_chunks,
     )
 
-    result = await pipeline.execute(return_output=True)
-    with open("qa.json", "w") as f:
-        json.dump(result, f, indent=4)
+    return await pipeline.execute(return_output=True)
 ```
 
 ### Generating Multi-hop Questions
@@ -329,7 +206,7 @@ singleton = MultiHopQuestion()
 executor = ParallelSingletonExecutor(dria, singleton)
 ```
 
-We set the model pools for the executor
+We set the model pools for the executor, publishing tasks to nodes that work with the specified models. 
 ```python
 executor.set_models([Model.GPT4O, Model.GEMINI_15_FLASH, Model.QWEN2_5_32B_FP16, Model.GEMINI_15_FLASH])
 ```
@@ -343,16 +220,17 @@ executor.load_instructions([{"chunks": random.sample(file_chunks, 3)} for _ in r
 Here is the complete code to generate multi-hop questions:
 
 ```python
-async def run_multihop_tasks(dria: Dria, chunker: ReadmeChunker):
-    file_chunks = ["\n".join(v) for k, v in chunker.get_files().items()]
+async def run_multihop_tasks(dria: Dria, file_chunks):
     singleton = MultiHopQuestion()
     executor = ParallelSingletonExecutor(dria, singleton)
-    # Set model pools
-    executor.set_models([Model.GPT4O, Model.GEMINI_15_FLASH, Model.QWEN2_5_32B_FP16, Model.GEMINI_15_FLASH])
-    executor.load_instructions([{"chunks": random.sample(file_chunks, 3)} for _ in range(20)])
-    results = await executor.run()
-    with open("multihop_output.json", "w") as f:
-        json.dump(results, f, indent=4)
+    executor.set_timeout(150)
+    executor.set_models(
+        [Model.GPT4O_MINI, Model.LLAMA3_1_70B, Model.QWEN2_5_32B_FP16, Model.GPT4O]
+    )
+    executor.load_instructions(
+        [{"chunks": random.sample(file_chunks, 3)} for _ in range(20)]
+    )
+    return await executor.run()
 ```
 
 That's it for generating synthetic data for evaluation.
@@ -368,6 +246,11 @@ The `Evaluator` class uses the `instructor` library to interact with OpenAI's AP
 We'll use the `EvaluationResult` pydantic model to structure the data for validation and processing.
 
 ```python
+import instructor
+from pydantic import BaseModel, Field
+from openai import OpenAI
+
+
 class EvaluationResult(BaseModel):
     evaluation: str = Field(...)
     reasoning: str = Field(...)
@@ -377,73 +260,104 @@ class Evaluator:
     def __init__(self):
         self.client = instructor.from_openai(OpenAI())
 
-    def evaluate(self, question: str, context: str, prediction: str, ground_truth: str) -> EvaluationResult:
+    def evaluate(
+        self, question: str, prediction: str, ground_truth: str
+    ) -> EvaluationResult:
 
-      return self.client.chat.completions.create(
-          model="gpt-4o-mini",
-          temperature=0,
-          response_model=EvaluationResult,
-          messages=[
-              {
-                  "role": "system",
-                  "content": "You are a world class algorithm to evaluate predicted questions.",
-              },
-              {"role": "user", "content": f"{context}"},
-              {"role": "user", "content": f"Question: {question}"},
-              {"role": "user", "content": f"Prediction: {prediction}"},
-              {"role": "user", "content": f"Ground truth: {ground_truth}"},
-          ]
-      )
+        return self.client.chat.completions.create(
+            model="gpt-4o",
+            temperature=0,
+            response_model=EvaluationResult,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a world class judge to evaluate predicted answers to given question.",
+                },
+                {"role": "user", "content": f"Question: {question}"},
+                {"role": "user", "content": f"Prediction: {prediction}"},
+                {"role": "user", "content": f"Ground truth: {ground_truth}"},
+            ],
+        )
+
 ```
 
-### Evaluating the Pipeline
+### Running the Evaluation pipeline
 
 We can now evaluate the generated questions and answers using the `Evaluator` class.
 
 ```python
-answers = []
-evaluate = Evaluator()
+def main():
 
-# Load QA data
-with open("qa.json", "r") as f:
-    qa = json.loads(f.read())
+    # Load dataset
+    dataset = load_dataset("m-ric/huggingface_doc")
+    eval_chunks = dataset["train"].select(range(int(0.10 * len(dataset["train"]))))
+    eval_chunks = [chunk["text"] for chunk in eval_chunks]
+    # Create synthetic evaluation data using %10 of the dataset
+    dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
+    qa_eval = asyncio.run(run_qa_pipeline(dria, eval_chunks))
+    multihop_eval = asyncio.run(run_multihop_tasks(dria, eval_chunks))
 
-# Load MultiHop QA
-with open("multihop_output.json", "r") as f:
-    multi_hop_qa = json.loads(f.read())
+    # Initialize RAG
+    all_chunks = dataset["train"]
+    all_chunks = [chunk["text"] for chunk in all_chunks]
+    rag = RAG(all_chunks)
 
-# Process simple QA
-for pair in tqdm(qa):
-    docs = rag.search(pair["question"])
-    answer = rag.answer(pair["question"], "\n".join(docs))
-    answers.append({
-        "prediction": answer,
-        "answer": pair["answer"],
-        "type": "simple",
-        "question": pair["question"],
-        "context": "\n".join(docs)
-    })
+    answers = []
+    evaluate = Evaluator()
 
-# Process multi-hop QA
-for pair in tqdm(multi_hop_qa):
-    for hop_type in ["1-hop", "2-hop", "3-hop"]:
-        docs = rag.search(pair[hop_type])
-        answer = rag.answer(pair[hop_type], "\n".join(docs))
-        answers.append({
-            "prediction": answer,
-            "answer": pair["answer"],
-            "type": hop_type,
-            "question": pair[hop_type],
-            "context": "\n".join(docs)
-        })
+    # Answer QA data
+    for pair in tqdm(qa_eval):
+        answer = rag.answer(pair["question"])
+        answers.append(
+            {
+                "prediction": answer.get_answer(),
+                "answer": pair["answer"],
+                "type": "simple",
+                "question": pair["question"],
+            }
+        )
 
-# Evaluate all answers
-evaluated_answers = []
-for answer in tqdm(answers):
-    result = evaluate.evaluate(answer["question"], answer["context"], answer["prediction"], answer["answer"])
-    evaluated_answers.append({"question": answer["question"], "answer": answer["answer"],
-                              "prediction": "\n".join([f.fact for f in answer["prediction"].answer]),
-                              "evaluation": result.evaluation.lower(), "reasoning": result.reasoning})
+    # Answer multi-hop QA data
+    for pair in tqdm(multihop_eval):
+        for hop_type in ["1-hop", "2-hop", "3-hop"]:
+            answer = rag.answer(pair[hop_type])
+            answers.append(
+                {
+                    "prediction": answer.get_answer(),
+                    "answer": pair["answer"],
+                    "type": hop_type,
+                    "question": pair[hop_type],
+                }
+            )
+
+    # Evaluate all answers
+    evaluated_answers = []
+    for answer in tqdm(answers):
+        result = evaluate.evaluate(
+            answer["question"],
+            answer["prediction"],
+            answer["answer"],
+        )
+        evaluated_answers.append(
+            {
+                "question": answer["question"],
+                "answer": answer["answer"],
+                "prediction": answer["prediction"],
+                "evaluation": result.evaluation.lower(),
+                "reasoning": result.reasoning,
+            }
+        )
+
+    # Calculate accuracy
+
+    accuracy = calculate_accuracy(evaluated_answers)
+    print("**********")
+    print(f"Total: {accuracy.total}")
+    print(f"Correct: {accuracy.correct} ({accuracy.correct_percentage}%)")
+    print(f"Partially correct: {accuracy.partially_correct} ({accuracy.partially_correct_percentage}%)")
+    print(f"Incorrect: {accuracy.incorrect} ({accuracy.incorrect_percentage}%)")
+    print("**********")
+
 ```
 
 
