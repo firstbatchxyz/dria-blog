@@ -55,7 +55,7 @@ Creating value for AI that can be obtained through decentralization.
 
 - Unbounded access to web based grounding
 - Hyper parallelization of inference
-- Ensembling outputs from diverse models
+- Ensemble outputs from diverse models
 - Ability to include human diversity
 - Creating economic value
 

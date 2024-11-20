@@ -1,16 +1,3 @@
----
-categories:
-- Applied AI
-description: Discover a comprehensive list of available AI models within the Dria
-  Network, including details on each model's features and capabilities.
-tags:
-- AI Models
-- Machine Learning
-- Dria Network
-- Model Features
-- Quantized Models
----
-
 # Models
 
 See available models in Dria Network below:
@@ -58,3 +45,16 @@ See available models in Dria Network below:
 | `Gemma2_2bIt` | `gemma-2-2b-it` | Gemma 2 2B IT model |
 | `Gemma2_9bIt` | `gemma-2-9b-it` | Gemma 2 9B IT model |
 | `Gemma2_27bIt` | `gemma-2-27b-it` | Gemma 2 27B IT model |
+| `ORLlama3_1_8B` | `meta-llama/llama-3.1-8b-instruct` | OpenRouter Models |
+| `ORLlama3_1_70B` | `meta-llama/llama-3.1-70b-instruct` | OpenRouter Models |
+| `ORLlama3_1_405B` | `meta-llama/llama-3.1-405b-instruct` | OpenRouter Models |
+| `ORLlama3_1_70BFree` | `meta-llama/llama-3.1-70b-instruct:free` | OpenRouter Models |
+| `OR3_5Sonnet` | `anthropic/claude-3.5-sonnet:beta` | OpenRouter Models |
+| `OR3_5Haiku` | `anthropic/claude-3-5-haiku-20241022:beta` | OpenRouter Models |
+| `ORQwen2_5_72B` | `qwen/qwen-2.5-72b-instruct` | OpenRouter Models |
+| `ORQwen2_5_7B` | `qwen/qwen-2.5-7b-instruct` | OpenRouter Models |
+| `ORQwen2_5Coder32B` | `qwen/qwen-2.5-coder-32b-instruct` | OpenRouter Models |
+| `ORQwen2_5Eva32B` | `eva-unit-01/eva-qwen-2.5-32b` | OpenRouter Models |
+| `ORDeepSeek2_5` | `deepseek/deepseek-chat` | OpenRouter Models |
+| `ORNousHermes405B` | `nousresearch/hermes-3-llama-3.1-405b` | OpenRouter Models |
+| `ORNemotron70B` | `nvidia/llama-3.1-nemotron-70b-instruct` | OpenRouter Models |

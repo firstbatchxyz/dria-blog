@@ -48,8 +48,20 @@ If issues persist, see [section](#gcc-related-issues)
 
 ## Obtaining Your RPC Key
 
-To interact with the Dria Network, you'll need an RPC (Remote Procedure Call) token. This token is essential for sending tasks to the network.
+To interact with the Dria Network, you'll need an RPC token. 
+
+### Community Network
+
+Dria Community Network consists of thousands of nodes (and counting) with LLMs and tool usage capabilities.
 Visit the [Dria Login API](https://dkn.dria.co/auth/generate-token) and get your unique RPC token.
+
+### Pro Network
+
+Dria Pro Network consists of ~100 high performance nodes, equipped with even more powerful LLMs, compute and 99.9% reliability.
+Pro Network is more suitable for production-grade applications and partners in the ecosystem. 
+Please fill out the [form](https://forms.gle/yGtLZw3HPW7kgD427) to get access to the Pro Network:
+
+### Setting Up Your Environment
 
 You can add your RPC key as an env variable by following command on your terminal
 ```commandline
