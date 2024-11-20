@@ -92,7 +92,7 @@ We'll use `QuestionAnswer` pydantic model to structure the data for validation a
 ```python
     def search(self, questions: Union[List[str], str], top_k=3) -> Union[List[List[str]], List[str]]:
         res = self.rag.search(questions)
-        return [r[:top_k] for r in res]
+        return [r["content"][:top_k] for r in res]
 
     def answer(self, question: str) -> QuestionAnswer:
 
@@ -214,7 +214,7 @@ executor.set_models([Model.GPT4O, Model.GEMINI_15_FLASH, Model.QWEN2_5_32B_FP16,
 Then load the instructions for the executor. We'll randomly sample 3 chunks from each file to create multi-hop questions.
 
 ```python
-executor.load_instructions([{"chunks": random.sample(file_chunks, 3)} for _ in range(20)])
+executor.load_instructions([{"chunks": random.sample(file_chunks, 3)} for _ in range(10)])
 ```
 
 Here is the complete code to generate multi-hop questions:
@@ -225,10 +225,16 @@ async def run_multihop_tasks(dria: Dria, file_chunks):
     executor = ParallelSingletonExecutor(dria, singleton)
     executor.set_timeout(150)
     executor.set_models(
-        [Model.GPT4O_MINI, Model.LLAMA3_1_70B, Model.QWEN2_5_32B_FP16, Model.GPT4O]
+        [
+            Model.QWEN2_5_72B_OR,
+            Model.GEMINI_15_PRO,
+            Model.GPT4O,
+            Model.ANTHROPIC_SONNET_3_5_OR,
+            Model.ANTHROPIC_HAIKU_3_5_OR,
+        ]
     )
     executor.load_instructions(
-        [{"chunks": random.sample(file_chunks, 3)} for _ in range(20)]
+        [{"chunks": random.sample(file_chunks, 3)} for _ in range(10)]
     )
     return await executor.run()
 ```
@@ -290,9 +296,10 @@ def main():
 
     # Load dataset
     dataset = load_dataset("m-ric/huggingface_doc")
-    eval_chunks = dataset["train"].select(range(int(0.10 * len(dataset["train"]))))
+    eval_chunks = dataset["train"].select(range(int(0.02 * len(dataset["train"]))))
     eval_chunks = [chunk["text"] for chunk in eval_chunks]
-    # Create synthetic evaluation data using %10 of the dataset
+
+    # Create synthetic evaluation data using %2 of the dataset
     dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
     qa_eval = asyncio.run(run_qa_pipeline(dria, eval_chunks))
     multihop_eval = asyncio.run(run_multihop_tasks(dria, eval_chunks))
@@ -361,15 +368,16 @@ def main():
 ```
 
 
-*Expected output*
+Outputs may vary based on the sampled data and the RAG pipeline implementation.
+Expected output format:
 
 ```commandline
-100%|██████████| 209/209 [13:29<00:00,  3.87s/it]
-100%|██████████| 19/19 [02:13<00:00,  7.00s/it]
-Total evaluations: 266
-Correct: 56 (21.05%)
-Partially Correct: 107 (40.23%)
-Incorrect: 42 (15.79%)
+**********
+Total: 93
+Correct: 22 (23.655913978494624%)
+Partially correct: 0 (0.0%)
+Incorrect: 67 (72.04301075268818%)
+**********
 ```
 
 There you have it! 
