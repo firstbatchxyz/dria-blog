@@ -367,11 +367,36 @@ def main():
 
 ```
 
+#### Indexing, synthetic data generation, and evaluation steps took around 15minutes on a A10G. 
 
 Outputs may vary based on the sampled data and the RAG pipeline implementation.
 Expected output format:
 
 ```commandline
+...
+Loading searcher for index my_index for the first time... This may take a few seconds
+[Nov 20, 18:21:13] #> Loading codec...
+[Nov 20, 18:21:13] #> Loading IVF...
+[Nov 20, 18:21:13] #> Loading doclens...
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 2473.06it/s]
+[Nov 20, 18:21:13] #> Loading codes and residuals...                                                                                             | 0/2 [00:00<?, ?it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 17.42it/s]
+Searcher loaded!█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 17.47it/s]
+
+#> QueryTokenizer.tensorize(batch_text[0], batch_background[0], bsize) ==
+#> Input: . What are the key limitations of the tabular Q-learning approach described, and what alternative methods or modifications might be considered to address these limitations, especially when dealing with high-dimensional state or action spaces?,           True,           None
+#> Output IDs: torch.Size([44]), tensor([  101,     1,  2054,  2024,  1996,  3145, 12546,  1997,  1996, 21628,
+         7934,  1053,  1011,  4083,  3921,  2649,  1010,  1998,  2054,  4522,
+         4725,  2030, 12719,  2453,  2022,  2641,  2000,  4769,  2122, 12546,
+         1010,  2926,  2043,  7149,  2007,  2152,  1011,  8789,  2110,  2030,
+         2895,  7258,  1029,   102], device='cuda:0')
+#> Output Mask: torch.Size([44]), tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+       device='cuda:0')
+
+Answering QA: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 36/36 [02:07<00:00,  3.55s/it]
+Answering multi-hop QA: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 19/19 [01:48<00:00,  5.73s/it]
+Evaluating answers: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 93/93 [02:46<00:00,  1.80s/it]
 **********
 Total: 93
 Correct: 22 (23.655913978494624%)
