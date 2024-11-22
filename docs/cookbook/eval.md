@@ -417,7 +417,7 @@ Incorrect: 10 (55.55555555555556%)
 There you have it! 
 
 A complete guide to evaluating RAG systems with synthetic data. 
-Please note we're using NaiveRAG and synthetic data for demonstration purposes. 
+Please note we're using a RAG and synthetic data for demonstration purposes. 
 Different RAG implementations and real-world data may yield different results.
 
 ## Code
