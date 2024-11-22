@@ -192,7 +192,34 @@ Instead looping through variations generated in the first step, and executing th
 Pipeline will automatically handle the parallel execution of the steps by parsing the json output and sending each instruction as a seperate task to network.
 In order to achieve this, `FirstPipelineStep` must output a valid JSON deserializable list. 
 
-Finally we set the input instruction using the `input` method. and build the pipeline 
+Finally we set the input instruction using the `input` method. and build the pipeline
+
+
+#### Inputs
+
+Pipelines can have multiple inputs. Inputs are defined using the `input` method of the `PipelineBuilder` class.
+
+There are pratically two ways to define inputs:
+
+##### Using **kwargs:
+
+This is useful if pipeline has a single input for the start.
+
+```python
+self.pipeline.input(instruction=instruction)
+```
+
+##### Using lists:
+
+This is useful if pipeline has multiple inputs as starting point.
+For a list of instructions:
+```json
+["Write a haiku", "Write a sonnet", "Write a limerick"]
+```
+
+```python
+self.pipeline.input([{"instruction": instruction} for instruction in instructions])
+```
 
 #### Callbacks
 
