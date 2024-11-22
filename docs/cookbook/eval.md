@@ -90,9 +90,9 @@ Now we need `search` and `answer` methods to complete RAG pipeline.
 We'll use `QuestionAnswer` pydantic model to structure the data for validation and processing.
 
 ```python
-    def search(self, questions: Union[List[str], str], top_k=3) -> Union[List[List[str]], List[str]]:
-        res = self.rag.search(questions)
-        return [r["content"][:top_k] for r in res]
+    def search(self, question: str, top_k=3) -> Union[List[List[str]], List[str]]:
+        res = self.rag.search(question, k=top_k)
+        return [r["content"] for r in res]
 
     def answer(self, question: str) -> QuestionAnswer:
 
@@ -399,9 +399,9 @@ Answering multi-hop QA: 100%|█████████████████
 Evaluating answers: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 93/93 [02:46<00:00,  1.80s/it]
 **********
 Total: 93
-Correct: 22 (23.655913978494624%)
-Partially correct: 0 (0.0%)
-Incorrect: 67 (72.04301075268818%)
+Correct: 36 (38.70967741935484%)
+Partially correct: 6 (6.451612903225806%)
+Incorrect: 44 (47.31182795698925%)
 **********
 ```
 
