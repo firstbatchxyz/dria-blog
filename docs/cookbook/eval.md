@@ -100,7 +100,7 @@ We'll use `QuestionAnswer` pydantic model to structure the data for validation a
         context = "\n".join(docs)
 
         return self.client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             temperature=0,
             response_model=QuestionAnswer,
             messages=[
