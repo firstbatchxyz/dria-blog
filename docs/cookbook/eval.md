@@ -296,10 +296,10 @@ def main():
 
     # Load dataset
     dataset = load_dataset("m-ric/huggingface_doc")
-    eval_chunks = dataset["train"].select(range(int(0.02 * len(dataset["train"]))))
+    eval_chunks = dataset["train"].select(range(int(0.01 * len(dataset["train"]))))
     eval_chunks = [chunk["text"] for chunk in eval_chunks]
 
-    # Create synthetic evaluation data using %2 of the dataset
+    # Create synthetic evaluation data using %1 of the dataset
     dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
     qa_eval = asyncio.run(run_qa_pipeline(dria, eval_chunks))
     multihop_eval = asyncio.run(run_multihop_tasks(dria, eval_chunks))
@@ -309,13 +309,19 @@ def main():
     all_chunks = [chunk["text"] for chunk in all_chunks]
     rag = RAG(all_chunks)
 
-    answers = []
+    answers = {
+        "qa": [],
+        "1-hop": [],
+        "2-hop": [],
+        "3-hop": []
+    }
     evaluate = Evaluator()
 
     # Answer QA data
-    for pair in tqdm(qa_eval):
+    for pair in tqdm(qa_eval, desc="Answering QA"):
         answer = rag.answer(pair["question"])
-        answers.append(
+        print("**** ", answer)
+        answers["qa"].append(
             {
                 "prediction": answer.get_answer(),
                 "answer": pair["answer"],
@@ -325,10 +331,10 @@ def main():
         )
 
     # Answer multi-hop QA data
-    for pair in tqdm(multihop_eval):
+    for pair in tqdm(multihop_eval, desc="Answering multi-hop QA"):
         for hop_type in ["1-hop", "2-hop", "3-hop"]:
             answer = rag.answer(pair[hop_type])
-            answers.append(
+            answers[hop_type].append(
                 {
                     "prediction": answer.get_answer(),
                     "answer": pair["answer"],
@@ -338,32 +344,36 @@ def main():
             )
 
     # Evaluate all answers
-    evaluated_answers = []
-    for answer in tqdm(answers):
-        result = evaluate.evaluate(
-            answer["question"],
-            answer["prediction"],
-            answer["answer"],
-        )
-        evaluated_answers.append(
-            {
-                "question": answer["question"],
-                "answer": answer["answer"],
-                "prediction": answer["prediction"],
-                "evaluation": result.evaluation.lower(),
-                "reasoning": result.reasoning,
-            }
-        )
+    for k, v in answers.items():
+        evaluated_answers = []
+        for answer in tqdm(v, desc="Evaluating answers"):
+            result = evaluate.evaluate(
+                answer["question"],
+                answer["prediction"],
+                answer["answer"],
+            )
+            evaluated_answers.append(
+                {
+                    "question": answer["question"],
+                    "answer": answer["answer"],
+                    "prediction": answer["prediction"],
+                    "evaluation": result.evaluation.lower(),
+                    "reasoning": result.reasoning,
+                }
+            )
 
-    # Calculate accuracy
+        accuracy = calculate_accuracy(evaluated_answers)
+        print(f"********** {k} accuracy")
+        print(f"Total: {accuracy.total}")
+        print(f"Correct: {accuracy.correct} ({accuracy.correct_percentage}%)")
+        print(
+            f"Partially correct: {accuracy.partially_correct} ({accuracy.partially_correct_percentage}%)"
+        )
+        print(f"Incorrect: {accuracy.incorrect} ({accuracy.incorrect_percentage}%)")
+        print("**********")
 
-    accuracy = calculate_accuracy(evaluated_answers)
-    print("**********")
-    print(f"Total: {accuracy.total}")
-    print(f"Correct: {accuracy.correct} ({accuracy.correct_percentage}%)")
-    print(f"Partially correct: {accuracy.partially_correct} ({accuracy.partially_correct_percentage}%)")
-    print(f"Incorrect: {accuracy.incorrect} ({accuracy.incorrect_percentage}%)")
-    print("**********")
+        with open(f"evaluated_answers_{k}.json", "w") as f:
+            f.write(json.dumps(evaluated_answers, indent=2))
 
 ```
 
