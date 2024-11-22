@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate multi-hop questions from three input documents using the MultiHopQuestion
-  singleton task for efficient reasoning.
+description: Generate multi-hop questions from three documents, requiring multi-level
+  reasoning and providing comprehensive answers.
 tags:
 - multi-hop questions
 - question generation
 - AI reasoning
-- document processing
-- data extraction
+- data processing
+- natural language processing
 ---
 
 # MultiHopQuestion 

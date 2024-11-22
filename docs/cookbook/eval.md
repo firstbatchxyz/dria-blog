@@ -1,14 +1,14 @@
 ---
 categories:
 - RAG
-description: Learn how to effectively evaluate RAG systems using synthetic data, enhancing
-  performance and optimization in AI applications.
+description: Learn how to evaluate Retrieval-Augmented Generation (RAG) systems using
+  synthetic data for improved performance and metrics.
 tags:
 - RAG
 - Synthetic Data
 - AI Evaluation
-- Data Quality
-- Performance Metrics
+- Question Answering
+- Data Generation
 ---
 
 # Evaluating RAG Systems with Synthetic Data 

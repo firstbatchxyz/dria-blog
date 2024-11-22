@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: WebMultiChoice answers multiple-choice questions using web search, generating
-  accurate responses through advanced evaluation techniques.
+- Workflows
+description: WebMultiChoice efficiently answers multiple-choice questions by utilizing
+  web search and model evaluation to provide accurate results.
 tags:
-- multiple-choice
-- AI evaluation
-- web search
-- deep learning
-- QWEN
+- Web search
+- AI models
+- Multiple-choice questions
+- Evaluation
+- Natural Language Processing
 ---
 
 # WebMultiChoice

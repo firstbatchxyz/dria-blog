@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: EvolveQuality enhances response quality using specified methods like
-  Helpfulness and Creativity in AI-generated content.
+- Workflows
+description: Evolve the quality of responses to prompts using specified methods in
+  Python with EvolveQuality, a Singleton task from Dria.
 tags:
 - EvolveQuality
-- AI
-- Response Enhancement
-- Natural Language Processing
-- Prompt Engineering
+- AI Response Generation
+- Python
+- Dria
+- Quality Improvement
 ---
 
 # EvolveQuality

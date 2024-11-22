@@ -2,13 +2,13 @@
 categories:
 - Synthetic Data
 description: Explore methods for generating synthetic preference data using Dria,
-  enhancing data analysis in AI applications.
+  enhancing data analysis and insights for AI applications.
 tags:
 - synthetic data
 - preference data
-- data generation
-- AI
 - Dria
+- AI applications
+- data generation
 ---
 
 # Synthetic Preference Data Generation Using Dria

@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to create asynchronous pipelines to generate complex outputs
-  efficiently using workflows and custom callbacks.
+description: Learn to create efficient pipelines using workflows for parallel processing,
+  enhancing your data handling capabilities.
 tags:
-- pipelines
-- workflows
-- asynchronous processing
-- data generation
-- QA pairs
+- Pipelines
+- Workflows
+- Asynchronous Processing
+- Data Generation
+- QA Pairs
 ---
 
 # Creating Pipelines

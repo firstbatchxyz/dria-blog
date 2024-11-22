@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: MagPie generates dialogues between personas, delivering structured conversations
-  powered by advanced AI models. Explore diverse interactions!
+description: MagPie generates dialogues between two personas, enabling AI-driven interactions
+  for various applications.
 tags:
 - AI dialogue generation
-- Natural language processing
-- Conversational AI
-- AI models
-- Synthetic conversations
+- MagPie
+- Persona interactions
+- Conversation task
+- GEMMA2 model
 ---
 
 # MagPie

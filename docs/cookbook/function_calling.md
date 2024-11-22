@@ -1,12 +1,12 @@
 ---
 categories:
 - Software Engineering
-description: Explore effective strategies for making function calls in programming.
-  Learn about syntax, best practices, and real-world applications.
+description: Explore the nuances and applications of function calling in programming
+  for enhanced code efficiency.
 tags:
 - function calling
 - programming
-- software development
+- code efficiency
+- software engineering
 - best practices
-- syntax
 ---

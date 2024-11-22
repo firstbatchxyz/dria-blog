@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Generate semantic triplets with specified similarity scores using the
-  SemanticTriplet singleton task.
+- Applied AI
+description: Generate semantic triplets with similarity scores using a JSON object
+  in various languages and difficulties.
 tags:
 - semantic triplet
-- NLP
-- text similarity
+- natural language processing
+- text generation
+- similarity scores
 - JSON
-- educational tools
 ---
 
 # SemanticTriplet

@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Discover StructRAG, a method for hybrid information structuring to enhance
-  knowledge-intensive reasoning in LLMs.
+description: Explore StructRAG, a hybrid approach enhancing knowledge-intensive reasoning
+  using structured information and advanced algorithms.
 tags:
 - StructRAG
+- AI algorithms
 - knowledge restructuring
-- LLM
-- hybrid information
-- AI reasoning
+- LLMs
+- Hybrid models
 ---
 
 # StructRAG

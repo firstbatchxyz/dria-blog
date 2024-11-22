@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Validate predictions against correct answers using the ValidatePrediction
-  singleton task with the Dria framework.
+description: ValidatePrediction is a Singleton task for evaluating the accuracy of
+  predictions against correct answers using semantic analysis.
 tags:
-- AI Validation
-- Predictive Modeling
-- Dria Framework
-- Semantic Analysis
-- Machine Learning
+- prediction validation
+- AI validation
+- semantic analysis
+- machine learning
+- GEMMA2
 ---
 
 # ValidatePrediction

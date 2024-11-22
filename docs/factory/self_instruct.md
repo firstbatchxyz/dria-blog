@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: 'SelfInstruct: Generate diverse user queries using AI for task management
-  in professional settings with the GEMMA2_9B_FP16 model.'
+- Workflows
+description: SelfInstruct generates dynamic user queries for AI applications based
+  on specified criteria and context for enhanced interaction.
 tags:
-- AI
-- Query Generation
-- Task Management
-- User Interaction
-- Gemma
+- AI applications
+- User queries
+- Task management
+- SelfInstruct
+- Dynamic generation
 ---
 
 # SelfInstruct

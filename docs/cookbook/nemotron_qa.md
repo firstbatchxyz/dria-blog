@@ -1,14 +1,14 @@
 ---
 categories:
-- Synthetic Data
-description: Implement Nvidia's Preference Data Pipeline using Dria to generate synthetic
-  data with Llama 3.1 for improved machine learning models.
+- Preference Data
+description: Learn to implement Nvidia's Preference Data Pipeline using Dria for generating
+  synthetic preference data efficiently.
 tags:
 - Nvidia
-- Synthetic Data
 - Dria
-- Preference Data
+- Synthetic Data
 - Machine Learning
+- Data Generation
 ---
 
 # Implementing Nvidia's Preference Data Pipeline with Dria

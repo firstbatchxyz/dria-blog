@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: 'Learn about tasks in the Dria network: unit of work execution, asynchronous
-  processing, model selection, and scalable operations.'
+- Workflows
+description: Explore tasks in the Dria network, focusing on execution, model selection,
+  and asynchronous workflows for efficient processing.
 tags:
-- Dria
-- Tasks
+- Dria Network
 - Asynchronous Execution
+- Task Management
 - Model Selection
-- Workflow
+- P2P Computing
 ---
 
 # Tasks

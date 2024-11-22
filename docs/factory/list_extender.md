@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: ListExtenderPipeline class creates a dynamic pipeline to enhance lists
-  of items with new subcategories effectively.
+description: Explore the ListExtender class that enhances item lists by generating
+  detailed subcategories for various domains.
 tags:
-- list management
-- data processing
-- pipeline
-- subcategories
-- dynamic lists
+- ListExtender
+- Data Generation
+- Item Extension
+- Python
+- Async Programming
 ---
 
 # ListExtender

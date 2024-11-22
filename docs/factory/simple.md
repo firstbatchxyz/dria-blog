@@ -1,13 +1,13 @@
 ---
 categories:
 - Workflows
-description: Single `Simple` task generates text from prompts using models like `GEMMA2_9B_FP16`.
-  Learn to implement it in Python!
+description: Simple is a Singleton task that generates text based on prompts using
+  the GEMMA2_9B_FP16 model.
 tags:
 - text generation
-- Python
-- GEMMA2
-- AI
+- singleton task
+- GEMMA2 model
+- AI prompts
 - asyncio
 ---
 

@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Evaluate predictions against context and questions using a Singleton
-  task in machine learning models.
+- Applied AI
+description: Evaluate the correctness of predicted answers using contextual and semantic
+  analysis with the EvaluatePrediction task.
 tags:
-- prediction evaluation
-- machine learning
-- semantic context
-- singleton task
-- model assessment
+- evaluation
+- prediction
+- AI
+- contextual analysis
+- semantic correctness
 ---
 
 # EvaluatePrediction

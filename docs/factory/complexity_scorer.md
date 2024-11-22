@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: ScoreComplexity ranks instructions by complexity using the GEMMA2_9B_FP16
-  model, providing essential insights for task evaluation.
+- Applied AI
+description: Rank instructions by complexity with ScoreComplexity using GEMMA2 model.
+  Ideal for evaluating task difficulty in NLP.
 tags:
-- complexity scoring
-- instruction ranking
+- complexity
+- natural language processing
+- task ranking
 - AI models
-- GEMMA2
-- task evaluation
+- instruction evaluation
 ---
 
 # ScoreComplexity

@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn how to implement text classification using JSON format with example
-  code in Python and the GEMMA2 model.
+description: Learn how to create JSON examples for text classification tasks with
+  a Python implementation using the Dria framework.
 tags:
 - text classification
-- JSON
-- Python
+- JSON example
+- Dria framework
 - machine learning
-- GEMMA2
+- NLP
 ---
 
 # TextClassification

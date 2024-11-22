@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn to generate structured outputs for book reviews using Dria SDK
-  and JSON Schema in Python.
+description: Learn how to implement structured outputs with Dria SDK for generating
+  consistent and reliable responses in Python.
 tags:
-- structured outputs
+- Structured Outputs
 - Dria SDK
-- JSON Schema
-- book reviews
 - Python
+- Book Review Generation
+- Workflow
 ---
 
 # Structured Outputs

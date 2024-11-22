@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore the TextMatching task for generating JSON examples for text matching
-  in NLP, using the GEMMA2_9B_FP16 model.
+- Workflows
+description: Discover how to use the TextMatching task to generate JSON objects for
+  various text matching applications in different languages.
 tags:
 - Text Matching
-- Natural Language Processing
 - JSON Generation
+- Natural Language Processing
+- Sentiment Analysis
 - GEMMA2 Model
-- AI Tasks
 ---
 
 # TextMatching

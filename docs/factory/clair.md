@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Clair tasks correct student solutions using reasoning, improving their
-  coding skills with AI models for accurate outputs.
+- Applied AI
+description: Clair is a SingletonTemplate task that corrects student solutions using
+  AI. It provides feedback and improved code examples.
 tags:
-- AI Correction
-- Student Solutions
-- Coding Education
-- Machine Learning
-- Task Automation
+- AI correction
+- student feedback
+- code correction
+- educational AI
+- factorial
 ---
 
 # Clair

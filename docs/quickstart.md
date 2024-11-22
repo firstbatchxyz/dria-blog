@@ -1,140 +1,90 @@
 ---
 categories:
 - Workflows
-description: Quickstart guide for installing Dria SDK, obtaining RPC token, and setting
-  up the environment for interaction with Dria Network.
+description: Quick start guide to create a dialogue using Dria SDK with Python. Learn
+  to implement a math teacher-student interaction.
 tags:
 - Dria SDK
-- RPC Token
-- Installation Guide
 - Python
-- Machine Learning
+- Dialogue Generation
+- AI Models
+- Quick Start
 ---
 
-# Installation
+# Quick Start
 
-## Requirements and Setup
+> In order to follow this guide, you need to [install](installation.md) Dria SDK.
 
-Dria SDK is compatible with Python 3.10 or higher. Start by creating a new conda env:
 
-```commandline
-conda create -n dria python=3.10
-conda activate dria
-```
+Let's get started with Dria SDK by creating a dialogue between a math teacher and a student. 
 
-Then to install the SDK, simply run the following command in your terminal:
+Import the necessary modules and create a `Dria` instance.
 
-```commandline
-pip install dria
-```
-
-_If you are having problems with installing coincurve, try installing coincurve separately_ :
-
-```commandline
-pip3 install --upgrade pip3
-
-pip3 install wheel
-
-pip3 install coincurve
-```
-
-and install dria package by:
-
-```commandline
-pip install --upgrade dria
-```
-
-If issues persist, see [section](#gcc-related-issues)
-
-## Obtaining Your RPC Key
-
-To interact with the Dria Network, you'll need an RPC token. 
-
-### Community Network
-
-Dria Community Network consists of community nodes with LLMs and tool usage capabilities.
-Visit the [Dria Login API](https://dkn.dria.co/auth/generate-token) and get your unique RPC token.
-
-### Pro Network
-
-Dria Pro Network consists of high performance nodes, equipped with even more powerful LLMs, compute and 99.9% reliability.
-Pro Network is more suitable for production-grade applications and partners in the ecosystem. 
-Please fill out the [form](https://forms.gle/yGtLZw3HPW7kgD427) to get access to the Pro Network:
-
-### Setting Up Your Environment
-
-You can add your RPC key as an env variable by following command on your terminal
-```commandline
-export DRIA_RPC_TOKEN=your-token-here
-```
-
-Alternatively, you can create a `.env` file and use `dotenv`
-Your .env file should look like:
-```dotenv
-DRIA_RPC_TOKEN=your-token-here
-```
-Import env variables with:
 ```python
-from dotenv import load_dotenv
-load_dotenv()
+import os
+import asyncio
+from dria.factory import MagPie
+from dria.client import Dria
+from dria.models import Task, Model
+import json
+
+dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
 ```
 
-## Important Notes
+Define a function to generate a dialogue between two personas using the `MagPie` task.
 
-- **Network Status**: The Dria Network is currently in __alpha__ stage. Access is managed through RPCs to ensure controlled access and trusted task execution.
+```python
+async def run_task():
+    magpie = MagPie()
+    res = await dria.execute(
+        Task(
+            workflow=magpie.workflow(
+                instructor_persona="A curious math student.",
+                responding_persona="A grumpy math Professor assistant with short, snappy answers.",
+                num_turns=3
+            ),
+            models=[Model.GPT4O_MINI],
+        ),
+        timeout=60,
+    )
+    return magpie.parse_result(res)
+```
 
-- **Cost**: At present, there is no cost associated with generating data using Dria. However, a valid RPC token is required to access the network.
+Now wrap the `run_task` function in a main function to run the task and print the result.
 
-- **Contributing**: You can contribute to the Dria ecosystem by running a [node](https://dria.co/join) in the Dria network. This helps scale the network and improve throughput.
+```python
+def main():
+    result = asyncio.run(evaluate())
+    print(json.dumps(result, indent=4))
 
-## Next Steps
-
-Once you have your RPC token, you're ready to start using the Dria SDK. Check out the examples from cookbook (e.g. [Patient Dialogues](cookbook/patient_dialogues.md)) or see [pipelines](how-to/pipelines.md) to learn how to create your first synthetic data pipeline.
-
-
-## GCC related issues:
-
-If you are having problems with `coincurve`
-Try installing `brew` and `xcode tools`
     
-```commandline
-xcode-select --install
+if __name__ == "__main__":
+    main()
 ```
 
-Install brew by:
+And that's it! Run the script, and you should see a dialogue between the two personas.
 
-```commandline
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```json
+[
+    {
+        "dialogue": [
+            {
+                "instructor": "Can you explain why the square root of a negative number is imaginary? I'm really curious about that!",
+                "responder": "Because it doesn't exist on the number line. We define the square root of negative numbers as imaginary to fill that gap. Simple enough?"
+            },
+            {
+                "instructor": "So, if imaginary numbers help fill the gap, what are they actually used for in real-world applications?",
+                "responder": "They're used in engineering, physics, and even signal processing. Ever heard of alternating current? That\u2019s imaginary math at work."
+            },
+            {
+                "instructor": "Wow, that's fascinating! So, imaginary numbers have real-world applications. Can you give me a specific example of how they are used in physics?",
+                "responder": "Sure, take electrical engineering. They use imaginary numbers in calculating impedance in AC circuits. Helps simplify complex calculations. Clear enough?"
+            }
+        ],
+        "model": "gpt-4o-mini"
+    }
+]
 ```
 
-and run:
 
-```commandline
-brew install automake libtool
-```
-
-re create env
-
-```commandline
-conda create -n dria_new python=3.10
-conda activate dria_new
-```
-
-Seperately install coincurve:
-
-```commandline
-pip3 install --upgrade pip3
-
-pip3 install wheel
-
-pip3 install coincurve
-```
-
-Install dria:
-
-```commandline
-pip install dria
-```
-
-If you are still facing issues, please reach out to us at [Discord](https://discord.gg/dria) for further assistance.
-```
+For more, check out Dria Factory tab, or go cracked mode and see how you can build custom pipelines and task!

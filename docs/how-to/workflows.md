@@ -5,14 +5,14 @@ categories:
 - Workflows
 comments: true
 date: 2024-10-29
-description: Explore custom workflows in Dria Network using the dria_workflows package
-  to enhance task management with LLMs.
+description: Learn to create custom workflows in the Dria Network for efficient task
+  management and LLM integration.
 tags:
 - Dria Network
-- Workflows
+- custom workflows
 - LLM
+- task management
 - Python
-- Custom Tasks
 title: Custom Workflows within Dria Network
 ---
 

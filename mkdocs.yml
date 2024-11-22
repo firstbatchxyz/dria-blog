@@ -68,7 +68,8 @@ markdown_extensions:
 nav:
   - Getting Started:
     - What is Dria?: "README.md"
-    - Installation: "quickstart.md"
+    - Installation: "installation.md"
+    - Quickstart: "quickstart.md"
     - Run a Node (Optional): "node.md"
   - How-To Guides:
     - Tasks: "how-to/tasks.md"
@@ -80,6 +81,7 @@ nav:
       - Functions: "how-to/functions.md"
       - Structured Outputs: "how-to/structured_outputs.md"
       - Creating Pipelines: "how-to/pipelines.md"
+      - Formatting for Training: "how-to/formatting.md"
   - Factory:
     - Singletons:
       - Simple: "factory/simple.md"
@@ -92,6 +94,7 @@ nav:
       - Evolve Quality: "factory/quality_evolution.md"
       - Generate Graph: "factory/graph_builder.md"
       - MagPie: "factory/magpie.md"
+      - Instruction Backtranslation: "factory/instruction_backtranslation.md"
       - MultiHopQA: "factory/multihopqa.md"
       - Self-Instruct: "factory/self_instruct.md"
       - Text Embeddings:

@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Discover how to select and manage models in Dria Network for efficient
-  task execution using LLMs and asynchronous processing.
+- Applied AI
+description: Explore how to select and assign models in Dria Network's LLM infrastructure
+  for efficient task execution.
 tags:
 - LLM
+- Task Execution
+- Model Selection
 - Dria Network
-- model selection
-- task execution
-- asynchronous processing
+- Mixture-of-Agents
 ---
 
 # Selecting Models
