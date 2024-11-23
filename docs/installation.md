@@ -110,7 +110,7 @@ Install brew by:
 and run:
 
 ```commandline
-brew install automake libtool
+brew install automake libtool pkg-config
 ```
 
 re create env
