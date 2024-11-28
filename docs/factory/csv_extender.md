@@ -34,7 +34,6 @@ import os
 
 from dria.client import Dria
 from dria.factory import CSVExtenderPipeline
-from dria.pipelines import PipelineConfig
 import json
 
 dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
@@ -79,7 +78,7 @@ Daily Life, Weather, Retrieve the weekly weather forecast of a location"""
 
 async def evaluate():
     await dria.initialize()
-    pipeline = CSVExtenderPipeline(dria, PipelineConfig()).build(
+    pipeline = CSVExtenderPipeline(dria).build(
         csv=data, num_rows=3, num_values=4
     )
     res = await pipeline.execute(return_output=True)

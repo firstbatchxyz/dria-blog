@@ -50,9 +50,8 @@ async def evaluate():
                 low_score=2,
                 difficulty="college"
             ),
-            models=[Model.LLAMA3_2_3B],
-        ),
-        timeout=45,
+            models=[Model.GEMINI_15_FLASH],
+        )
     )
     return semantic_triplet.parse_result(res)
 

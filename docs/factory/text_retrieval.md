@@ -57,9 +57,8 @@ async def evaluate():
                 language="English",
                 difficulty="high school"
             ),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+          models=[Model.LLAMA3_1_8B_FP16, Model.QWEN2_5_72B_OR],
+        )
     )
     return text_retrieval.parse_result(res)
 

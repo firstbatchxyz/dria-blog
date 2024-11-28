@@ -46,9 +46,8 @@ async def evaluate():
                 responding_persona="An AI assistant",
                 num_turns=3
             ),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=60,
+            models=[Model.GPT40_MINI],
+        )
     )
     return magpie.parse_result(res)
 

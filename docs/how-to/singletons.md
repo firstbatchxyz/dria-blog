@@ -35,7 +35,7 @@ evolve_instruct = EvolveInstruct()
 original_prompt = "Explain the concept of photosynthesis."
 task = Task(
     workflow=evolve_instruct.workflow(prompt=original_prompt, mutation_type="DEEPEN"),
-    models=[Model.GEMMA2_9B_FP16],
+    models=[Model.GPT4O_MINI],
 )
 ```
 

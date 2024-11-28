@@ -49,9 +49,9 @@ async def evaluate():
                 clarity="clear",
                 difficulty="high school"
             ),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.QWEN2_5_72B_OR,
+                    Model.LLAMA3_1_8B_FP16],
+        )
     )
     return text_classification.parse_result(res)
 

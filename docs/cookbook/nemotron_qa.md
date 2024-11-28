@@ -326,15 +326,14 @@ That's it! We've created all the steps.
 #### Building the Pipeline
 
 Final step for implementing the pipeline is to connect the steps using `PipelineBuilder`.
-The `PipelineBuilder`requires a `Dria` instance and a `PipelineConfig` object. 
+The `PipelineBuilder`requires a `Dria` instance. 
 
 We'll create a `NemotronQA` class to build the pipeline.
 
 ```python
 class NemotronQA:
     def __init__(self, dria: Dria):
-        self.pipeline_config: PipelineConfig = PipelineConfig()
-        self.pipeline = PipelineBuilder(self.pipeline_config, dria)
+        self.pipeline = PipelineBuilder(dria)
 ```
 
 Since we have implemented three steps, we'll define a list of models for each step. 
@@ -346,8 +345,7 @@ We define a list of models which act as a `model pool` for the step. If there ar
 ```python
 class NemotronQA:
     def __init__(self, dria: Dria):
-        self.pipeline_config: PipelineConfig = PipelineConfig()
-        self.pipeline = PipelineBuilder(self.pipeline_config, dria)
+        self.pipeline = PipelineBuilder(dria)
         self.models_list = [
             [Model.GPT4O],
             [

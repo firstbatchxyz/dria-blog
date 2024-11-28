@@ -42,9 +42,9 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=evolve.workflow(instruction="Write a short story about a cat."),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.GPT4O,
+                    Model.LLAMA_3_1_8B_OR],
+        )
     )
     return evolve.parse_result(res)
 

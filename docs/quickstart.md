@@ -44,8 +44,7 @@ async def run_task():
                 num_turns=3
             ),
             models=[Model.GPT4O_MINI],
-        ),
-        timeout=60,
+        )
     )
     return magpie.parse_result(res)
 ```

@@ -173,12 +173,11 @@ We use `<<` notation to add multiple steps to the pipeline and determine the ord
 
 ```python
 from dria.client import Dria
-from dria.pipelines import Pipeline, PipelineConfig, PipelineBuilder
+from dria.pipelines import Pipeline, PipelineBuilder
 class BasicPipeline:
 
-    def __init__(self, dria: Dria, config: PipelineConfig):
-        self.pipeline_config: PipelineConfig = config or PipelineConfig()
-        self.pipeline = PipelineBuilder(self.pipeline_config, dria)
+    def __init__(self, dria: Dria):
+        self.pipeline = PipelineBuilder(dria)
 
     def build(self, instruction: str) -> Pipeline:
         

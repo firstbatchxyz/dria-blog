@@ -48,9 +48,8 @@ async def evaluate():
                 application_description="A task management AI assistant",
                 context="Professional work environment"
             ),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.GEMINI_15_PRO],
+        )
     )
     return self_instruct.parse_result(res)
 

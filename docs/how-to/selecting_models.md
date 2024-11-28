@@ -59,8 +59,7 @@ async def evaluate():
         models=[Model.OLLAMA],
     )
     res = await dria.execute(
-        task=[task] * 10,
-        timeout=200,
+        task=[task] * 10
     )
     return simple.parse_result(res)
 ```

@@ -48,9 +48,8 @@ async def evaluate():
                 instruction="Write a function to calculate the factorial of a number",
                 language="python"
             ),
-            models=[Model.QWEN2_5_CODER_1_5B],
-        ),
-        timeout=45,
+            models=[Model.GPT40],
+        )
     )
     return generate_code.parse_result(res)
 

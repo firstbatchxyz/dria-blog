@@ -52,8 +52,7 @@ async def evaluate():
         Task(
             workflow=mhop.workflow(chunks=chunks),
             models=[Model.GEMINI_15_FLASH],
-        ),
-        timeout=45,
+        )
     )
     return mhop.parse_result(res)
 

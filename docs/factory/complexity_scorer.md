@@ -46,9 +46,8 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=score_complexity.workflow(instructions=instructions),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.GEMINI_15_FLASH],
+        )
     )
     return score_complexity.parse_result(res)
 

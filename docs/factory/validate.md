@@ -44,9 +44,8 @@ async def evaluate():
                 prediction="The capital of France is Paris.",
                 correct_answer="Paris is the capital city of France."
             ),
-            models=[Model.QWEN2_5_32B_FP16],
-        ),
-        timeout=45,
+            models=[Model.QWEN2_5_32B_FP16, Model.QWEN2_5_72B_OR],
+        )
     )
     return validate_prediction.parse_result(res)
 

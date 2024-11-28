@@ -30,7 +30,6 @@ import os
 
 from dria.client import Dria
 from dria.factory import ListExtenderPipeline
-from dria.pipelines import PipelineConfig
 import json
 
 dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
@@ -38,9 +37,8 @@ dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
 
 async def evaluate():
     await dria.initialize()
-    pipeline = ListExtenderPipeline(dria, PipelineConfig()).build(list=["Wildlife", "Computers", "Food", "Physics", "Communication", "Music", "Sociology", "Art", "Modern Art", "Mechanical Physics"], granularize=True)
+    pipeline = ListExtenderPipeline(dria).build(list=["Wildlife", "Computers", "Food", "Physics", "Communication", "Music", "Sociology", "Art", "Modern Art", "Mechanical Physics"], granularize=True)
     res = await pipeline.execute(return_output=True)
-    print("Done")
     with open("lists.json", "w") as f:
         f.write(json.dumps(res, indent=2))
     print(res)
