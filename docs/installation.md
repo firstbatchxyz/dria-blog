@@ -46,44 +46,11 @@ pip install --upgrade dria
 
 If issues persist, see [section](#gcc-related-issues)
 
-## Obtaining Your RPC Key
-
-To interact with the Dria Network, you'll need an RPC token. 
-
-### Community Network
-
-Dria Community Network consists of community nodes with LLMs and tool usage capabilities.
-Visit the [Dria Login API](https://dkn.dria.co/auth/generate-token) and get your unique RPC token.
-
-### Pro Network
-
-Dria Pro Network consists of high performance nodes, equipped with even more powerful LLMs, compute and 99.9% reliability.
-Pro Network is more suitable for production-grade applications and partners in the ecosystem. 
-Please fill out the [form](https://forms.gle/yGtLZw3HPW7kgD427) to get access to the Pro Network:
-
-### Setting Up Your Environment
-
-You can add your RPC key as an env variable by following command on your terminal
-```commandline
-export DRIA_RPC_TOKEN=your-token-here
-```
-
-Alternatively, you can create a `.env` file and use `dotenv`
-Your .env file should look like:
-```dotenv
-DRIA_RPC_TOKEN=your-token-here
-```
-Import env variables with:
-```python
-from dotenv import load_dotenv
-load_dotenv()
-```
-
 ## Important Notes
 
 - **Network Status**: The Dria Network is currently in __alpha__ stage. Access is managed through RPCs to ensure controlled access and trusted task execution.
 
-- **Cost**: At present, there is no cost associated with generating data using Dria. However, a valid RPC token is required to access the network.
+- **Cost**: At present, there is no cost associated with generating data using Dria.
 
 - **Contributing**: You can contribute to the Dria ecosystem by running a [node](https://dria.co/join) in the Dria network. This helps scale the network and improve throughput.
 
