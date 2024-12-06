@@ -1,6 +1,7 @@
 # Exporting Data
 
-### To Different Formats
+Data within DriaDataset can export to different formats:
+
 ```python
 # Export to pandas DataFrame
 df = dataset.to_pandas()
@@ -41,9 +42,93 @@ HuggingFace's TRL is a framework to train transformer language models with Reinf
 Dria allows you to convert the generated data into the expected dataset [format](https://huggingface.co/docs/trl/dataset_formats) for each trainer in the TRL framework. 
 Enabling seamless plug-n-play with HuggingFace's TRL.
 
+Here is an example exporting MagPie data in `CONVERSATIONAL_PROMPT_COMPLETION` format.
+First create dataset and generate data:
+
+```python
+from dria import DriaDataset, DatasetGenerator, Model
+from dria.factory import MagPie
+import asyncio
+from dria.utils import ConversationMapping, FieldMapping, FormatType
+
+
+instructions = [
+    {
+        "instructor_persona": "A math student",
+        "responding_persona": "An AI teaching assistant.",
+        "num_turns": 3,
+    },
+    {
+        "instructor_persona": "A chemistry student",
+        "responding_persona": "An AI teaching assistant.",
+        "num_turns": 3,
+    },
+    {
+        "instructor_persona": "A physics student",
+        "responding_persona": "An AI teaching assistant.",
+        "num_turns": 3,
+    },
+    {
+        "instructor_persona": "A music student",
+        "responding_persona": "An AI teaching assistant.",
+        "num_turns": 5,
+    },
+    {
+        "instructor_persona": "A visual arts student",
+        "responding_persona": "An AI teaching assistant.",
+        "num_turns": 2,
+    },
+]
+
+my_dataset = DriaDataset("magpie_test", "a test dataset", MagPie.OutputSchema)
+generator = DatasetGenerator(dataset=my_dataset)
+
+
+asyncio.run(
+    generator.generate(
+        instructions,
+        MagPie,
+        [
+            Model.ANTHROPIC_HAIKU_3_5_OR,
+            Model.QWEN2_5_72B_OR,
+            Model.LLAMA_3_1_8B_OR,
+            Model.LLAMA3_1_8B_FP16,
+        ],
+    )
+)
+```
+
+You can export data by creating a ConversationMapping for CONVERSATIONAL_PROMPT_COMPLETION.
+MagPie outputs:
+
+```python
+class DialogueTurn(BaseModel):
+    instructor: str = Field(..., description="Instructor's message")
+    responder: str = Field(..., description="Responder's message")
+
+
+class DialogueOutput(BaseModel):
+    dialogue: List[DialogueTurn] = Field(..., description="List of dialogue turns")
+    model: str = Field(..., description="Model used for generation")
+```
+
+So DriaDataset will read the `dialogue` field and map `instructor` to `user_message` and `responder` to the `assistant_message`.
+DriaDataset will export a jsonl file in suitable format.
+
+```python
+cmap = ConversationMapping(
+    conversation=FieldMapping(user_message="instructor", assistant_message="responder"),
+    field="dialogue",
+)
+my_dataset.format_for_training(
+    FormatType.CONVERSATIONAL_PROMPT_COMPLETION, cmap, output_format="jsonl"
+)
+
+```
+
+Here are the full list of TRL formats mapped to Dria formats.
+
 ---
-
-
 | Trainer               | Expected Dataset Type                                       |
 |-----------------------|------------------------------------------------------------|
 | **BCOTrainer**        | `FormatType.STANDARD_UNPAIRED_PREFERENCE`                  |
@@ -60,36 +145,4 @@ Enabling seamless plug-n-play with HuggingFace's TRL.
 | **SFTTrainer**        | `FormatType.STANDARD_LANGUAGE_MODELING`                    |
 | **XPOTrainer**        | `FormatType.STANDARD_PROMPT_ONLY`                          |
 
-## Schema Management
-
-### Update Schema
-```python
-# Add new fields to schema
-dataset.update_schema({"new_field": (str, ...)})
-```
-
-## Data Access
-
-```python
-# Get all entries
-entries = dataset.get_entries()
-
-# Get entries without metadata
-data_only = dataset.get_entries(data_only=True)
-```
-
-## Key Features
-
-1. **Schema Validation**: Ensures data consistency using Pydantic models
-2. **Flexible Import/Export**: Supports multiple data formats
-3. **Database Integration**: Persistent storage with DatasetDB
-4. **Schema Evolution**: Ability to update schema and mutate data
-5. **Training Format**: Specialized formatting for ML training
-6. **Data Validation**: Automatic validation of entries against schema
-
-## Notes
-
-- Always initialize with a proper schema for data validation
-- Use appropriate data types in schema definition
-- Consider memory limitations when working with large datasets
-- Ensure proper database configuration for persistence
+---

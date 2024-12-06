@@ -81,3 +81,36 @@ dataset = DriaDataset.from_huggingface(
 )
 ```
 
+## Schema Management
+
+### Update Schema
+```python
+# Add new fields to schema
+dataset.update_schema({"new_field": (str, ...)})
+```
+
+## Data Access
+
+```python
+# Get all entries
+entries = dataset.get_entries()
+
+# Get entries without metadata
+data_only = dataset.get_entries(data_only=True)
+```
+
+## Key Features
+
+1. **Schema Validation**: Ensures data consistency using Pydantic models
+2. **Flexible Import/Export**: Supports multiple data formats
+3. **Database Integration**: Persistent storage with DatasetDB
+4. **Schema Evolution**: Ability to update schema and mutate data
+5. **Training Format**: Specialized formatting for ML training
+6. **Data Validation**: Automatic validation of entries against schema
+
+## Notes
+
+- Always initialize with a proper schema for data validation
+- Use appropriate data types in schema definition
+- Consider memory limitations when working with large datasets
+- Ensure proper database configuration for persistence
