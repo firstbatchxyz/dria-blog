@@ -44,21 +44,6 @@ Dria comes with a extensive factory of built-in tools derived from verified rese
 
 Dria enables you to create pipelines in which the AI can search for grounding in the web or siloed APIs, allowing you to create diverse synthetic data with real-life distribution.
 
-
-#### Decentralization
-
-_Dria’s primary objective is to leverage decentralization to obtain state-of-the-art synthesized data._
-
-**What does leveraging decentralization mean?**
-
-Creating value for AI that can be obtained through decentralization.
-
-- Unbounded access to web based grounding
-- Hyper parallelization of inference
-- Ensemble outputs from diverse models
-- Ability to include human diversity
-- Creating economic value
-
 [Get Started](installation.md)
 
 [Run a Node](node.md)

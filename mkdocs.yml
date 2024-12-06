@@ -71,17 +71,19 @@ nav:
     - Installation: "installation.md"
     - Quickstart: "quickstart.md"
     - Run a Node (Optional): "node.md"
-  - How-To Guides:
-    - Dria Datasets: "how-to/"
-    - Data Generator: "how-to/singletons.md"
-    - Selecting Models: "how-to/selecting_models.md"
-    - Batches: "how-to/batches.md"
+  - Basics:
+    - Dria Datasets:
+      - Create: "how-to/dria_datasets.md"
+      - Exports: "how-to/dria_datasets_exports.md"
+    - Data Generation:
+      - Generator: "how-to/data_generators.md"
+      - Prompts: "how-to/prompters.md"
+      - Singletons: "how-to/singletons"
+      - Selecting Models: "how-to/selecting_models.md"
   - Advanced:
-      - Writing Workflows: "how-to/workflows.md"
+      - Complex Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"
       - Structured Outputs: "how-to/structured_outputs.md"
-      - Creating Pipelines: "how-to/pipelines.md"
-      - Formatting for Training: "how-to/formatting.md"
   - Cookbook:
       - Evaluating RAG Systems with Synthetic Data: "cookbook/eval.md"
       - Implementing Nvidia's Preference Data Pipeline using Dria Network: "cookbook/nemotron_qa.md"

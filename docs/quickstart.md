@@ -16,7 +16,7 @@ tags:
 > In order to follow this guide, you need to [install](installation.md) Dria SDK.
 
 
-Using Dria is easy. 
+Using Dria is simple: 
 
 - Create a dataset
 - Attach a dataset generator
@@ -58,4 +58,4 @@ dataset.to_pandas()
 ```
 
 And that's it!
-No API keys or GPUs needed.
+This script will run your instructions on models of your choice, execute them on a network of LLMs, and store them on a local database.
