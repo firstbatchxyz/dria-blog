@@ -33,7 +33,6 @@ Usage Example
 ```python
 import os
 from dria.client import Dria
-from dria.pipelines import PipelineConfig
 from dria.factory import QAPipeline
 import asyncio
 import json
@@ -70,7 +69,7 @@ async def run_pipeline():
     chunks = ["\n".join(lines[i:i + 100]) for i in range(0, len(lines), 100)]
     await dria.initialize()
 
-    pipeline = QAPipeline(dria, PipelineConfig(pipeline_timeout=500)).build(
+    pipeline = QAPipeline(dria).build(
         simulation_description="Grad students who wants to learn about uses cases of the paper",
         num_samples=5,
         persona="A researcher that is concise and direct",

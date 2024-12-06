@@ -156,7 +156,7 @@ We'll use existing chunks as our context to generate questions.
 Instead of using chunks directly, we are merging them as files, and using files as whole to boost pipelines ability to generate coherent questions.
 
 ```python
-pipeline = QAPipeline(dria, config=PipelineConfig()).build(
+pipeline = QAPipeline(dria).build(
     simulation_description="AI developers and researchers learning Huggingface. "
                            "Some focus on fine-tuning and post-training, others on RAG systems, "
                            "retrieval problems, image models, or dataset work.",
@@ -172,7 +172,7 @@ We can now execute the pipeline to generate question-answer pairs.
 async def run_qa_pipeline(dria: Dria, file_chunks):
     await dria.initialize()
 
-    pipeline = QAPipeline(dria, config=PipelineConfig()).build(
+    pipeline = QAPipeline(dria).build(
         simulation_description="AI developers and researchers learning Huggingface. "
                                "Some focus on fine-tuning and post-training, others on RAG systems, "
                                "retrieval problems, image models, or dataset work.",
@@ -223,7 +223,6 @@ Here is the complete code to generate multi-hop questions:
 async def run_multihop_tasks(dria: Dria, file_chunks):
     singleton = MultiHopQuestion()
     executor = ParallelSingletonExecutor(dria, singleton)
-    executor.set_timeout(150)
     executor.set_models(
         [
             Model.QWEN2_5_72B_OR,

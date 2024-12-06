@@ -97,7 +97,7 @@ We'll run it using the following code:
 ```python
 async def execute_workflow(dria: Dria, **kwargs):
     tasks = Task(workflow=Generator().workflow(**kwargs), models=[Model.GPT4O_MINI])
-    res = await dria.execute(tasks, timeout=60)
+    res = await dria.execute(tasks)
     return Generator().parse_result(res)
 
 
@@ -181,7 +181,7 @@ class BookReviewSingleton(SingletonTemplate):
 
 async def execute_workflow(dria: Dria):
     task = Task(workflow=BookReviewSingleton().workflow(), models=[Model.GPT4O_MINI])
-    res = await dria.execute(task, timeout=60)
+    res = await dria.execute(task)
     return BookReviewSingleton().parse_result(res)
 
 

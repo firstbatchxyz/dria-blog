@@ -45,9 +45,8 @@ async def evaluate():
                 task_description="Generate a text matching example for sentiment analysis",
                 language="English"
             ),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.LLAMA3_1_8B_FP16, Model.QWEN2_5_72B_OR],
+        )
     )
     return text_matching.parse_result(res)
 

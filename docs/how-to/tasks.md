@@ -63,9 +63,8 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=simple.workflow(prompt="Hey there!"),
-            models=[Model.LLAMA3_1_8B_FP16],
-        ),
-        timeout=45,
+            models=[Model.GPT4O],
+        )
     )
     return simple.parse_result(res)
 

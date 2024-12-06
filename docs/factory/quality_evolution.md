@@ -52,10 +52,8 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=evolve_quality.workflow(prompt=original_prompt, response=original_response, method="DEEPENING"),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
-    )
+            models=[Model.GPT4O],
+        )
     return evolve_quality.parse_result(res)
 
 def main():

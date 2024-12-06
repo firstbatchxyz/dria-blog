@@ -47,8 +47,7 @@ async def evaluate():
                 context="France is a country in Western Europe. Its capital city is Paris."
             ),
             models=[Model.GPT4O]
-        ),
-        timeout=45,
+        )
     )
     return evaluator.parse_result(res)
 

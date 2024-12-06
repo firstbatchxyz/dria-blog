@@ -29,7 +29,8 @@ async def batch():
     dria_client = Dria()
     singleton = Simple()
     executor = ParallelSingletonExecutor(dria_client, singleton)
-    executor.set_models([Model.QWEN2_5_7B_FP16, Model.LLAMA3_2_3B, Model.LLAMA3_2_1B])
+    executor.set_models([Model.QWEN2_5_7B_OR, Model.LLAMA_3_1_8B_OR,
+                         Model.QWEN2_5_7B_FP16, Model.LLAMA3_2_3B, Model.LLAMA3_2_1B])
     executor.load_instructions([{ "prompt": "What is the capital of France?" }, { "prompt": "What is the capital of Germany?" }])
     return await executor.run()
 

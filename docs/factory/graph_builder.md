@@ -42,9 +42,9 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=generate_graph.workflow(context=context),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=75,
+            models=[Model.LLAMA_3_1_8B_OR,
+                    Model.LLAMA3_1_8B_FP16],
+        )
     )
     return generate_graph.parse_result(res)
 

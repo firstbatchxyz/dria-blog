@@ -33,14 +33,13 @@ import os
 import json
 from dria.client import Dria
 from dria.factory import SearchPipeline
-from dria.pipelines import PipelineConfig
 
 dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
 
 
 async def evaluate():
     await dria.initialize()
-    pipeline = SearchPipeline(dria, PipelineConfig(pipeline_timeout=80)).build(
+    pipeline = SearchPipeline(dria).build(
         topic="Entropy-based sampling", summarize=True
     )
     res = await pipeline.execute(return_output=True)

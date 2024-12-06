@@ -47,9 +47,8 @@ async def evaluate():
     res = await dria.execute(
         Task(
             workflow=clair.workflow(task=task, student_solution=student_solution),
-            models=[Model.GEMMA2_9B_FP16],
-        ),
-        timeout=45,
+            models=[Model.GPT4O],
+        )
     )
     return clair.parse_result(res)
 
