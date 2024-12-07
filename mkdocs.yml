@@ -71,15 +71,14 @@ nav:
     - Installation: "installation.md"
     - Quickstart: "quickstart.md"
     - Run a Node (Optional): "node.md"
-  - Basics:
-    - Dria Datasets:
-      - Create: "how-to/dria_datasets.md"
-      - Exports: "how-to/dria_datasets_exports.md"
-    - Data Generation:
-      - Generator: "how-to/data_generators.md"
-      - Prompts: "how-to/prompters.md"
-      - Singletons: "how-to/singletons"
-      - Selecting Models: "how-to/selecting_models.md"
+  - Datasets:
+    - Create: "how-to/dria_datasets.md"
+    - Exports: "how-to/dria_datasets_exports.md"
+  - Data Generation:
+    - Generator: "how-to/data_generators.md"
+    - Prompts: "how-to/prompters.md"
+    - Singletons: "how-to/singletons"
+    - Selecting Models: "how-to/selecting_models.md"
   - Advanced:
       - Complex Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"

@@ -21,45 +21,7 @@ tags:
 #### Outputs
 - scores (`str`): A string containing the complexity scores for each instruction.
 
-### Example
-
-Rank a list of instructions based on complexity. This example uses the `GEMMA2_9B_FP16` model.
-
-```python
-import os
-import asyncio
-from dria.factory import ScoreComplexity
-from dria.client import Dria
-from dria.models import Task, Model
-
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    score_complexity = ScoreComplexity()
-    instructions = [
-        "Boil water in a kettle",
-        "Write a research paper on quantum physics",
-        "Tie your shoelaces",
-        "Develop a machine learning algorithm",
-        "Make a sandwich"
-    ]
-    res = await dria.execute(
-        Task(
-            workflow=score_complexity.workflow(instructions=instructions),
-            models=[Model.GEMINI_15_FLASH],
-        )
-    )
-    return score_complexity.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
-```
-
-Expected output
+#### Expected output
 
 ```json
 [

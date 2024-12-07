@@ -7,10 +7,13 @@ Data within DriaDataset can export to different formats:
 df = dataset.to_pandas()
 
 # Export to JSONL
-dataset.to_jsonl("output.jsonl")
+dataset.to_jsonl()
 
 # Export to JSON
-dataset.to_json("output.json")
+dataset.to_json()
+
+# Export to custom path
+dataset.to_json("export.jsonl")
 ```
 
 ### Format for Training
@@ -43,7 +46,9 @@ Dria allows you to convert the generated data into the expected dataset [format]
 Enabling seamless plug-n-play with HuggingFace's TRL.
 
 Here is an example exporting MagPie data in `CONVERSATIONAL_PROMPT_COMPLETION` format.
-First create dataset and generate data:
+First create dataset and generate data.
+
+#### Generate Data
 
 ```python
 from dria import DriaDataset, DatasetGenerator, Model
@@ -97,6 +102,7 @@ asyncio.run(
     )
 )
 ```
+#### Export Data
 
 You can export data by creating a ConversationMapping for CONVERSATIONAL_PROMPT_COMPLETION.
 MagPie outputs:

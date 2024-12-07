@@ -62,5 +62,6 @@ You can also select providers as your models.
 OLLAMA = "ollama"  # Open source models
 OPENAI = "openai"  # OpenAI models
 GEMINI = "gemini"  # Gemini models
+OPENROUTER = "openrouter"  # OpenRouter models
 CODER = "coder"  # Coder models
 ```

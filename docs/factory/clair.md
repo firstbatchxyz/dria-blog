@@ -26,41 +26,19 @@ tags:
 - student_solution (`str`): The original student solution (echoed from input).
 - model (`str`): The model used for code generation.
 
-### Example
-
-Generate a corrected student solution based on a given task and the student's original solution. This example uses the `GEMMA2_9B_FP16` model.
 
 ```python
-import os
-import asyncio
 from dria.factory import Clair
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    clair = Clair()
-    task = "Write a function to calculate the factorial of a number."
-    student_solution = "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)"
-    
-    res = await dria.execute(
-        Task(
-            workflow=clair.workflow(task=task, student_solution=student_solution),
-            models=[Model.GPT4O],
-        )
-    )
-    return clair.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="clair",
+    description="A dataset for clair",
+    schema=Clair.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+#### Expected output
 
 ```json
 {

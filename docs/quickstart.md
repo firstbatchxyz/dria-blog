@@ -59,3 +59,8 @@ dataset.to_pandas()
 
 And that's it!
 This script will run your instructions on models of your choice, execute them on a network of LLMs, and store them on a local database.
+
+
+---
+
+**Note**: Network capacity and data generation volumes are limited during the current phase of Dria.
