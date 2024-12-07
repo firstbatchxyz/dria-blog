@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: SelfInstruct generates dynamic user queries for AI applications based
-  on specified criteria and context for enhanced interaction.
+description: SelfInstruct generates user queries for AI applications based on specified
+  criteria and context, enhancing task management efficiency.
 tags:
 - AI applications
-- User queries
-- Task management
+- user queries
+- task management
 - SelfInstruct
-- Dynamic generation
+- query generation
 ---
 
 # SelfInstruct

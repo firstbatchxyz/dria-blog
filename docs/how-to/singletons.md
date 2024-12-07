@@ -1,3 +1,16 @@
+---
+categories:
+- Workflows
+description: Learn about Singletons in Dria, including how to use and create your
+  own for efficient task handling with Pydantic validation.
+tags:
+- Singletons
+- Dria
+- Pydantic
+- Task Management
+- Data Generation
+---
+
 # Singletons
 
 Singletons are pre-built task templates that perform specific functions using a standardized structure. 
@@ -206,4 +219,3 @@ Based on this prompt, we add a `callback` method:
                 raise ValueError("The result is not a boolean value.")
         return outputs
 ```
-

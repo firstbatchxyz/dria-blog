@@ -1,3 +1,16 @@
+---
+categories:
+- Workflows
+description: Learn how to export data using DriaDataset in various formats like JSON,
+  JSONL, and prepare it for training with HuggingFace TRL.
+tags:
+- DriaDataset
+- Data Export
+- HuggingFace
+- Data Formatting
+- Training Data
+---
+
 # Exporting Data
 
 Data within DriaDataset can export to different formats:

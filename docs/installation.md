@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Learn how to install Dria SDK, obtain your RPC key, and set up your environment
-  for data generation using Dria Network.
+- Software Engineering
+description: Learn how to install the Dria SDK, set up dependencies, and troubleshoot
+  installation issues for creating synthetic data pipelines.
 tags:
 - Dria SDK
-- Python
-- RPC Key
 - Installation
-- Data Generation
+- Python
+- Synthetic Data
+- Conda
 ---
 
 # Installation

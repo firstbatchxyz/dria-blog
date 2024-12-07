@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn how to run an example batch process using Dria and asyncio to handle
-  multiple models efficiently.
+description: Explore an example of asynchronous batch processing using the Dria library
+  with multiple AI models.
 tags:
 - Dria
-- asyncio
-- batch processing
-- AI models
-- Python example
+- Python
+- Asynchronous
+- AI Models
+- Batch Processing
 ---
 
 # Example Run

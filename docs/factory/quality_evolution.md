@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Evolve the quality of responses to prompts using specified methods in
-  Python with EvolveQuality, a Singleton task from Dria.
+- Applied AI
+description: Evolve the quality of responses through effective rewriting methods within
+  AI frameworks.
 tags:
+- Response Quality
+- AI Rewriting
+- Task Automation
 - EvolveQuality
-- AI Response Generation
-- Python
-- Dria
-- Quality Improvement
+- Model Evaluation
 ---
 
 # EvolveQuality

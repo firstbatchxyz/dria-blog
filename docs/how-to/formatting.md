@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore the Formatter class for converting datasets into training-ready
-  formats for Dria Network and HuggingFace TRL.
+- Software Engineering
+description: Learn how to format data with the Formatter class for various training
+  formats in AI applications.
 tags:
 - Formatter
-- Dria Network
 - Data Formatting
-- HuggingFace
-- Training Data
+- AI Training
+- Data Processing
+- Dria Network
 ---
 
 # Formatter

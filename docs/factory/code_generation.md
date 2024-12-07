@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate code efficiently using a SingletonTemplate task with specified
-  instructions and programming languages.
+description: Generate code instantly with the GenerateCode task using specified languages
+  and instructions. Ideal for coder models.
 tags:
 - code generation
-- programming
 - software engineering
-- asyncio
-- Python
+- AI coding
+- programming tasks
+- machine learning
 ---
 
 # GenerateCode

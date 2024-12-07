@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Rank instructions by complexity with ScoreComplexity using GEMMA2 model.
-  Ideal for evaluating task difficulty in NLP.
+- Preference Data
+description: Rank instructions by complexity using the ScoreComplexity singleton task,
+  providing scores and model references for guidance.
 tags:
-- complexity
-- natural language processing
-- task ranking
-- AI models
-- instruction evaluation
+- Complexity Scoring
+- Instructions Ranking
+- Machine Learning
+- Task Automation
+- Data Analysis
 ---
 
 # ScoreComplexity

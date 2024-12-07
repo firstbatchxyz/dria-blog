@@ -1,12 +1,12 @@
 ---
 categories:
 - Software Engineering
-description: Explore the nuances and applications of function calling in programming
-  for enhanced code efficiency.
+description: Learn how to effectively implement function calling in your programming
+  projects with this comprehensive guide.
 tags:
 - function calling
 - programming
-- code efficiency
-- software engineering
-- best practices
+- software development
+- coding
+- API
 ---

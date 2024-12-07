@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Quick start guide to create a dialogue using Dria SDK with Python. Learn
-  to implement a math teacher-student interaction.
+- Data Generation
+description: Quick start guide to using Dria SDK for generating tweets with customizable
+  prompts and dataset management.
 tags:
 - Dria SDK
+- Dataset Generation
 - Python
-- Dialogue Generation
-- AI Models
-- Quick Start
+- Machine Learning
+- Prompt Engineering
 ---
 
 # Quick Start

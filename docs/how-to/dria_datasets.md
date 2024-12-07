@@ -1,3 +1,16 @@
+---
+categories:
+- Data Generation
+description: Discover the Dria Dataset for flexible data generation and management
+  with schema validation and easy imports from various formats.
+tags:
+- data generation
+- schema validation
+- Dria
+- data management
+- datasets
+---
+
 # Dria Dataset
 
 The `DriaDataset` class serves as the foundation of Dria's data generation framework. 

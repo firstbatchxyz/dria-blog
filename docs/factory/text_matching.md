@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Discover how to use the TextMatching task to generate JSON objects for
-  various text matching applications in different languages.
+description: Explore the TextMatching Singleton task for generating JSON examples
+  in text matching, including inputs and expected outputs.
 tags:
 - Text Matching
 - JSON Generation
+- AI Workflows
 - Natural Language Processing
-- Sentiment Analysis
-- GEMMA2 Model
+- Text Analysis
 ---
 
 # TextMatching

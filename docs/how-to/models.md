@@ -1,16 +1,3 @@
----
-categories:
-- Applied AI
-description: Explore the list of available AI models in the Dria Network including
-  Nous, Phi, and Llama from major tech companies.
-tags:
-- AI Models
-- Dria Network
-- Machine Learning
-- Tech
-- Model Availability
----
-
 # Models
 
 See available models in Dria Network below:
@@ -36,6 +23,7 @@ See available models in Dria Network below:
 | `Llama3_1_70BTextQ4KM` | `llama3.1:70b-text-q4_0` | Meta's LLama3.1 model fp16 |
 | `Llama3_2_1B` | `llama3.2:1b` | Meta's LLama3.2 Edge models, 1B parameters |
 | `Llama3_2_3B` | `llama3.2:3b` | Meta's LLama3.2 Edge models, 3B parameters |
+| `Llama3_3_70B` | `llama3.3:70b` | Meta's LLama3.3 Edge models, 3B parameters |
 | `Llama3_2_1BTextQ4KM` | `llama3.2:1b-text-q4_K_M` | Meta's LLama3.2 Edge models, 1B parameters, q4 |
 | `Qwen2_5_7B` | `qwen2.5:7b-instruct-q5_0` | Alibaba's Qwen2.5 model, 7B parameters |
 | `Qwen2_5_7Bf16` | `qwen2.5:7b-instruct-fp16` | Alibaba's Qwen2.5 model, 7B parameters, fp16 |
@@ -44,6 +32,7 @@ See available models in Dria Network below:
 | `Qwen2_5coder7B` | `qwen2.5-coder:7b-instruct` | AliBaba's Qwen2.5 7b |
 | `Qwen2_5oder7Bq8` | `qwen2.5-coder:7b-instruct-q8_0` | AliBaba's Qwen2.5 7b 8bit |
 | `Qwen2_5coder7Bf16` | `qwen2.5-coder:7b-instruct-fp16` | AliBaba's Qwen2.5 7b 16bit |
+| `QwenQwq` | `qwq` | AliBaba's QwenQwq |
 | `DeepSeekCoder6_7B` | `deepseek-coder:6.7b` | DeepSeek Coding models |
 | `Mixtral8_7b` | `mixtral:8x7b` | Mistral's MoE Models |
 | `GPT4Turbo` | `gpt-4-turbo` | OpenAI's GPT-4 Turbo model |
@@ -62,12 +51,14 @@ See available models in Dria Network below:
 | `ORLlama3_1_70B` | `meta-llama/llama-3.1-70b-instruct` | OpenRouter Models |
 | `ORLlama3_1_405B` | `meta-llama/llama-3.1-405b-instruct` | OpenRouter Models |
 | `ORLlama3_1_70BFree` | `meta-llama/llama-3.1-70b-instruct:free` | OpenRouter Models |
+| `ORLlama3_3_70B` | `meta-llama/llama-3.3-70b-instruct` | OpenRouter Models |
 | `OR3_5Sonnet` | `anthropic/claude-3.5-sonnet:beta` | OpenRouter Models |
 | `OR3_5Haiku` | `anthropic/claude-3-5-haiku-20241022:beta` | OpenRouter Models |
 | `ORQwen2_5_72B` | `qwen/qwen-2.5-72b-instruct` | OpenRouter Models |
 | `ORQwen2_5_7B` | `qwen/qwen-2.5-7b-instruct` | OpenRouter Models |
 | `ORQwen2_5Coder32B` | `qwen/qwen-2.5-coder-32b-instruct` | OpenRouter Models |
 | `ORQwen2_5Eva32B` | `eva-unit-01/eva-qwen-2.5-32b` | OpenRouter Models |
+| `ORQwenQwq` | `qwen/qwq-32b-preview` | OpenRouter Models |
 | `ORDeepSeek2_5` | `deepseek/deepseek-chat` | OpenRouter Models |
 | `ORNousHermes405B` | `nousresearch/hermes-3-llama-3.1-405b` | OpenRouter Models |
 | `ORNemotron70B` | `nvidia/llama-3.1-nemotron-70b-instruct` | OpenRouter Models |

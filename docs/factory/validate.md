@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: ValidatePrediction is a Singleton task for evaluating the accuracy of
-  predictions against correct answers using semantic analysis.
+- RAG
+description: Validate if a predicted answer is correct using the ValidatePrediction
+  singleton task with various models.
 tags:
-- prediction validation
-- AI validation
-- semantic analysis
-- machine learning
-- GEMMA2
+- prediction
+- validation
+- semantic correctness
+- contextual accuracy
+- singleton task
 ---
 
 # ValidatePrediction

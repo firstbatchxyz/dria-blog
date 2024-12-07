@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Simple is a Singleton task that generates text based on prompts using
-  the GEMMA2_9B_FP16 model.
+- Software Engineering
+description: Generate text with the Simple Singleton task using instructions and select
+  models like GEMINI for output.
 tags:
 - text generation
-- singleton task
-- GEMMA2 model
-- AI prompts
-- asyncio
+- Singleton pattern
+- GEMINI model
+- Python
+- dria
 ---
 
 # Simple

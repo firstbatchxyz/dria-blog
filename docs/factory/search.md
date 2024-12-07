@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: A guide to creating a SearchPipeline class for effective web data retrieval
-  and summarization, focusing on artificial intelligence topics.
+- Workflows
+description: Explore the SearchPipeline class for efficient web data retrieval and
+  summarization based on specific topics.
 tags:
-- Search Pipeline
-- Web Retrieval
-- Data Summarization
+- SearchPipeline
+- Data Retrieval
+- Web Summarization
+- AI Workflows
 - Artificial Intelligence
-- Machine Learning
 ---
 
 # SearchPipeline

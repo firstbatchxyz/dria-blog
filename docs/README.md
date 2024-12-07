@@ -1,14 +1,14 @@
 ---
 categories:
 - Synthetic Data
-description: Dria is a synthetic data infrastructure for creating, managing, and orchestrating
-  versatile data pipelines for AI applications.
+description: Dria is a synthetic data infrastructure for AI projects, enabling scalable
+  pipelines and efficient compute offloading.
 tags:
 - synthetic data
-- AI pipelines
-- data generation
-- decentralization
-- massive parallelization
+- AI development
+- data pipelines
+- compute offloading
+- machine learning
 ---
 
 # Dria

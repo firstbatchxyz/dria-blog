@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore Instruction Backtranslation for evaluating AI-generated text.
-  Score instructions with a detailed rationale and model used.
+- Applied AI
+description: Learn about Instruction Backtranslation, a Singleton task for evaluating
+  text outputs against reference instructions with scoring.
 tags:
 - Instruction Backtranslation
 - AI Evaluation
-- Text Scoring
-- Natural Language Processing
-- Model Assessment
+- Text Output Analysis
+- Parallel Execution
+- Model Scoring
 ---
 
 # Instruction Backtranslation

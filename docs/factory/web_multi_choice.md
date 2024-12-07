@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: WebMultiChoice efficiently answers multiple-choice questions by utilizing
-  web search and model evaluation to provide accurate results.
+- Applied AI
+description: WebMultiChoice is a Singleton task that answers multiple-choice questions
+  via web search to provide accurate evaluations and insights.
 tags:
-- Web search
-- AI models
-- Multiple-choice questions
-- Evaluation
-- Natural Language Processing
+- multiple-choice
+- AI evaluation
+- web search
+- machine learning
+- question answering
 ---
 
 # WebMultiChoice

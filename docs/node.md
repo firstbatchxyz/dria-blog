@@ -1,14 +1,14 @@
 ---
 categories:
 - Decentralized Network
-description: Learn how to run a Node in the decentralized Dria network for AI collaboration
-  with easy setup steps and requirements.
+description: A quick guide to setting up a decentralized AI node with Dria, requiring
+  minimal setup and no wallet activity.
 tags:
 - Node Setup
-- Decentralized Network
+- Decentralized AI
+- Dria Network
+- FirstBatch
 - AI Collaboration
-- Dria
-- Tutorial
 ---
 
 # Run a Node

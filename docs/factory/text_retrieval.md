@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Discover how to generate JSON objects for text retrieval tasks with user
-  queries, positive and negative documents using the TextRetrieval tool.
+description: Discover a TextRetrieval task that generates user queries and related
+  documents, suitable for various educational levels and topics.
 tags:
 - text retrieval
-- JSON generation
-- AI tasks
-- data workflows
-- machine learning
+- user queries
+- document generation
+- JSON data
+- educational tasks
 ---
 
 # TextRetrieval

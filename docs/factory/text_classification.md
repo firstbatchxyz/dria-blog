@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Learn how to create JSON examples for text classification tasks with
-  a Python implementation using the Dria framework.
+- RAG
+description: Learn how to generate text classification examples in JSON format using
+  the TextClassification task with Python code.
 tags:
 - text classification
-- JSON example
-- Dria framework
-- machine learning
+- Python
+- JSON
 - NLP
+- AI
 ---
 
 # TextClassification

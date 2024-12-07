@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: EvolveInstruct mutates prompts using various types of mutations to enhance
-  instruction quality in AI models.
+- Workflows
+description: EvolveInstruct mutates prompts with various techniques for enhanced instruction
+  generation in AI models.
 tags:
-- AI Mutation
+- EvolveInstruct
+- AI Instruction
 - Prompt Engineering
-- Machine Learning
-- Instruction Generation
-- AI Models
+- Mutation Types
+- Workflow
 ---
 
 # EvolveInstruct

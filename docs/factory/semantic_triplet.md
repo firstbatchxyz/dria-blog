@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate semantic triplets with similarity scores using a JSON object
-  in various languages and difficulties.
+- Workflows
+description: Learn how to generate a semantic triplet JSON object with specified similarity
+  scores using the SemanticTriplet task in Python.
 tags:
 - semantic triplet
-- natural language processing
-- text generation
+- JSON generation
 - similarity scores
-- JSON
+- Python programming
+- AI tasks
 ---
 
 # SemanticTriplet
