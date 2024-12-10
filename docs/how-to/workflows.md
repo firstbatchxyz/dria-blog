@@ -71,7 +71,7 @@ builder.set_max_time(100)
 builder.set_max_tokens(750)
 ```
 
-Dria nodes provides several built-in [tools](#step-a-random-variable-generation) that is included in your workflow by default.
+Dria nodes provides several built-in tools that is included in your workflow by default.
 Tools include:
 - Search: Tools for searching and retrieving data.
 - Scrape: Tools for scraping data from the web.
@@ -117,7 +117,7 @@ There are two types of steps in a workflow:
 - id `str`: The unique ID for the step.
 
 
-`search_step()`: Steps that perform a [search](#step-b-validation) operation through the file system.
+`search_step()`: Steps that perform a search operation through the file system.
 - search_query `str`: The query to search for.
 - id `str`: The unique ID for the step.
 
