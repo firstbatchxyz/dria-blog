@@ -13,53 +13,44 @@ tags:
 
 # MagPie
 
-`MagPie` is a `Singleton` task that generates a dialogue between two personas.
+## Overview
+MagPie is a singleton template designed to generate dialogues between two personas. It facilitates the creation of conversational exchanges by managing turns between an instructor and a responder, with configurable number of dialogue turns.
 
-#### Inputs
-- instructor_persona (`str`): The persona of the instructor.
-- responding_persona (`str`): The persona of the responder.
-- num_turns (`int`, optional): The number of turns in the dialogue. Defaults to 1.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instructor_persona | str | Persona of the instructor who initiates the dialogue |
+| responding_persona | str | Persona of the responder who replies to the instructor |
+| num_turns | conint(ge=1) | Number of conversation turns (must be greater than or equal to 1) |
 
-#### Outputs
-- dialogue (`List[Dict[str, str]]`): A list of dictionaries representing the dialogue, where each dictionary contains a single key-value pair with the speaker as the key and their message as the value.
-- model (`str`): The model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| dialogue | List[DialogueTurn] | List of dialogue turns, each containing instructor and responder messages |
+| model | str | The AI model used for generation |
 
-### Example
+### DialogueTurn Schema
+| Field | Type | Description |
+|-------|------|-------------|
+| instructor | str | Instructor's message in the dialogue turn |
+| responder | str | Responder's message in the dialogue turn |
 
-Generate a dialogue between two personas. This example uses the `GEMMA2_9B_FP16` model.
+#### Usage
+
+MagPie instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import MagPie
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    magpie = MagPie()
-    res = await dria.execute(
-        Task(
-            workflow=magpie.workflow(
-                instructor_persona="A curious scientist",
-                responding_persona="An AI assistant",
-                num_turns=3
-            ),
-            models=[Model.GPT40_MINI],
-        )
-    )
-    return magpie.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="magpie_dialogue",
+    description="A dataset for dialogue generation between personas",
+    schema=MagPie.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {

@@ -103,7 +103,6 @@ nav:
               - Model-as-a-Judge:
                   - Evaluate Prediction: "factory/evaluate.md"
                   - Validate Prediction: "factory/validate.md"
-          - Pipelines:
               - List Extender: "factory/list_extender.md"
               - Persona Pipeline: "factory/persona.md"
               - Sub-Topic Pipeline: "factory/subtopic.md"

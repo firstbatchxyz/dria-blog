@@ -13,58 +13,47 @@ tags:
 
 # EvolveQuality
 
-`EvolveQuality` is a `Singleton` task that evolves the quality of a response to a prompt through rewriting based on a specified method.
+## Overview
+EvolveQuality is a singleton template that evolves or improves text responses based on specific quality dimensions. It takes an original response and enhances it according to one of several methods: helpfulness, relevance, depth, creativity, or detail level.
 
-#### Inputs
-- prompt (`str`): The original prompt.
-- response (`str`): The original response to be evolved.
-- method (`str`): The method for evolving the response. Must be one of the following:
-  - `"HELPFULNESS"`
-  - `"RELEVANCE"`
-  - `"DEEPENING"`
-  - `"CREATIVITY"`
-  - `"DETAILS"`
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| prompt | str | The original prompt or context |
+| response | str | The response text to be evolved |
+| method | Literal | Evolution method to apply ("HELPFULNESS", "RELEVANCE", "DEEPENING", "CREATIVITY", "DETAILS") |
 
-#### Outputs
-- response (`str`): The original response.
-- evolved_response (`str`): The evolved version of the original response.
-- method (`str`): The method used for evolution.
-- model (`str`): The model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| response | str | The original response text |
+| evolved_response | str | The evolved/rewritten response |
+| method | str | Method used for evolution |
+| model | str | The AI model used for generation |
 
-### Example
+#### Usage
 
-Evolve a response using the "DEEPENING" method. This example uses the `GEMMA2_9B_FP16` model.
+EvolveQuality instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import EvolveQuality
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    evolve_quality = EvolveQuality()
-    original_prompt = "Explain the concept of photosynthesis."
-    original_response = "Photosynthesis is the process by which plants make their own food using sunlight."
-    
-    res = await dria.execute(
-        Task(
-            workflow=evolve_quality.workflow(prompt=original_prompt, response=original_response, method="DEEPENING"),
-            models=[Model.GPT4O],
-        )
-    return evolve_quality.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="EvolveQuality",
+    description="A dataset for response quality evolution",
+    schema=EvolveQuality.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+The singleton supports five evolution methods:
+- HELPFULNESS: Makes the response more helpful to the user
+- RELEVANCE: Improves relevance to the given prompt
+- DEEPENING: Increases the depth of the response
+- CREATIVITY: Enhances creative aspects
+- DETAILS: Adds more detailed information
+
+### Expected output
 
 ```json
 {

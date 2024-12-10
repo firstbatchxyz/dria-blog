@@ -11,62 +11,42 @@ tags:
 - Model Scoring
 ---
 
-# Instruction Backtranslation
+# InstructionBacktranslation
 
-`InstructionBackTranslation` is a `Singleton` task that generates a score (1-5) and reason for a given instruction and generation 
+## Overview
+InstructionBacktranslation is a singleton class that evaluates instruction-generation pairs. It processes an original instruction and its generated text, providing a score and reasoning for the evaluation.
 
-### Inputs
-instruction (`str`): The reference instruction to evaluate the text output.
-generation (`str`): The text output to evaluate for the given instruction.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The original instruction to be evaluated |
+| generation | str | The generated text to be evaluated against the instruction |
 
-### Outputs
-score (`str`): The score for the generation based on the given instruction.
-reason (`str`): The reason for the provided score.
-model_name (`str`): The model name used to score the generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| reasoning | str | Detailed explanation for the evaluation score |
+| score | str | Evaluation score for the instruction-generation pair |
+| instruction | str | Original instruction (echoed from input) |
+| generation | str | Generated text (echoed from input) |
+| model | str | The AI model used for evaluation |
 
-### Example
+#### Usage
 
-We'll use `ParallelSingletonExecutor` to run multiple `InstructionBackTranslation` task in parallel across multiple models.
+InstructionBacktranslation instance can be used in data generation as follows:
 
 ```python
-from dria.client import Dria
 from dria.factory import InstructionBacktranslation
-from dria.models import Model
-from dria.batches import ParallelSingletonExecutor
-import asyncio
-import json
 
-async def batch():
-    dria_client = Dria()
-    singleton = InstructionBacktranslation()
-    executor = ParallelSingletonExecutor(dria_client, singleton)
-    executor.set_models([Model.GPT4O])
-    executor.load_instructions(
-        [
-            {
-                "instruction": "What is 3 times 20?",
-                "generation": "It's 60.",
-            },
-            {
-                "instruction": "What is 3 times 20?",
-                "generation": "It's 59.",
-            },
-        ]
-    )
-    return await executor.run()
-
-
-def main():
-    results = asyncio.run(batch())
-    print(json.dumps(results, indent=2))
-
-
-if __name__ == "__main__":
-    main()
-
+my_dataset = DriaDataset(
+    name="instruction_backtranslation",
+    description="A dataset for instruction-generation pair evaluation",
+    schema=InstructionBacktranslation.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-#### Expected output
+### Expected output
 
 ```json
 [
