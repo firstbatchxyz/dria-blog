@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore the ListExtender class for generating extended item lists in
-  Python, enhancing data organization and categorization.
-tags:
-- Python
-- Data Structuring
-- List Management
-- AI Pipeline
 - Data Generation
+description: Discover the ListExtender pipeline for dynamically generating subcategories
+  from existing lists to enhance data organization.
+tags:
+- Data Pipeline
+- List Management
+- Data Generation
+- Python
+- Async Programming
 ---
 
 # ListExtender

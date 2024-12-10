@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Discover a TextRetrieval task that generates user queries and related
-  documents, suitable for various educational levels and topics.
+- Data Generation
+description: Learn how to generate user queries and relevant documents for text retrieval
+  tasks with this JSON-based singleton task example.
 tags:
 - text retrieval
+- JSON
+- data generation
 - user queries
 - document generation
-- JSON data
-- educational tasks
 ---
 
 # TextRetrieval

@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to implement structured outputs in your workflows using Dria
-  SDK and ensure model responses meet your JSON schema requirements.
+description: Learn about structured outputs and how to implement them in Dria Network
+  with examples and JSON Schema.
 tags:
-- structured outputs
-- Dria SDK
+- Structured Outputs
+- Dria Network
+- JSON Schema
 - OpenAI
-- workflow automation
-- JSON schema
+- Workflows
 ---
 
 # Structured Outputs

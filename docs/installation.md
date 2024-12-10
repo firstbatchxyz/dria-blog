@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to install the Dria SDK, set up dependencies, and troubleshoot
-  installation issues for creating synthetic data pipelines.
+- Workflows
+description: Follow this guide to install Dria SDK on Python, manage dependencies,
+  and troubleshoot common issues effectively.
 tags:
 - Dria SDK
-- Installation
-- Python
-- Synthetic Data
-- Conda
+- Python Installation
+- Software Development
+- Troubleshooting
+- Data Generation
 ---
 
 # Installation

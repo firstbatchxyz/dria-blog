@@ -1,12 +1,12 @@
 ---
 categories:
-- Preference Data
-description: Explore diverse patient dialogues to enhance understanding and improve
-  healthcare interactions.
+- Workflows
+description: Explore insightful patient dialogues that enhance understanding and improve
+  communication in healthcare settings.
 tags:
-- patient interaction
-- healthcare communication
-- dialogue analysis
-- patient feedback
-- healthcare quality
+- patient communication
+- healthcare dialogues
+- medical conversations
+- doctor-patient relationship
+- healthcare education
 ---

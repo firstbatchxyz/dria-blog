@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Learn how to generate a semantic triplet JSON object with specified similarity
-  scores using the SemanticTriplet task in Python.
+- Synthetic Data
+description: Generate JSON objects with semantic triplets using specified similarity
+  scores and educational difficulty levels.
 tags:
 - semantic triplet
 - JSON generation
-- similarity scores
-- Python programming
-- AI tasks
+- textual similarity
+- NLP
+- data generation
 ---
 
 # SemanticTriplet

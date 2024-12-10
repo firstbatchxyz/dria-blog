@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to use the Prompt class in Dria for generating structured outputs
-  with schema validation using Pydantic models.
+description: Learn how to use the Prompt class with Pydantic for structured output
+  generation from language models in Python.
 tags:
-- Prompt
 - Pydantic
 - Data Generation
-- Dria
-- Schema Validation
+- Prompting
+- Language Models
+- Python
 ---
 
 # Prompt

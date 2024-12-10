@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Generate text with the Simple Singleton task using instructions and select
-  models like GEMINI for output.
+- Workflows
+description: Discover how to use the Simple Singleton task for text generation with
+  the GEMMA2_9B_FP16 model in Python.
 tags:
 - text generation
-- Singleton pattern
-- GEMINI model
+- Singleton task
 - Python
-- dria
+- GEMMA2_9B_FP16
+- code example
 ---
 
 # Simple

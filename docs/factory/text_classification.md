@@ -1,14 +1,14 @@
 ---
 categories:
 - RAG
-description: Learn how to generate text classification examples in JSON format using
-  the TextClassification task with Python code.
+description: Generate examples for text classification tasks using various parameters
+  in Python and JSON format.
 tags:
-- text classification
-- Python
+- Text Classification
 - JSON
+- Python
 - NLP
-- AI
+- Machine Learning
 ---
 
 # TextClassification

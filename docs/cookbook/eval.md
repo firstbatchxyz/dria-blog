@@ -1,13 +1,13 @@
 ---
 categories:
-- Applied AI
-description: Discover how to evaluate Retrieval-Augmented Generation systems using
-  synthetic data. Boost your AI performance with this comprehensive guide.
-tags:
 - RAG
+description: Learn to evaluate RAG systems using synthetic data to enhance AI-powered
+  question-answering performance.
+tags:
+- RAG Systems
 - Synthetic Data
-- AI Evaluation
-- Data Generation
+- Evaluation
+- AI
 - Machine Learning
 ---
 

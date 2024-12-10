@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Generate multi-hop questions requiring reasoning across three documents
-  using the MultiHopQuestion task.
+description: Learn how to generate multi-hop questions from three documents using
+  the MultiHopQuestion task. Perfect for advanced reasoning applications.
 tags:
-- multi-hop questions
-- reasoning
-- document analysis
-- AI education
-- question generation
+- Multi-hop Questions
+- Reasoning
+- AI
+- Question Generation
+- Natural Language Processing
 ---
 
 # MultiHopQuestion 

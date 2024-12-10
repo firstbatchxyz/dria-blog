@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore an example of asynchronous batch processing using the Dria library
-  with multiple AI models.
+- Workflows
+description: An example of running asynchronous tasks with Dria and parallel model
+  execution in Python.
 tags:
-- Dria
 - Python
-- Asynchronous
-- AI Models
-- Batch Processing
+- Dria
+- Asyncio
+- Parallel Execution
+- Machine Learning
 ---
 
 # Example Run

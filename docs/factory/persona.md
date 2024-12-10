@@ -1,14 +1,14 @@
 ---
 categories:
-- Synthetic Data
-description: Generate unique personas with backstories for simulations using the PersonaPipeline
-  class, versatile for creative applications.
+- Workflows
+description: PersonaPipeline generates personas with unique backstories based on simulation
+  descriptions for creative projects.
 tags:
-- Personas
-- Synthetic Data
-- Simulation
-- Cyberpunk
-- AI Backstories
+- personas
+- simulation
+- storytelling
+- cyberpunk
+- AI
 ---
 
 # PersonaPipeline

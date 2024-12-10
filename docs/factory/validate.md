@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Validate if a predicted answer is correct using the ValidatePrediction
-  singleton task with various models.
+- Workflows
+description: Validate predictions against correct answers using a singleton task for
+  semantic evaluation.
 tags:
-- prediction
-- validation
-- semantic correctness
-- contextual accuracy
-- singleton task
+- prediction validation
+- semantic evaluation
+- AI models
+- data accuracy
+- contextual assessment
 ---
 
 # ValidatePrediction

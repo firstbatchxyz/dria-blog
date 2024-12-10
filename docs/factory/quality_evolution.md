@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Evolve the quality of responses through effective rewriting methods within
-  AI frameworks.
+description: Explore the EvolveQuality task for enhancing response quality using specified
+  methods like helpfulness, creativity, and relevance.
 tags:
-- Response Quality
-- AI Rewriting
-- Task Automation
 - EvolveQuality
-- Model Evaluation
+- Response Improvement
+- AI Techniques
+- Deepening Responses
+- Natural Language Processing
 ---
 
 # EvolveQuality

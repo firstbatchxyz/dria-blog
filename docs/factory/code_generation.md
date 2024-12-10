@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate code instantly with the GenerateCode task using specified languages
-  and instructions. Ideal for coder models.
+description: 'GenerateCode: A task for generating code based on instructions in specified
+  programming languages using advanced coding models.'
 tags:
 - code generation
+- programming
 - software engineering
-- AI coding
-- programming tasks
-- machine learning
+- instructions
+- coder models
 ---
 
 # GenerateCode

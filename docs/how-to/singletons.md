@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn about Singletons in Dria, including how to use and create your
-  own for efficient task handling with Pydantic validation.
+description: Learn how to create and use Singletons in Dria for efficient task handling
+  with Pydantic models.
 tags:
 - Singletons
 - Dria
 - Pydantic
-- Task Management
-- Data Generation
+- Task Automation
+- AI Workflows
 ---
 
 # Singletons

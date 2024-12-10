@@ -1,582 +1,592 @@
 README.md:
-  hash: 6903e81b1dfa6c4674a3be0008c24681
-  summary: Dria is a comprehensive synthetic data infrastructure designed to accelerate
-    AI development by providing scalable pipelines and efficient compute offloading.
-    It enables the creation, management, and orchestration of synthetic data through
-    a multi-agent network, capable of synthesizing data from both web and siloed sources.
-    Dria supports a wide range of AI projects, including traditional predictive models
-    and advanced generative and large language model (LLM) applications. Key features
-    include massive parallelization, flexible and scalable custom pipelines, and an
-    extensive built-in toolset based on verified research. It also allows AI integration
-    with real-life data through web and API grounding. Dria SDK is released under
-    the MIT License.
+  hash: 17016fde8633a794dc44a6f9d7bc5673
+  summary: Dria is a comprehensive synthetic data infrastructure designed to empower
+    AI development by enabling scalable and efficient data generation workflows. Key
+    features include a framework for creating and managing synthetic data pipelines,
+    a multi-agent network for data synthesis from web and siloed sources, and tools
+    for massive parallelization and compute offloading. Dria supports a wide range
+    of AI projects, from traditional predictive models to advanced generative and
+    large language model (LLM) applications, providing high-quality and diverse datasets.
+    It offers flexible, scalable custom pipelines and an extensive built-in toolset
+    to enhance computational efficiency. Dria SDK is available under the MIT License.
 cookbook/eval.md:
-  hash: f493e3a0134d097360120a6b545740a2
-  summary: 'This guide provides a comprehensive approach to evaluating Retrieval-Augmented
-    Generation (RAG) systems using synthetic data. Key concepts include the setup
-    of a RAG pipeline, selection of embedding models, retrieval and reranking strategies,
-    and generation of question-answer pairs for system evaluation. The use of tools
-    like `RAGatouille` for ColBERT-based retrieval and the `instructor` library for
-    structuring outputs with OpenAI''s API are detailed. Additionally, synthetic data
-    generation involves creating diverse datasets for both simple and multi-hop questions.
-    The document emphasizes the importance of evaluation in identifying areas for
-    improvement in AI-powered question-answering applications. Keywords: RAG system,
-    synthetic data, AI evaluation, data generation, retrieval, machine learning.'
+  hash: ca0b55de58cf4ba1899c9329554d9ab8
+  summary: This guide explains how to evaluate Retrieval-Augmented Generation (RAG)
+    systems using synthetic data. RAG systems enhance AI-powered question-answering
+    applications by retrieving and generating relevant content. The evaluation process
+    covers multiple parameters such as embedding models, retrieval methods (e.g.,
+    BM25, VectorDB), reranking strategies, and answer generation models. By using
+    a Python-based RAG pipeline and generating synthetic question-answer pairs, users
+    can test and improve their RAG implementations effectively. The process includes
+    setting up the environment with necessary dependencies, generating QA and multi-hop
+    questions, and using OpenAI's API for evaluating responses. The guide emphasizes
+    the importance of evaluation in optimizing RAG systems, offering a practical approach
+    for AI developers and researchers.
 cookbook/function_calling.md:
-  hash: 8bae208c372a25be44f71a782ff95c6c
-  summary: Discover effective strategies for implementing function calling in programming
-    projects with this comprehensive guide. The material covers essential concepts
-    in software development such as function calling, programming techniques, and
-    coding practices. It aims to enhance developers' skills in using APIs and streamline
-    software engineering processes. Key points include best practices for efficient
-    code organization and how to leverage function calls for improved program performance.
+  hash: e6f64274c94b8b6babb74469b0f60380
+  summary: The content delves into the nuances and techniques of function calling
+    in programming, providing practical insights for software engineers. It covers
+    key concepts such as best practices for efficient function calling, coding techniques
+    to optimize software development, and essential programming tips to enhance code
+    performance. This guide serves as a valuable resource for understanding the intricacies
+    of function calling, enabling developers to write more effective and robust code.
+    Key aspects include optimizing function usage and understanding the impact of
+    function design on overall application performance.
 cookbook/nemotron_qa.md:
-  hash: 92b57a83e52e37be73a20647ec416a31
-  summary: 'This guide outlines the implementation of Nvidia''s Preference Data Pipeline
-    using Dria, focusing on synthetic data generation and reward modeling techniques.
-    The process involves synthetic response generation for domain-specific queries
-    using Meta''s Llama 3.1 405B Instruct, followed by a scoring phase with Nemotron-4
-    340B Reward for alignment training via NeMo Aligner. The tutorial details step-by-step
-    instructions, including the use of a defined folder structure and implementation
-    of specific prompts and callback methods. The key steps include generating subtopics,
-    questions, and responses. The pipeline is constructed using Dria''s PipelineBuilder
-    and executed through an example Python script. Keywords: Nvidia, Dria, Preference
-    Data Pipeline, synthetic data, reward modeling, Llama 3.1, NeMo Aligner, GPT4O,
-    machine learning.'
+  hash: a2eef57f08cdb835161579ff538f9ec7
+  summary: "This guide provides a comprehensive tutorial on implementing Nvidia's\
+    \ Preference Data Pipeline using Dria for synthetic data generation, leveraging\
+    \ Meta's Llama 3.1 model. The process involves two main steps: synthetic response\
+    \ generation, where multiple questions and corresponding responses are generated\
+    \ using Llama 3.1, and a reward model, Nemotron-4 340B, for scoring responses\
+    \ to enhance further training. The implementation also details the folder structure,\
+    \ use of prompts, flow of data through pipeline steps\u2014subtopics, questions,\
+    \ and answers\u2014and the setup of a Dria-based pipeline. Keywords include Nvidia,\
+    \ synthetic data, Dria, AI pipeline, Llama 3.1, and data generation. The full\
+    \ code is provided along with pointers to run the pipeline efficiently."
 cookbook/patient_dialogues.md:
-  hash: 0119970930c8d17474fb68007cd2c7a6
-  summary: Explore a diverse range of patient dialogues designed to enhance understanding
-    and improve healthcare interactions. This resource focuses on key areas such as
-    patient interaction, healthcare communication, dialogue analysis, patient feedback,
-    and healthcare quality. By examining these dialogues, healthcare professionals
-    can gain valuable insights to foster more effective communication and elevate
-    the quality of care provided to patients.
+  hash: 1a4e858dfc986359623c57c8c95d1398
+  summary: The content explores insightful patient dialogues aimed at enhancing understanding
+    and improving communication in healthcare settings. It focuses on key components
+    such as patient communication, healthcare dialogues, and medical conversations,
+    emphasizing the importance of strengthening the doctor-patient relationship. The
+    objective is to provide valuable educational resources for healthcare professionals
+    seeking to improve their interaction skills, thereby fostering better health outcomes.
+    Keywords include patient communication, healthcare education, and doctor-patient
+    relationship.
 cookbook/preference_data.md:
-  hash: 903e686f0c493d6686f4669288c42cf1
-  summary: Learn to generate synthetic preference data using Dria, a cutting-edge
-    AI tool designed for enhanced data analysis and modeling. This approach focuses
-    on creating high-quality synthetic data that can be used in machine learning applications,
-    optimizing the performance and accuracy of predictive models. Core concepts include
-    synthetic data generation, preference data, and AI tools, which are crucial for
-    improving data-driven decision-making and overcoming limitations of real datasets.
-    Key benefits include improved data privacy and the ability to create diverse and
-    comprehensive datasets tailored to specific analytical needs.
+  hash: 360c8d17795273858b974fe8f5393b91
+  summary: Discover the power of synthetic preference data generation with Dria, a
+    tool designed to enhance AI model training and analysis. By creating realistic
+    preference data, Dria aids in improving the accuracy and efficiency of AI systems.
+    Key topics include synthetic data, preference data, AI training, and innovative
+    data generation techniques. Explore how Dria can revolutionize the way AI models
+    are developed and fine-tuned.
 example_run.md:
-  hash: f192fcd8970195f5c7865a270024e3fa
-  summary: 'This document provides a practical example of asynchronous batch processing
-    utilizing the Dria library with multiple AI models, demonstrating its application
-    in Python. Key points include the integration of the Dria client with the MagPie
-    factory and ParallelSingletonExecutor to execute asynchronous tasks. The example
-    showcases setting up AI models such as GPT4O_MINI, GEMINI_15_FLASH, and MIXTRAL_8_7B
-    to process prompts and deliver results efficiently. Core concepts include asynchronous
-    operations, batch processing, and AI model execution, making it relevant for developers
-    interested in optimizing AI-driven applications. Important keywords for SEO are:
-    Dria, Python, asynchronous, AI models, batch processing, MagPie, GPT4O_MINI, GEMINI_15_FLASH,
-    MIXTRAL_8_7B.'
+  hash: c061849a4f1454fd914bf054404fbae1
+  summary: This article provides an example of running asynchronous tasks and parallel
+    model execution in Python using Dria. It demonstrates how to use the Dria package,
+    including setting up a `Dria` client and `MagPie` instance, and employing a `ParallelSingletonExecutor`
+    to run tasks concurrently. The script specifies models such as `Model.GPT4O_MINI`,
+    `Model.GEMINI_15_FLASH`, and `Model.MIXTRAL_8_7B`, and loads prompts to query
+    the capitals of France and Germany, showcasing how parallel execution can optimize
+    workflows in machine learning applications. Key concepts include Python, asynchronous
+    tasks, Dria, parallel execution, and machine learning.
 factory/clair.md:
-  hash: 7009330657c8a8b53ac6cc5fbfe028f6
-  summary: Clair is an educational AI tool, categorized as a SingletonTemplate task,
-    designed to enhance student coding solutions by providing corrections and detailed
-    reasoning. It focuses on tasks such as correcting student solutions for coding
-    problems, specifically involving functions like factorial calculations. Key features
-    include input of task descriptions and student solutions, and output of the teacher's
-    reasoning, corrected solutions, original task descriptions, and the model used.
-    Clair aims to improve student understanding and coding skills by transforming
-    original solutions into optimized versions, utilizing models like "gemma2:9b-instruct-fp16."
-    Core keywords related to Clair include "Applied AI," "student solution correction,"
-    "educational AI," and "coding problem."
+  hash: af88a536898aa1944ac3134a15f613ba
+  summary: 'Clair is a SingletonTemplate task designed to enhance programming education
+    by correcting student solutions and offering detailed feedback. It employs machine
+    learning to improve student code, providing a clear reasoning process and generating
+    a refined version of the submitted solution. Key features include inputs for task
+    descriptions and student submissions, and outputs that echo these inputs alongside
+    the corrected solution and the model used. This task is valuable for educational
+    technology and code review, and it contributes to improved learning outcomes in
+    programming. Keywords: Clair, programming education, student correction, machine
+    learning, educational technology, code review.'
 factory/code_generation.md:
-  hash: a79882ad226a7f87f79dc9f29ec5abc2
-  summary: The `GenerateCode` task is a tool designed for code generation in software
-    engineering, triggered by specific instructions and choice of programming language.
-    It is optimized for use with coder models like `Model.CODER` and `Model.QWEN2_5_CODER_1_5B`,
-    making it ideal for AI coding and programming tasks. The task outputs the original
-    instruction, the chosen language, the generated code, and the model utilized.
-    Key features include execution versatility across programming contexts, aiding
-    developers in swiftly obtaining functional code snippets. Core keywords are code
-    generation, software engineering, AI coding, and programming tasks.
+  hash: a6ceef30e99c924314660dd31980b589
+  summary: '`GenerateCode` is a task-focused tool in software engineering for generating
+    code from instructions using advanced coding models. It works best with coder
+    models like `Model.CODER` and `Model.QWEN2_5_CODER_1_5B`. The main objective is
+    to provide code generation capabilities across various programming languages by
+    inputting a task description and the desired language. The tool outputs the original
+    instruction, the specified language, the generated code, and the model used, making
+    it a robust solution for developers seeking to automate or assist in coding tasks.
+    Key areas include code generation, programming, and using specific coder models.'
 factory/complexity_scorer.md:
-  hash: f81861f1362797386d53896f4281371b
-  summary: The "ScoreComplexity" task is a Singleton task that ranks a list of instructions
-    by their complexity using complexity scoring. It outputs complexity scores for
-    each instruction alongside model references, such as "llama3.1:8b-instruct-fp16,"
-    indicating the model used for scoring. This task is particularly relevant for
-    domains like data analysis, task automation, machine learning, and instructions
-    ranking. Key features include the provision of scores and model references to
-    guide complexity assessment, with example instructions ranging from simple tasks
-    like "Boil water in a kettle" to complex ones like "Develop a machine learning
-    algorithm." Relevant references include the ComplexityScorer Distilabel and research
-    on automatic data selection for instruction tuning.
+  hash: 2fb4b67485cb74b48e8e7583a2d54189
+  summary: 'ScoreComplexity is a machine learning workflow designed to rank a list
+    of instructions based on their complexity. This Singleton task outputs complexity
+    scores for various tasks, such as cooking or writing, enabling users to assess
+    and compare instructional difficulty levels. Key features include instruction
+    ranking, score generation, and complexity assessment, utilizing the "llama3.1:8b-instruct-fp16"
+    model. The task''s efficiency is highlighted in references like the ComplexityScorer
+    Distilabel and a study on automatic data selection in instruction tuning. Keywords:
+    complexity scoring, instruction ranking, machine learning, task assessment.'
 factory/csv_extender.md:
-  hash: 5d1586b04d0e2c6969d79d197da1c62a
-  summary: CSVExtenderPipeline is a data manipulation tool designed to extend CSV
-    files by generating new rows based on existing data categories. This pipeline
-    automates the process of adding new subcategories to existing categories, allowing
-    users to specify the number of new independent values and the number of rows to
-    generate for each value. Ideal for workflows involving CSV, data extension, and
-    automation, CSVExtenderPipeline efficiently expands data sets, making it a valuable
-    asset for tasks requiring large-scale CSV data manipulation. Keywords include
-    CSV, data manipulation, pipeline, data extension, and automation.
+  hash: bc93e6c8190bfd0417ad68a969bc3619
+  summary: The `CSVExtenderPipeline` is a powerful tool for enhancing CSV file management
+    by generating new rows with specified subcategories, aiding in data extension
+    and organization. By using this pipeline, users can specify the number of new
+    independent values and rows to be generated, effectively increasing the complexity
+    and detail of the CSV data. Key features include supporting data workflows by
+    adding new subcategories to existing categories, making it an ideal solution for
+    data management tasks that require extensive CSV manipulation. Keywords include
+    CSV, data management, pipeline, data extension, and subcategories.
 factory/evaluate.md:
-  hash: 79161689ea3b4d9b0691037bd3a086af
-  summary: The `EvaluatePrediction` task is a Singleton task designed to assess the
-    accuracy of AI model predictions by evaluating their contextual and semantic correctness
-    against a provided answer. Key features include its ability to analyze predicted
-    answers using specific questions and contextual information to determine correctness.
-    The task utilizes specific models, such as GPT-4O, for evaluation. This functionality
-    is particularly useful in the fields of applied AI, contextual analysis, machine
-    learning, and software development, ensuring AI-generated responses are accurate
-    and relevant. The process is implemented using Python, and a sample code demonstrates
-    its application in evaluating a prediction about the capital of France.
+  hash: cbcac75bcb2bac2d5a621c4cba62be6f
+  summary: The documentation outlines the `EvaluatePrediction` task, a Singleton task
+    designed to assess the contextual and semantic accuracy of predicted answers compared
+    to correct answers. Key concepts include predictive modeling, semantic analysis,
+    and contextual understanding, highlighting its application in AI tasks and evaluation
+    processes. The process involves inputting a prediction, question, and context
+    to receive an evaluation result using models like GPT-4O. An example demonstrates
+    the workflow, showcasing how predictions are evaluated for correctness in context,
+    making it a vital tool for ensuring semantic accuracy in AI-driven predictions.
 factory/evolve_complexity.md:
-  hash: 44dc033b1e2ecc3ccafa3925a0db4663
-  summary: EvolveComplexity is a Singleton task designed to enhance the complexity
-    of given instructions using advanced AI models, making it ideal for generating
-    creative and intricate content. The task takes a simple instruction as input and
-    outputs a more complex version, along with details of the AI model used. For example,
-    it can transform a basic prompt like "Write a short story about a cat" into a
-    more detailed narrative concept involving secret languages and mysteries. Key
-    concepts include instruction evolution, complexity enhancement, AI model utilization,
-    and creative writing. Relevant keywords are instruction evolution, complexity
-    enhancement, AI models, and creative writing.
+  hash: dc0b56bbb65e2d346bbaf1b46266efb9
+  summary: EvolveComplexity is an AI-driven tool designed to enhance instruction complexity,
+    particularly for enriching storytelling. It utilizes advanced AI models to transform
+    simple instructions into more intricate and engaging narratives, providing outputs
+    that include the evolved instruction, original instruction, and the model used
+    for generation. The tool focuses on applied AI, instruction generation, and storytelling
+    enhancement, using models like GEMMA2_9B_FP16 and others. Key concepts include
+    complexity evolution and the use of large language models to follow complex instructions.
+    References and resources are available for further exploration, including links
+    to related academic papers and GitHub repositories.
 factory/graph_builder.md:
-  hash: 96803116e3882a4155ac1774d56690e9
-  summary: The "GenerateGraph" task in Dria specializes in generating a graph of concepts
-    and their relationships from a specified context using a Singleton task. This
-    involves extracting an ontology of terms and representing them as nodes and edges
-    in a JSON-like string format. The task is executed using AI models such as LLAMA_3_1_8B_OR,
-    and LLAMA3_1_8B_FP16. Key applications include graph generation, concept relationship
-    mapping, and leveraging AI models for structured data representation. Dria's implementation
-    supports integrating these functionalities into workflows for enhanced AI-driven
-    data analysis.
+  hash: 37c4416ac4987f96b8d7be16d7985447
+  summary: The article showcases the use of Dria's `GenerateGraph` task in Python
+    to create a concept graph from a given context, highlighting its applicability
+    in graph generation, concept mapping, and understanding AI relationships. It explains
+    how concepts like Artificial Intelligence, machine learning, and deep learning
+    can be graphically represented, with nodes and edges detailing their interconnections.
+    The example provided uses specific models such as `Model.LLAMA_3_1_8B_OR` to demonstrate
+    the process, ultimately outputting a JSON-like structure of related concepts.
+    Key keywords include graph generation, AI relationships, concept mapping, and
+    Python example.
 factory/instruction_backtranslation.md:
-  hash: 8493fd7adc266e70df2ce816e4f449a1
-  summary: Instruction Backtranslation is an AI evaluation methodology designed for
-    assessing text outputs relative to reference instructions, providing a score between
-    1 and 5 along with reasoning for the evaluation. Leveraging models like GPT4O
-    and executed via tools such as ParallelSingletonExecutor, this task independently
-    evaluates multiple text outputs in parallel by comparing them against original
-    instructions. It offers applications in AI evaluation, text output analysis, and
-    model scoring, with a focus on accuracy and relevance. Key benefits include efficient
-    analysis of multiple generations simultaneously, providing detailed qualitative
-    feedback to improve AI models' performance. Relevant keywords include Instruction
-    Backtranslation, AI Evaluation, Text Output Analysis, Parallel Execution, and
-    Model Scoring.
+  hash: d810c212a31ca8c70f1b50e7a22dd71d
+  summary: The document discusses "Instruction Backtranslation," a task for evaluating
+    text generation based on given instructions, which produces a score (1-5) and
+    reasoning for the evaluation. It involves the use of parallel execution across
+    models using the `ParallelSingletonExecutor` to run the task with different models.
+    The process involves evaluating the output text against a reference instruction
+    to determine accuracy and relevance, using a specific model to provide the score
+    and reasoning. Keywords include Instruction Backtranslation, AI Evaluation, Text
+    Generation, Score Generation, and Parallel Execution. The method supports efficient
+    AI assessment, offering concise evaluations of how well text responses meet instructional
+    goals.
 factory/instruction_evolution.md:
-  hash: 2fe870eb57a3763be114165d23e8f67d
-  summary: EvolveInstruct is a tool designed to enhance AI model instruction generation
-    by mutating prompts using various techniques. These mutation types include "FRESH_START,"
-    "ADD_CONSTRAINTS," "DEEPEN," "CONCRETIZE," "INCREASE_REASONING," and "SWITCH_TOPIC."
-    It is a part of workflows that aim to refine prompt engineering and create more
-    effective AI instructions. Outputs of EvolveInstruct include a modified prompt,
-    the original prompt, and the model used for generating instructions, such as the
-    GEMMA2_9B_FP16 model. The tool is integral in producing detailed and complex instructions,
-    increasing both depth and breadth in explanations, making it valuable for applications
-    in AI instruction and prompt engineering. Key terms include EvolveInstruct, AI
-    Instruction, Prompt Engineering, Mutation Types, and Workflow.
+  hash: 5cef6b078f113aec78e98a9bb951d70a
+  summary: EvolveInstruct is a workflow tool designed to enhance AI content generation
+    by mutating prompts with various strategies such as "FRESH_START," "ADD_CONSTRAINTS,"
+    "DEEPEN," "CONCRETIZE," "INCREASE_REASONING," and "SWITCH_TOPIC." It accepts input
+    prompts and mutation types to provide a mutated prompt output, refining prompt
+    engineering for better AI model performance. The tool is a part of the Dria framework
+    and supports model-based tasks with models like GEMMA2_9B_FP16. EvolveInstruct
+    is useful for AI mutation, prompt enhancement, and optimizing content generation
+    processes. Key concepts include prompt engineering, mutation strategies, and AI
+    content enhancement.
 factory/iterate_code.md:
-  hash: 08652ebd442b037f3f2886f1d93e9669
-  summary: IterateCode is a Singleton task designed for enhancing existing code by
-    iterating improvements based on specific instructions. Key features include supporting
-    code improvement, adhering to given instructions, and utilizing the Singleton
-    pattern within software engineering. It handles inputs such as the original code,
-    instructions, and programming language, and outputs improved code along with metadata
-    like the original instruction, language, and model used for code generation. An
-    example showcases the process using a Python code snippet with a specific error
-    handling instruction, highlighting models like DEEPSEEK_CODER_6_7B and QWEN2_5_CODER_32B_OR.
-    Core concepts include code iteration, error handling, and the Singleton design
-    pattern.
+  hash: 0c386351d58865ae9a56e59b38eef6b3
+  summary: IterateCode is a software engineering tool designed to enhance and improve
+    existing code based on specific instructions. It supports multiple programming
+    languages and focuses on tasks such as code improvement, error handling, and async
+    programming. The tool works as a `Singleton` task, taking inputs like the original
+    code, a guiding instruction, and the target programming language. Outputs include
+    the iterated code, the original instruction, language used, and the model applied
+    for code generation. The example demonstrates using the GEMMA2_9B_FP16 model to
+    add error handling in Python code, emphasizing useful features for developers
+    aiming to streamline software development processes. Keywords include code improvement,
+    software development, programming, and error handling.
 factory/list_extender.md:
-  hash: 3052ee3adf90c4ced56b0ab8992ba625
-  summary: The page introduces the `ListExtenderPipeline` class, a Python tool designed
-    to efficiently extend and categorize data lists. This pipeline generates new items
-    by adding subcategories to existing categories, enhancing data structuring in
-    fields like AI, data generation, and list management. Key functionalities include
-    the ability to granularize lists for more detailed organization. The provided
-    example demonstrates its application with a list of subjects, showing its efficiency
-    in generating extensive, organized lists. Keywords include Python, data structuring,
-    list management, AI pipeline, and data generation.
+  hash: 787e440c92a84ad04ae84bf7fb64d873
+  summary: The ListExtender Pipeline is a dynamic data generation tool designed to
+    enhance the organization of lists by creating new subcategories from existing
+    items. Primarily developed for data pipeline and list management, the tool uses
+    Python and supports asynchronous programming. Users can specify the number of
+    subcategories to be generated, which can include a wide range of topics such as
+    history, literature, philosophy, psychology, biology, chemistry, astronomy, economics,
+    geography, politics, technology, art, and more. The tool provides an efficient
+    solution for expanding data architecture, thereby offering utility across various
+    domains like education, business, and research. Core keywords include data generation,
+    list management, data pipeline, Python, and async programming.
 factory/magpie.md:
-  hash: de8b11fd40751bea40760941ad03c5da
-  summary: MagPie is a Singleton task designed for generating dialogues between two
-    personas using AI-driven conversations and custom models. It involves inputs such
-    as instructor and responder personas, with an optional parameter for the number
-    of dialogue turns. The output is a list of dialogues and the model utilized for
-    generation. MagPie is particularly useful for exploring persona interactions through
-    natural language processing and machine learning. An example provided demonstrates
-    a conversation between a curious scientist and an AI assistant, showcasing the
-    model's ability to address questions about training data and bias mitigation techniques.
-    Core keywords include Dialogue Generation, AI Conversations, Persona Interaction,
-    NLP, and Machine Learning.
+  hash: a29cae345a13eda97bd141077849827f
+  summary: MagPie is an AI dialogue generation tool that creates structured conversations
+    between two personas, ideal for applications in persona modeling and natural language
+    processing. This Singleton task enables users to input the personas of an instructor
+    and a responder, as well as specify the number of dialogue turns, to generate
+    a conversational output. The tool employs machine learning models, such as the
+    GEMMA2_9B_FP16, to produce dialogues that can simulate various conversation scenarios.
+    MagPie supports AI dialogue generation by using conversational AI and maintaining
+    fairness and objectivity through advanced bias mitigation techniques. For developers,
+    it provides a simple implementation example using the Dria framework.
 factory/multihopqa.md:
-  hash: 156333e592e4d08c575fa1e3ebde6b31
-  summary: The "MultiHopQuestion" task focuses on generating multi-hop questions that
-    require reasoning across three documents, leveraging the power of applied AI for
-    enhanced document analysis and education. This process involves crafting questions
-    that require one, two, or three document references to determine the answers,
-    utilizing advanced models like GEMINI_15_FLASH and mixtral:8x7b to ensure accurate
-    question generation. The method sets constraints like maximum execution time and
-    tokens, aiming for efficient question creation. This innovative approach is critical
-    for developing AI-driven reasoning, question-answering capabilities, and AI education,
-    as it incorporates multi-hop questions, document analysis, and reasoning across
-    multiple texts.
+  hash: 9e06584b0ef39f616e99053c06394271
+  summary: The "MultiHopQuestion" task is a specialized AI-based tool for generating
+    multi-hop questions from three input documents, designed for advanced reasoning
+    applications. It facilitates the creation of questions that require reasoning
+    across multiple documents, enhancing natural language processing tasks like question
+    generation and reasoning. By using a workflow that takes three documents and set
+    constraints, it generates questions categorized into 1-hop, 2-hop, and 3-hop,
+    with answers and details about the generative model used. This approach leverages
+    applied AI and improves query complexity through multi-document analysis, providing
+    a valuable resource for AI-driven decision-making and educational purposes. Key
+    concepts include multi-hop questions, applied AI, reasoning, question generation,
+    and natural language processing.
 factory/persona.md:
-  hash: a2b504ea5004682bbd19b84f1fe228a6
-  summary: The PersonaPipeline class is designed for generating unique personas with
-    detailed backstories, ideal for creative applications such as simulations, particularly
-    within cyberpunk settings. It utilizes a simulation description to create personas,
-    incorporating random variables to fit the specified environment. Users can specify
-    the number of personas to be developed, each featuring a distinct narrative based
-    on the provided description. The tool supports creative storytelling by integrating
-    elements such as cybernetic enhancements, diverse cultural backgrounds, and socio-economic
-    dynamics, set in futuristic scenarios like Neo-Tokyo in 2077. Keywords include
-    synthetic data, personas, simulation, cyberpunk, and AI backstories.
+  hash: 06697753728b71fe1bb5ee66e6f5c95e
+  summary: 'PersonaPipeline is a powerful tool for generating unique personas with
+    detailed backstories, ideal for creative projects involving simulation descriptions.
+    This class allows users to create multiple personas by defining random variables
+    that align with a given context, such as a "cyberpunk city in the year 2077."
+    By specifying the number of samples, users can generate diverse and complex character
+    profiles that explore various aspects of storytelling, cyberpunk themes, and AI-driven
+    narrative creation. The output includes richly detailed backstories, making PersonaPipeline
+    a valuable resource for writers and developers focused on simulation, storytelling,
+    and character development. Keywords: personas, simulation, storytelling, cyberpunk,
+    AI, narrative creation, character profiles, creative projects.'
 factory/qa.md:
-  hash: a56504339b022bd47a102fefdb2c54c4
-  summary: 'The `QAPipeline` is a class that facilitates generating personas and simulating
-    question-answer interactions using advanced text processing techniques. It allows
-    users to input a simulation description, persona details, and text chunks to generate
-    multiple Q&A samples. Key features include creating detailed personas with backstories
-    and producing contextually relevant questions and answers. This pipeline emphasizes
-    data simulation, AI personas, and iterative improvement by leveraging persona-driven
-    text processing. The class is particularly beneficial for scenarios requiring
-    a nuanced understanding of conversation dynamics, making it relevant for applications
-    in AI-driven customer service, educational tools, and instructional training modules.
-    Keywords: QAPipeline, data simulation, question-answer interaction, AI personas,
-    text processing.'
+  hash: a7493a5778b003ee528de45d1294fde4
+  summary: 'The QAPipeline class is designed for generating AI personas and simulating
+    question-answer interactions using text chunks and simulation descriptions. It
+    caters to applications involving dynamic question generation and answer formulation,
+    driven by detailed persona descriptions that guide the tone and style of responses.
+    The pipeline is customizable through inputs like simulation scenarios, persona
+    traits, sample numbers, and text chunks, yielding a list of question-answer pairs.
+    Key objectives include enhancing understanding of AI capabilities in generating
+    coherent, context-aware interactions without human-annotated data. Core terms
+    include: AI personas, QAPipeline, question-answering, simulation, AI personas,
+    iterative training, synthetic preferences, instruction-following, reward modeling,
+    and performance metrics. This framework is crucial for advancing AI''s ability
+    to interact naturally and accurately with complex data inputs.'
 factory/quality_evolution.md:
-  hash: 1295e614597690baf7aef47e6b5306b6
-  summary: '"EvolveQuality" is a task within AI frameworks focused on enhancing response
-    quality through effective rewriting methods. It involves evolving responses to
-    prompts using methods like "HELPFULNESS," "RELEVANCE," "DEEPENING," "CREATIVITY,"
-    and "DETAILS." This singleton task utilizes AI models to generate improved responses
-    while indicating the method and model used. It serves as a tool in AI-driven task
-    automation and model evaluation, enabling deeper and more creative responses by
-    leveraging models like GEMMA2 and GPT4O. Key elements include the task''s ability
-    to enhance response detail and relevance, making it a valuable asset in applied
-    AI for improving interactions. Keywords: Response Quality, AI Rewriting, Task
-    Automation, EvolveQuality, Model Evaluation.'
+  hash: 62b8dc8cd496fdc034bb9a4c62fe0d2c
+  summary: EvolveQuality is a specialized task that enhances the quality of responses
+    to prompts by rewriting them using selected methods such as helpfulness, creativity,
+    relevance, deepening, and details. This Singleton task involves providing an original
+    prompt, response, and chosen method to produce an evolved response, enhancing
+    depth and engagement. It supports models like GEMMA2_9B_FP16 and emphasizes natural
+    language processing techniques to improve response improvement and AI-driven content
+    generation. Key concepts include response evolution, applied AI, and natural language
+    processing, with practical applications in improving the clarity and depth of
+    generated content.
 factory/search.md:
-  hash: f10a2a280be32ec96743d4318f13ac03
-  summary: 'The SearchPipeline class is a workflow tool designed for efficient web
-    data retrieval and summarization based on specific topics. Key components include
-    the PageAggregator, which gathers relevant web pages, and the PageSummarizer,
-    which condenses content when summarization is enabled. By leveraging AI, SearchPipeline
-    streamlines the process of finding and summarizing information on topics like
-    "artificial intelligence" or "entropy-based sampling," providing users with comprehensive,
-    summarized data. This can be particularly useful in domains requiring quick and
-    insightful data synthesis, such as research and content creation. Keywords: SearchPipeline,
-    data retrieval, web summarization, AI workflows, artificial intelligence.'
+  hash: 29346fdc9a85ce95768be251b08c81ad
+  summary: The "SearchPipeline" class is designed for web-based data retrieval, focusing
+    on topic aggregation and summarization. Core components include a "PageAggregator"
+    for collecting relevant web pages and a "PageSummarizer" for summarizing these
+    pages when enabled. Typically implemented in Python, this class finds utility
+    in machine learning and data retrieval systems. The class accepts inputs such
+    as the topic and a summarization option. Examples and demonstrations highlight
+    its application in topics like "artificial intelligence" to efficiently generate
+    summarized outputs. Keywords include SearchPipeline, data retrieval, web search,
+    machine learning, and Python.
 factory/self_instruct.md:
-  hash: ec7bea91ea09fa661666e256c23d1e76
-  summary: SelfInstruct is a workflow tool designed to generate user queries for AI
-    applications, focusing on enhancing task management efficiency. This singleton
-    task utilizes inputs like the number of instructions, criteria for query generation,
-    application description, and context to create diverse and relevant user queries.
-    The example provided demonstrates the use of the GEMMA2_9B_FP16 model to produce
-    queries applicable to a professional work environment. Key components include
-    AI applications, user query generation, task management, and detailed instructions
-    for implementation.
+  hash: 7c7309b505622858b7458244a6e60647
+  summary: The document introduces "SelfInstruct," a tool designed to generate user
+    queries for AI applications, particularly in task management within professional
+    environments. As a `Singleton` task, it takes inputs like the number of instructions,
+    criteria for query generation, application description, and context to produce
+    a list of user queries and specify the model used, such as "GEMMA2_9B_FP16." The
+    process is demonstrated with a Python example using the Dria platform, outlining
+    how to execute the task and providing an expected output. Key topics include AI
+    queries, automation, task management, and user instructions.
 factory/semantic_triplet.md:
-  hash: eba5be05083e5afe04a7f38ac9c11b2e
-  summary: The document introduces the `SemanticTriplet` task, a Python-based tool
-    designed to generate JSON objects containing three textual units (S1, S2, S3)
-    with specified semantic similarity scores. Key parameters for this task include
-    the unit type (e.g., sentence), language, similarity scores, and difficulty level.
-    This task employs AI models like `GEMINI_15_FLASH` to perform semantic analysis.
-    It is useful for applications that require tailored text generation with defined
-    semantic relationships, such as AI tasks, JSON generation, and similarity score
-    assessments. The tool's versatility in languages and educational difficulty levels
-    further enhances its utility.
+  hash: 14f29c6ee8754b6dbf9b77b212c8a5f8
+  summary: The document outlines the SemanticTriplet task, which generates JSON objects
+    containing three textual units (semantic triplets) with specified similarity scores.
+    Key components include input parameters like the type of textual unit (e.g., sentence),
+    language, high and low similarity scores, and educational difficulty level. Outputs
+    are JSON objects with textual units that meet these specifications. The process
+    involves using the DRIA platform and models like GEMINI_15_FLASH to achieve accurate
+    semantic triplet generation. Keywords include semantic triplet, JSON generation,
+    textual similarity, NLP, and data generation.
 factory/simple.md:
-  hash: 374a9de4ba39304e85163534c7c87a2e
-  summary: The content describes a "Simple" Singleton task focused on text generation
-    using prompts, specifically with a focus on models like GEMINI and GEMMA2_9B_FP16.
-    Key components include instruction-based generation, Python implementation, and
-    integration with Dria's API using task and model configurations. The example showcases
-    the use of the GEMINI_15_FLASH model to generate a conversational output, highlighting
-    its application in software engineering for generating text based on user input
-    prompts. Keywords include text generation, Singleton pattern, Python, model selection,
-    and GEMINI model.
+  hash: 22f9bda517afc248654768fb484afdc8
+  summary: The article provides a guide on using the Simple Singleton task for text
+    generation with the GEMMA2_9B_FP16 model in Python. It explains the process of
+    generating text from a prompt, detailing the necessary code and library imports,
+    and highlights how to use the Dria client for executing tasks. Core keywords include
+    text generation, Singleton task, Python, GEMMA2_9B_FP16, and code example. An
+    example with expected output demonstrates the functionality, showcasing an essential
+    tool for developers interested in leveraging AI for automated text creation.
 factory/subtopic.md:
-  hash: efa7d14b321df02a895ac2cd4337b477
-  summary: The `SubTopicPipeline` class is a tool designed to generate recursive subtopics
-    based on a primary topic, enhancing research efficiency in artificial intelligence.
-    By specifying a maximum depth, users can control the complexity and level of detail
-    in the subtopic tree. This system is particularly useful for fields like AI, as
-    it facilitates the exploration of intricate subtopics such as deep learning applications,
-    AI ethics, and human-AI collaboration. The process involves utilizing the `Dria`
-    API to execute the topic generation pipeline and generate a hierarchical list
-    of subtopics. Key terms include AI, subtopics, and topic generation.
+  hash: a3f55cb71aff8b570f271bd64ef3cf13
+  summary: The SubTopicPipeline class is designed to generate detailed subtopics recursively
+    from a main topic, with a focus on enhancing content depth and improving SEO strategies.
+    It allows for specifying the depth of the subtopic tree, providing a structured
+    and comprehensive breakdown of any subject. This functionality is particularly
+    useful for content generation, leveraging artificial intelligence and deep learning
+    methodologies to produce nuanced and informative content hierarchies. Important
+    keywords include subtopic generation, artificial intelligence, deep learning,
+    and SEO strategies. By using this pipeline, users can create content rich in detail,
+    which can ultimately contribute to better search engine visibility and engagement.
 factory/text_classification.md:
-  hash: b905e0ad96f4444cbf6b7aaa80f56242
-  summary: The document introduces the `TextClassification` task, a specialized tool
-    designed to generate JSON objects for text classification tasks using Python code.
-    It highlights the task's ability to output classification examples with specified
-    parameters such as task description, language, clarity, and difficulty. The guide
-    includes a Python code snippet that demonstrates how to use models like `GEMMA2_9B_FP16`
-    to classify text inputs. Additionally, it provides an example output structure
-    featuring fields like 'input_text', 'label', and 'misleading_label'. Key topics
-    include text classification, Python, JSON format, NLP, and AI. References include
-    links to related tools and research, enhancing the text's relevance for those
-    working on natural language processing and artificial intelligence.
+  hash: 58da386206220d32e77fad5118546c72
+  summary: 'The content describes a `TextClassification` task in Python, which generates
+    a JSON object providing an example for text classification tasks. It involves
+    inputs such as task description, language, clarity, and difficulty to produce
+    outputs containing ''input_text,'' ''label,'' and ''misleading_label.'' The process
+    includes setting up a singleton task, using models like `GEMMA2_9B_FP16`, and
+    executing the task through a workflow using the `Dria` client. The example highlights
+    categorizing movie reviews as positive or negative, showcasing machine learning
+    and natural language processing (NLP) in classifying text. Key points include
+    using Python and JSON for NLP, leveraging machine learning models, and providing
+    code for practical implementation. Keywords: Text Classification, Python, JSON,
+    NLP, Machine Learning, Dria, Task, Model.'
 factory/text_matching.md:
-  hash: 9e171d9b41d40337fbd2e42937d03190
-  summary: 'The **TextMatching** Singleton task generates JSON examples for text matching
-    tasks, focusing on producing ''input'' and ''positive_document'' pairs. It involves
-    creating natural language processing workflows, utilizing models such as `GEMMA2_9B_FP16`,
-    for applications like sentiment analysis. The task requires specifying the task
-    description and language to receive a text matching example, with a focus on AI
-    workflows, text analysis, and JSON generation. This process is elaborated with
-    an asynchronous Python implementation, highlighting the use of `LLAMA3_1_8B_FP16`
-    and `QWEN2_5_72B_OR` models. Key aspects include integrating AI models to enhance
-    text embeddings and ensuring clear documentation through Python scripting. Keywords:
-    Text Matching, JSON Generation, AI Workflows, Natural Language Processing, Text
-    Analysis, Sentiment Analysis.'
+  hash: d92dfca17326ac1c603fc8c742ff94e9
+  summary: 'The "TextMatching" workflow is a specialized task designed to generate
+    JSON objects for effective text matching, focusing on input and positive document
+    pairing using advanced natural language processing models. Key components include
+    task description, language specification, and example generation utilizing models
+    like `GEMMA2_9B_FP16`. This process is particularly beneficial for tasks like
+    sentiment analysis, enabling sophisticated text comparison and understanding.
+    The workflow also highlights the use of models such as `LLAMA3_1_8B_FP16` and
+    `QWEN2_5_72B_OR`, showcasing the capabilities of current NLP models in improving
+    text embeddings and classification. Keywords: Text Matching, JSON Generation,
+    NLP Models, Sentiment Analysis, Language Specification, Model Utilization.'
 factory/text_retrieval.md:
-  hash: 1352f0b726f53b23e9396f846a4f234f
-  summary: The "TextRetrieval" task is a tool designed to generate user queries and
-    corresponding documents for text retrieval tasks, supporting various educational
-    levels and topics. It produces a JSON object containing a user query, a relevant
-    document, and a hard negative document that appears relevant but isn't. The task
-    supports customization through parameters such as task description, query type,
-    query length, clarity, language, and difficulty level. It utilizes models like
-    GEMMA2_9B_FP16 to create examples, ensuring educational content aligns with specific
-    learning and comprehension needs. Key points include text retrieval, user queries,
-    document generation, JSON data, and educational tasks.
+  hash: 6f536d0a1812c535c8a1f8fe8e87dffe
+  summary: The "TextRetrieval" task generates JSON objects containing user queries,
+    a positive document, and a hard negative document aimed at improving text retrieval
+    tasks. It utilizes parameters such as task description, query type, length, clarity,
+    language, and difficulty to create relevant content, facilitated by specific models
+    like LLAMA3_1_8B_FP16. The task addresses the creation of informative and navigational
+    queries for studies involving topics like climate change impacts, offering insights
+    into document selection for retrieval systems. Key points include the generation
+    of diverse document types and enrichment of text embedding processes with detailed
+    examples, serving tasks in text retrieval and data generation.
 factory/validate.md:
-  hash: 20a281f412d1a2711d8c36b30cc971eb
-  summary: The content outlines the `ValidatePrediction` task, a Singleton process
-    that confirms whether a predicted answer is both contextually and semantically
-    correct when compared to a given correct answer. It highlights the use of machine
-    learning models for validating predictions, emphasizing features such as prediction
-    validation, semantic correctness, and contextual accuracy. The example provided
-    demonstrates the use of the `GEMMA2_9B_FP16` model for executing this task via
-    the `dria` library, showcasing how to evaluate and parse results effectively.
-    Key concepts include prediction evaluation, model usage, and validation accuracy.
+  hash: 736c6f0065a3f7bd554c9890e7f62ce9
+  summary: The document provides an overview of the `ValidatePrediction` workflow,
+    a `Singleton` task designed to assess if a predicted answer is semantically and
+    contextually accurate compared to a correct answer. Core elements include inputs
+    like the prediction and correct answer, and outputs such as a validation boolean
+    and the model used, like `GEMMA2_9B_FP16`. This task supports AI model-driven
+    semantic evaluation to ensure data accuracy and prediction validation. An example
+    code snippet demonstrates how to use the `ValidatePrediction` task with various
+    AI models, highlighting keywords like prediction validation, semantic evaluation,
+    AI models, data accuracy, and contextual assessment.
 factory/web_multi_choice.md:
-  hash: d81eb38cf4ecb703b5f0bf50af70cf2e
-  summary: WebMultiChoice is an AI-driven task designed to answer multiple-choice
-    questions accurately through web search and evaluation. By using a workflow that
-    generates search queries, scrapes content from relevant URLs, and evaluates the
-    notes against the choices, it determines the best answer. Key features include
-    leveraging machine learning models like QWEN2_5_7B_FP16 and providing insights
-    into AI evaluation, question answering, and using web search for model-based decision-making.
-    This tool enhances the precision of AI responses in multiple-choice scenarios,
-    making it valuable for applied AI tasks and evaluations.
+  hash: 68ee34a3f8842769ebe9d01477a9d5c0
+  summary: 'WebMultiChoice is a powerful tool designed to answer multiple-choice questions
+    by leveraging web search and evaluation techniques. It processes inputs like the
+    question and possible answer choices, conducts web searches, and scrapes relevant
+    content to generate and evaluate notes for determining the best answer. This process
+    is exemplified by using medical scenarios, such as determining which fetal cells
+    are stimulated by betamethasone to produce surfactant, demonstrating the tool''s
+    ability in areas like AI evaluation and medical education. Key features include
+    search query generation, web scraping, and content analysis, employing models
+    like QWEN2_5_7B_FP16 for effective decision-making. Keywords: WebMultiChoice,
+    AI evaluation, web search, multiple-choice questions, surfactant production, tocolytics,
+    betamethasone, fetal cells.'
 how-to/batches.md:
-  hash: bd82c50bfa31e7e8c736e5ef9e26df63
-  summary: The document provides a guide on using Batches (ParallelSingletonExecutor)
-    for parallel processing in Python with Dria. It explains how to execute multiple
-    instructions concurrently, which is beneficial for handling large instruction
-    sets efficiently. The process involves creating a `Dria` client, a `Singleton`
-    task, and a `ParallelSingletonExecutor` object. The example code demonstrates
-    loading instructions and executing them using models like `Model.QWEN2_5_7B_OR`
-    and `Model.LLAMA_3_1_8B_OR`. Key topics include parallel processing, Python, Dria,
-    and asynchronous execution.
+  hash: 2ac5057d9f6b8a819f99ec06b638d175
+  summary: This document explains how to use Batches with the ParallelSingletonExecutor
+    for parallel execution of instructions in Python, leveraging a Dria client and
+    the Singleton pattern. It focuses on running multiple instructions concurrently
+    using Python's asyncio library. The guide provides a code example featuring essential
+    components such as the Dria client, Singleton task, and ParallelSingletonExecutor.
+    It outlines how to set models and load instructions to execute tasks like determining
+    the capitals of various countries. Key terms include parallel execution, Dria
+    client, Python asyncio, Batches, and Singleton pattern.
+how-to/data_enrichment.md:
+  hash: 32e424720520df2ea3fc22a21b72b312
+  summary: 'Discover how to effectively enhance your datasets with Dria''s powerful
+    data enrichment capabilities. Utilizing Dria, transform and enrich data with new
+    fields to create richer data representations for analytics, improving machine
+    learning models or supporting other downstream tasks. Key features include schema
+    definition through Pydantic models, prompt creation for data transformation, and
+    detailed examples illustrating text summarization and sentiment analysis. This
+    process enriches customer feedback, enhances data quality, and streamlines workflows,
+    gaining actionable insights and improving search and filtering of large text corpora.
+    Keywords: data enrichment, Dria, analytics, machine learning, customer feedback,
+    sentiment analysis, data transformation.'
 how-to/data_generators.md:
-  hash: c1348254dd10bc02f1d7048c3b0dcdad
-  summary: 'The DatasetGenerator tool by Dria facilitates efficient dataset creation
-    and transformation, leveraging both prompt-based and singleton-based AI workflows.
-    This tool supports parallel execution, automatic schema validation, multiple model
-    integration, search capabilities, and sequential workflow processing. Core features
-    include generating datasets through models such as GPT4O and GEMINI_15_FLASH,
-    using structured instructions and prompts, or employing pre-built singleton factories
-    for specific data generation tasks. Designed for streamlined dataset manipulation,
-    DatasetGenerator is ideal for users seeking to generate or transform synthetic
-    data efficiently with AI-driven methodologies. Key terms: dataset generation,
-    data transformation, AI workflows, synthetic data, Dria.'
+  hash: 6ff184e25858491266ec66331e885776
+  summary: The "Dataset Generator" is a versatile tool designed to effortlessly generate
+    and transform datasets using Dria, with support for both prompt-based and singleton
+    workflows. Key features include parallel execution, automatic schema validation,
+    support for multiple models, search functionalities, and sequential workflow processing.
+    Aimed at enhancing AI automation, data transformation, and workflow processing,
+    it utilizes the `Prompt` class for prompt-based generation and provides factory-built
+    singletons for more customized data generation workflows. The tool supports various
+    model configurations, including single, multiple, and pipelined models, to optimize
+    the dataset creation process. Keywords include dataset generation, Dria, AI automation,
+    data transformation, and workflow processing.
 how-to/dria_datasets.md:
-  hash: 17f267b3fe2bf7ecfa40f21b5163cee2
-  summary: The Dria Dataset, facilitated by the `DriaDataset` class, is an advanced
-    framework for data generation and management. Core features include data persistence,
-    flexible initialization, and robust data management with schema validation. Users
-    can create datasets from scratch or initialize them from existing formats like
-    JSON, CSV, or even import data from Hugging Face datasets. This ensures compatibility
-    and consistency in handling complex datasets while offering multiple import/export
-    options. The framework is tailored for applications in data generation, schema
-    validation, and comprehensive data management, making it a versatile tool for
-    developers and data scientists.
+  hash: af8d02eca24800d1ca186d90f7c82345
+  summary: 'DriaDataset is a robust data generation framework designed for structured
+    data management and persistence, ensuring seamless integration with multiple formats,
+    including JSON, CSV, and Hugging Face datasets. It offers features like automatic
+    data persistence, multi-stage process tracking, and schema validation to maintain
+    data consistency. DriaDataset facilitates flexible initialization, allowing users
+    to start with an empty dataset or integrate existing data to augment or provide
+    instructions. Key functionalities include structured handling of complex datasets,
+    intermediate step preservation, and compatibility with various import/export options.
+    Leveraging tools like Pydantic for schema definition, DriaDataset serves as a
+    comprehensive solution for efficient data management and generation processes.
+    Keywords: data generation, data management, schema validation, Hugging Face, dataset.'
 how-to/dria_datasets_exports.md:
-  hash: bd4c98f99c865d4aab87bda355603d44
-  summary: The guide explains how to export data from DriaDataset into various formats
-    such as JSON, JSONL, and pandas DataFrame, with a focus on preparing the data
-    for training using HuggingFace TRL (Transformers with Reinforcement Learning).
-    It introduces the `Formatter` class, which converts datasets into specific formats
-    like standard, conversational, and their subtypes, crucial for different training
-    setups in HuggingFace's TRL framework. The content also provides a step-by-step
-    example of generating and exporting data in the `CONVERSATIONAL_PROMPT_COMPLETION`
-    format, making it seamless to integrate with various TRL trainers. Key keywords
-    include DriaDataset, data export, HuggingFace, data formatting, and TRL training.
+  hash: 3131ccc7c5e8f6682c5c8cc5e0648013
+  summary: The guide provides insights into exporting data from DriaDataset for use
+    with HuggingFace's TRL framework, highlighting formats such as pandas DataFrame,
+    JSONL, and JSON. It introduces the `Formatter` class for converting data into
+    training-ready formats, supporting types like Standard and Conversational. Key
+    export formats for TRL trainers, such as STANDARD_LANGUAGE_MODELING and CONVERSATIONAL_PROMPT_COMPLETION,
+    are explained, alongside mapping processes for dialogue data. Core keywords include
+    DriaDataset, data export, format types, TRL, HuggingFace, and machine learning.
 how-to/formatting.md:
-  hash: 85eac28ead59c159c7d9498800cd1795
-  summary: The article provides a comprehensive guide on using the `Formatter` class
-    for data formatting in AI applications, specifically for transforming datasets
-    from Dria Network into training-ready formats. The class supports both "Standard"
-    and "Conversational" formats with subtypes like LANGUAGE_MODELING, PROMPT_ONLY,
-    and PREFERENCE. It details how to implement the `Formatter` class using Python
-    code, mapping input data fields to the required format structure. The guide also
-    covers how to convert data for compatibility with HuggingFace's TRL (Transformers
-    with Reinforcement Learning) framework, facilitating seamless integration with
-    different TRL trainers such as BCOTrainer, SFTTrainer, and PPOTrainer. Key terms
-    include Data Formatting, AI Training, and HuggingFace TRL.
+  hash: 7b9ab240eeb6083aa46bdbc5bd37566d
+  summary: The Formatter class in Dria is a powerful tool designed to convert datasets
+    into training-ready formats, compatible with various trainers and styles. It supports
+    standard and conversational format types with subtypes like LANGUAGE_MODELING,
+    PROMPT_ONLY, and PREFERENCE, making data transformation seamless. The class enables
+    easy mapping of data keys for both standard and conversational training styles,
+    aiding in preparing datasets for the HuggingFace TRL framework, which includes
+    trainers like BCOTrainer and PPOTrainer. Key features include the ability to handle
+    FIELD_MAPPING and CONVERSATION_MAPPING, making it an essential component for efficient
+    data generation and formatting in machine learning workflows.
 how-to/functions.md:
-  hash: ccc12288841100837de357a921651c50
-  summary: Discover how to leverage custom and built-in functions in Dria Nodes workflows
-    for enhanced automation and seamless API integration. Learn to utilize `Operator.FUNCTION_CALLING`
-    for executing built-in tools and create custom functions using `CustomTool` or
-    `HttpRequestTool` to perform specialized operations. The guide provides programming
-    examples, including a workflow to sum numbers and make HTTP requests for cryptocurrency
-    price feeds. Enhance your workflow automation with Dria Nodes by integrating these
-    tools, focusing on keywords like Dria Nodes, custom functions, workflow automation,
-    API integration, and programming examples.
+  hash: a11fc7ad518eb83fdc79d1c16be64e5b
+  summary: The document provides a comprehensive guide on using built-in and custom
+    functions in Dria Nodes for advanced workflow automation, particularly emphasizing
+    automation and API integration. It highlights built-in tools like `Operator.FUNCTION_CALLING`
+    for executing functions such as the `Stock` tool. Custom functions, including
+    `CustomTool` for defining operations and `HttpRequestTool` for making HTTP requests,
+    allow users to extend Dria's native capabilities. The document includes examples
+    and code snippets for creating custom tools and incorporating them into workflows,
+    demonstrating how to perform specific tasks, such as sum calculations and fetching
+    cryptocurrency prices. Keywords include Dria Nodes, workflows, custom functions,
+    automation, and API integration.
 how-to/models.md:
-  hash: 65eed134acf760fd4cd9b1fbccc0d730
-  summary: Explore the Dria Network's extensive selection of advanced AI models from
-    leading organizations such as Microsoft, Google, OpenAI, Meta, and Alibaba. The
-    page provides a comprehensive list of available AI models, including Nous's Hermes,
-    Microsoft's Phi3 and Phi3.5 series, Google's Gemma2, Meta's Llama3.1 and 3.2 models,
-    Alibaba's Qwen2.5 series, and OpenAI's GPT-4 Turbo. Key features such as parameter
-    size and quantization details are highlighted for each model, catering to diverse
-    machine learning and AI application needs. The Dria Network emphasizes its breadth
-    of cutting-edge AI model offerings, serving as a valuable resource for AI exploration
-    and integration.
+  hash: 5ebee32762eecda2f4a1302f739d60e1
+  summary: Explore the Dria Network's comprehensive list of AI models from top developers,
+    focusing on categories such as machine learning, model repositories, and artificial
+    intelligence. This curated selection includes advanced models like NousTheta,
+    Phi3Medium, Gemma2, and OpenAI's GPT-4 Turbo, providing a range of options for
+    AI applications with varying parameters and quantization levels. Key offerings
+    are detailed from leading organizations such as Microsoft, Meta, Google, and Alibaba,
+    making the Dria Network a hub for state-of-the-art AI usage.
 how-to/pipelines.md:
-  hash: 5a6f968af4d7c5c5067c93ece28ed94b
-  summary: The article provides a comprehensive guide on creating efficient pipelines
-    using Dria for parallel processing and data generation. It emphasizes the integration
-    of asynchronous workflows to execute complex outputs in a sequence, exemplified
-    by generating QA pairs from topics using Nvidia's methods. The guide details the
-    implementation of pipelines through classes like `Pipeline`, `StepTemplate`, and
-    `PipelineBuilder`, using Dria's network to manage parallel execution with custom
-    callbacks for task automation. Key concepts include workflows, data generation,
-    parallel processing, and the use of Dria to enhance workflow efficiency.
+  hash: d0f23693b421f3f66f7283c97970274d
+  summary: This document provides a comprehensive guide on creating asynchronous pipelines
+    to efficiently generate question-and-answer (QA) pairs and manage multiple inputs
+    concurrently. Key features include using the `Pipeline` class and `StepTemplate`
+    for defining sequences of workflows executed in a specific order, utilizing Dria
+    network for parallel execution of steps, and employing built-in callbacks like
+    `scatter`, `broadcast`, and `aggregate` for handling input-output mappings. The
+    guide also emphasizes the flexibility of pipelines with custom callbacks and multiple
+    input management. Essential keywords include asynchronous processing, workflows,
+    QA generation, data processing, and pipelines.
 how-to/prompters.md:
-  hash: 401a486fe574190f6a37a8c8d2e7e186
-  summary: The article provides a guide on using the `Prompt` class in Dria for generating
-    structured outputs with schema validation through Pydantic models. It outlines
-    the basic usage steps including importing dependencies, defining an output schema
-    with Pydantic, creating a `DriaDataset`, initializing a `Prompt` instance with
-    a template, and generating data using `DatasetGenerator`. It highlights the class's
-    ability to structure prompts for language models, mentioning core terms such as
-    data generation, schema validation, and Pydantic. Additionally, a complete example
-    is provided to demonstrate generating tweets about different topics, emphasizing
-    practical application and key components like the `Model` and async operations
-    in Dria workflows.
+  hash: a4b71027a4cea26d71acedce525f5e5d
+  summary: This guide explains how to use the `Prompt` class with Pydantic in Python
+    for generating structured outputs from language models. It covers the setup of
+    a prompt with schema validation using Pydantic models, specifically focusing on
+    creating prompts with the `Prompt` class for easy data generation. Key steps include
+    importing necessary libraries, defining output schemas with Pydantic, initializing
+    a DriaDataset, and utilizing the `DatasetGenerator` for executing prompts and
+    generating data. The article uses a practical example of generating tweet datasets
+    and highlights the use of models such as GPT-4. Important keywords include Pydantic,
+    data generation, language models, prompting, and Python programming.
 how-to/selecting_models.md:
-  hash: 05aafbe742680ebc9b3b7b6f51b77115
-  summary: 'The content provides a guide on selecting and utilizing Language Learning
-    Models (LLMs) within the Dria Network for tasks and comparisons. Key topics include
-    model selection, task execution, and handling model availability within the network''s
-    nodes. The article details how to use the `Model` enum to assign tasks to specific
-    models and explores the distribution of tasks across available models. It also
-    highlights the capability to execute a single task using multiple models to compare
-    outcomes, such as using `LLAMA3_1_8B_FP16` and `LLAMA_3_1_70B_OR`. Additionally,
-    it mentions the option to choose specific providers like OpenAI, Gemini, and OpenRouter
-    for model execution. Keywords: Applied AI, LLMs, Model Selection, Dria Network,
-    Task Execution, AI Models.'
+  hash: 605b8772d9792fbfcef56fe717fe535f
+  summary: The content provides an overview of the Dria Network, a system for selecting
+    and assigning tasks to various large language models (LLMs) for optimized execution.
+    Key features include the ability to specify desired models using the `Model` enum,
+    asynchronous task execution across network nodes, and the option to distribute
+    a single task to multiple models for comparative analysis. Users can utilize models
+    like `LLAMA3_1_8B_FP16` and others provided by platforms such as OLLAMA and OPENAI.
+    This functionality supports effective model selection, task assignment, and handling
+    of model availability within the network. Key terms include asynchronous execution,
+    model selection, task assignment, Dria Network, and LLMs.
 how-to/singletons.md:
-  hash: a543540038687f8d093420cfbe3b6885
-  summary: "The document provides an overview of how to use and create Singletons\
-    \ in Dria for efficient task handling with Pydantic validation. Singletons are\
-    \ pre-built task templates, functioning as single instances that handle specific\
-    \ tasks through Pydantic models for input validation and output formatting. Dria\u2019\
-    s Factory offers ready-to-use Singletons, and for custom needs, users can create\
-    \ their own by defining input fields, output schemas, and implementing workflow\
-    \ and callback methods. The article includes a code example using the `Simple`\
-    \ singleton to generate a dataset with an AI model. Key themes include task management,\
-    \ data generation, and custom workflow implementation. Keywords: Singletons, Dria,\
-    \ Pydantic, Task Management, Data Generation, Workflow, Dataset Generator."
+  hash: f1e0ba2377c3dd31d6d026600f9e09f3
+  summary: "The content provides a comprehensive guide on creating and using Singletons\
+    \ in Dria, emphasizing their role in efficient task handling through Pydantic\
+    \ models. Singletons are pre-built task templates with a standard structure for\
+    \ input validation and output formatting. The guide covers using ready-made Singletons\
+    \ like 'Simple' from Dria\u2019s Factory and illustrates the process of writing\
+    \ custom Singletons tailored to specific needs. It details the essential components\
+    \ of a Singleton, including defining input fields, creating an output schema with\
+    \ Pydantic, and implementing workflow and callback methods for task execution\
+    \ and result processing. This approach to task automation within AI workflows\
+    \ leverages the power of Dria, Pydantic, and task manipulation for optimized performance.\
+    \ Key concepts include Singleton design, task automation, AI workflows, Pydantic\
+    \ integration, and Dria\u2019s Factory utility."
 how-to/structured_outputs.md:
-  hash: 61fb885a6b52d41f70de31499df75120
-  summary: Learn how to implement structured outputs in your workflows using the Dria
-    SDK to ensure model responses adhere to your JSON Schema requirements. Structured
-    outputs, as explained in OpenAI's blog post, guarantee that model responses consistently
-    meet specified JSON schemas, preventing issues like missing keys or invalid enum
-    values. The Dria Network supports this feature for providers like OpenAI, Gemini,
-    and Ollama, with the prerequisite that models can handle function calling. By
-    using the `WorkflowBuilder` instance in Dria SDK, you can easily implement structured
-    outputs by attaching the `OutputSchema` to your workflow, as demonstrated with
-    the `generative_step` in the provided code snippet. Key topics include workflow
-    automation, JSON schema, and structured outputs in AI models.
+  hash: 47aae0a9505bd8f3ca19d5230e8ac207
+  summary: The article introduces the concept of structured outputs, a feature that
+    ensures consistent and valid responses from models by adhering to a supplied JSON
+    Schema. This approach prevents models from omitting required keys or producing
+    invalid enum values. Dria Network supports structured outputs for providers like
+    OpenAI, Gemini, and Ollama, specifically for models capable of function calling.
+    The implementation involves providing a schema to the `WorkflowBuilder` instance
+    within the Dria SDK, enabling streamlined and reliable workflows. Key keywords
+    include Structured Outputs, JSON Schema, Dria Network, OpenAI, and Workflows.
 how-to/tasks.md:
-  hash: 149feb0c00927b8bacf3166885380abd
-  summary: 'The Dria network leverages tasks as fundamental units of work, enabling
-    efficient AI workflows through asynchronous execution and model selection. By
-    publishing tasks to the network, nodes execute them based on their capabilities,
-    allowing for scalable operations without limitations on task numbers. Key features
-    include flexible model selection, scalability, and asynchronous execution, facilitating
-    efficient work distribution. Users can send tasks, such as executing simple prompts
-    on selected models like GPT4O, through a streamlined Python SDK. Overall, the
-    Dria network enhances AI task management, offering seamless result retrieval and
-    completion for effective processing in the Dria ecosystem. Keywords: Dria network,
-    tasks, asynchronous execution, model selection, AI workflows, scalability.'
+  hash: 9b889f397d05d4cb616960e9b7d6cdf4
+  summary: Discover the functionality of tasks within the Dria network, which serve
+    as units of work executed asynchronously by compute nodes. Key features include
+    model selection, scalable operations, and efficient result retrieval. Tasks are
+    published to the network with specified workflows and models, ensuring flexible
+    and distributed execution. With no limit on the number of tasks that can be published,
+    the system supports scalable, high-efficiency operations. This article guides
+    users on creating, executing, and retrieving results from tasks, emphasizing the
+    Dria network's robust asynchronous execution and scalability capabilities.
 how-to/workflows.md:
-  hash: 5c5b7d3d5bf7598eebbd397ec78a2656
-  summary: The article discusses creating custom workflows in the Dria Network using
-    Large Language Models (LLMs) to effectively manage execution flow and memory.
-    It emphasizes the use of the Dria SDK's `dria_workflows` package for building
-    workflows that consist of configurable steps interacting with LLMs and memory
-    operations. Key components include setting execution parameters, defining generative
-    and search steps, and establishing flow controls with conditions to manage task
-    execution. The guide includes practical examples and code snippets for building
-    workflows, highlighting tools for task management, memory operations, and conditional
-    logic in Python. Keywords include Dria Network, Workflows, LLMs, Task Management,
-    and Python SDK.
+  hash: bf8adec6b63917cf6203b5cf7f119fb2
+  summary: The article "Custom Workflows within Dria Network" provides a comprehensive
+    guide on creating custom workflows using the `dria_workflows` package within the
+    Dria Network, focusing on effective task management and automation. It highlights
+    the core components of a workflow, including configuration settings, steps, and
+    flow management. The guide explains how workflows can be constructed by defining
+    steps that interact with Large Language Models (LLMs) and input/output memory
+    operations. Key features such as memory operations, step types, and flow control
+    through conditional logic are discussed. The tutorial offers practical examples
+    of building a workflow to generate and validate random variables, illustrating
+    the use of Python code in setting up the workflow. Keywords include Dria Network,
+    LLM, workflow development, automation, and task management.
 installation.md:
-  hash: 5a71b3c39cf36d373c439abe7f1e0eb8
-  summary: The Dria SDK installation guide covers setting up the SDK for creating
-    synthetic data pipelines with Python 3.10 or higher. Users start by creating a
-    new Conda environment and installing the SDK using pip. The documentation addresses
-    potential installation issues, particularly with the coincurve package, and provides
-    solutions such as updating pip, installing wheel and coincurve separately, and
-    using tools such as brew and xcode on macOS. Key aspects include its current alpha
-    stage, free data generation, and community contributions through node operation.
-    Keywords include Dria SDK, installation, conda, Python, synthetic data, coincurve,
-    and troubleshooting.
+  hash: 3485658193a4c6741292144a1d39ae1b
+  summary: This guide provides a comprehensive walkthrough for installing the Dria
+    SDK on Python, highlighting key steps such as setting up a compatible environment
+    with Python 3.10 via conda and handling dependencies like coincurve. It addresses
+    troubleshooting techniques for common installation issues, including GCC-related
+    problems, by advising on tools like Homebrew and xcode-select. The guide emphasizes
+    Dria's alpha-stage network, accessible through RPCs, and invites users to contribute
+    by running a network node. Key terms include Dria SDK, Python Installation, Software
+    Development, and Troubleshooting.
 modules/structrag.md:
-  hash: 15753542a48e009ba5f541354837a264
-  summary: 'StructRAG is a retrieval-augmented generation (RAG) framework designed
-    to enhance large language models (LLMs) for knowledge-intensive reasoning tasks
-    by structuring information using cognitive-inspired techniques. This novel approach
-    improves accuracy and reasoning capabilities by automatically determining the
-    optimal structure for given tasks and restructuring documents accordingly. Key
-    components of the framework include modules for synthesizing, simulating, and
-    judging structured data to ensure high-quality outcomes. StructRAG achieves state-of-the-art
-    results on complex tasks, making it an effective solution for challenges involving
-    scattered and noisy data. The framework supports cutting-edge LLMs like GEMINI,
-    QWEN2.5, and LLAMA3. Key terms: StructRAG, LLMs, information structuring, retrieval-augmented
-    generation, knowledge reasoning.'
+  hash: d1e49074697e89c03cce50a43c88123b
+  summary: 'StructRAG is a cutting-edge retrieval-augmented generation (RAG) framework
+    designed to enhance large language models (LLMs) in performing knowledge-intensive
+    reasoning tasks. Unlike traditional RAG methods, StructRAG employs cognitive-inspired
+    structuring techniques to handle scattered and noisy information, automatically
+    identifying the optimal structure for given tasks to improve inference accuracy.
+    The framework consists of three main modules: StructRAGSynthesize for structuring
+    knowledge units, StructRAGSimulate for generating and testing solutions, and StructRAGJudge
+    for evaluating and refining outputs. By restructuring documents and conducting
+    inference on organized information, StructRAG achieves state-of-the-art results
+    across various complex knowledge tasks. Key terms include StructRAG, RAG, large
+    language models, cognitive science, and knowledge reasoning.'
 modules/structrag2.md:
-  hash: a3b1eb8dc90a44d75689f4836da02bb6
-  summary: 'StructRAG enhances language model reasoning through hybrid knowledge restructuring,
-    effectively improving reasoning capabilities in language models (LLMs). The model
-    employs a Hybrid Router to determine the best format for structuring information,
-    aiding in complex tasks such as developing machine learning algorithms or writing
-    research papers on quantum physics. Core components of StructRAG include StructRAGGraph,
-    StructRAGCatalogue, StructRAGAlgorithm, and StructRAGTable. The approach is detailed
-    in a study titled "StructRAG: Boosting Knowledge Intensive Reasoning of LLMs via
-    Inference-time Hybrid Information Structurization," showcasing its potential in
-    knowledge-intensive scenarios. Key terms: StructRAG, knowledge restructuring,
-    hybrid information structurization, AI reasoning, LLMs.'
+  hash: a62511c6fea66f4d333adc731b080b06
+  summary: StructRAG is an innovative approach designed to enhance the reasoning capabilities
+    of large language models (LLMs) through knowledge restructuring and hybrid information
+    integration. By utilizing a hybrid router to determine the format of structured
+    data, StructRAG enables LLMs to better handle complex tasks by structuring information
+    during inference. The methodology involves leveraging components like StructRAGGraph,
+    StructRAGCatalogue, and StructRAGAlgorithm, which are critical in processing and
+    evaluating the complexity of tasks such as developing machine learning algorithms
+    or writing research papers. This approach aims to significantly improve the efficiency
+    and effectiveness of LLM reasoning, making it a notable advancement in applied
+    AI and machine learning with a focus on knowledge-intensive tasks. Keywords include
+    StructRAG, knowledge restructuring, hybrid information, LLM, and machine learning.
 node.md:
-  hash: 6ca62aaf7d8aed4c01be5146e60e7778
-  summary: 'Learn how to set up a decentralized AI node using Dria, an AI collaboration
-    network by FirstBatch, with minimal setup and no wallet transactions required.
-    This quick guide outlines the process: download the launcher from the Dria website,
-    run it, enter your ETH wallet private key, and select a model to serve. Optional
-    steps include entering API keys for additional tools. The guide covers node requirements,
-    mentions potential security warnings for MacOS, and suggests post-setup actions
-    like filling out a form for a Discord role and following Dria on social media.
-    Key topics include decentralized AI, node setup, and the Dria Network.'
+  hash: 5b48fcf7bb7d9f178225fb36aa5a105f
+  summary: 'Set up a node on the Dria decentralized network for AI collaboration with
+    ease. The Dria network, developed by FirstBatch, allows users to participate without
+    any wallet activity and with a quick installation process. Key steps involve downloading
+    the launcher from the Dria website, running it, and entering your ETH wallet private
+    key. You''ll then choose a model to serve, with options to enter API keys for
+    more tools. MacOS users may need to bypass security warnings, and there might
+    be OS-specific variations. For post-setup, fill out a form for a Discord role
+    and engage with the community by starring the GitHub repo and following Dria on
+    social media. Important keywords: decentralized network, AI collaboration, node
+    setup, Dria network, compute node.'
 quickstart.md:
-  hash: c837d4ad73b4cd117c8d91792f4c7ca2
-  summary: This quick start guide provides an overview of using Dria SDK for generating
-    tweets through customizable prompts and dataset management. It walks users through
-    creating a dataset, attaching a dataset generator, defining instructions and prompts,
-    and executing the generation using Python. Key components include integrating
-    Dria SDK, using Pydantic for schema definitions, and leveraging models like GPT4O
-    to produce data stored in a local database. This guide is essential for tasks
-    involving prompt engineering, dataset generation, and machine learning applications.
-    Key terms include Dria SDK, Dataset Generation, Python, Machine Learning, and
-    Prompt Engineering.
+  hash: 008e87ae2469c3d2aefeaec0a2fdd5ad
+  summary: The guide provides a step-by-step overview of using Dria SDK for generating
+    datasets of tweets leveraging large language models (LLMs), specifically using
+    Python. Key steps include creating a dataset, attaching a dataset generator, defining
+    input instructions and prompts, and executing the task. The example script uses
+    the Dria SDK to generate tweets about specified topics. It highlights the ease
+    of integrating the SDK with models like GPT-4O for data generation and mentions
+    that network capacity and volume are currently limited. Key terms include Dria
+    SDK, dataset generation, LLMs, Python, and quickstart guide.

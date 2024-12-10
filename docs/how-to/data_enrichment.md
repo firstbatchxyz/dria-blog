@@ -1,3 +1,16 @@
+---
+categories:
+- RAG
+description: Discover how to use Dria for effective data enrichment, transforming
+  datasets with powerful insights and enhancing analytics capabilities.
+tags:
+- data enrichment
+- Dria
+- analytics
+- machine learning
+- customer feedback
+---
+
 # Data Enrichment
 
 `enrich` provides powerful data enrichment capabilities that allow you to enrich your existing datasets by generating new fields through Dria. This helps you build richer data representations for analytics, machine learning models, or other downstream tasks.

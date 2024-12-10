@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Explore a comprehensive list of AI models available in the Dria Network,
+  including advanced options from top AI developers.
+tags:
+- AI models
+- Dria Network
+- Machine Learning
+- Model Repository
+- Artificial Intelligence
+---
+
 # Models
 
 See available models in Dria Network below:
