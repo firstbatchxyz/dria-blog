@@ -58,7 +58,6 @@ dataset = DriaDataset(
     name="my_dataset",
     description="Example dataset",
     schema=MySchema,
-    db=DatasetDB()
 )
 ```
 
@@ -72,7 +71,6 @@ dataset = DriaDataset.from_json(
     name="json_dataset",
     description="Dataset from JSON",
     schema=MySchema,
-    db=db,
     json_path="data.json"
 )
 ```
@@ -83,7 +81,6 @@ dataset = DriaDataset.from_csv(
     name="csv_dataset",
     description="Dataset from CSV",
     schema=MySchema,
-    db=db,
     csv_path="data.csv",
     delimiter=",",
     has_header=True
@@ -96,7 +93,6 @@ dataset = DriaDataset.from_huggingface(
     name="hf_dataset",
     description="Dataset from HuggingFace",
     schema=MySchema,
-    db=db,
     dataset_id="username/dataset",
     mapping={"text": "input", "label": "class"}
 )
