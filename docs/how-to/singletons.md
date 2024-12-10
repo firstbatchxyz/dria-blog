@@ -125,7 +125,7 @@ def workflow(self) -> Workflow
 def callback(self, result: List[TaskResult]) -> List[ValidationOutput]
 ```
 
-See [workflows]("how-to/workflows.md") for more information on how to implement workflows.
+See [workflows](workflows.md) for more information on how to implement workflows.
 
 The `workflow` method defines the task to be executed and `callback` method processes the result.
 
@@ -158,7 +158,7 @@ The `workflow` method defines the task to be executed and `callback` method proc
         return builder.build()
 ```
 
-Since Dria supports multiple models, [structured outputs](../structured_outputs) are not forced. But can be added through `schema` field of `generative_step`. 
+Since Dria supports multiple models, [structured outputs](structured_outputs.md) are not forced. But can be added through `schema` field of `generative_step`. 
 If not, the format and parsing is up to the prompt you provided to the task.
 
 This is the implemented prompt for `Validator`

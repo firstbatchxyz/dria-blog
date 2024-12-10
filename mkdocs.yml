@@ -79,6 +79,7 @@ nav:
     - Prompts: "how-to/prompters.md"
     - Singletons: "how-to/singletons"
     - Selecting Models: "how-to/selecting_models.md"
+    - Data Enrichment: "how-to/data_enrichment.md"
   - Advanced:
       - Complex Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"
