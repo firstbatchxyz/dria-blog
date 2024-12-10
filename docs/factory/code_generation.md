@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate code instantly with the GenerateCode task using specified languages
-  and instructions. Ideal for coder models.
+description: Generate code easily using Singleton classes for various programming
+  languages with specified instructions.
 tags:
 - code generation
 - software engineering
-- AI coding
-- programming tasks
-- machine learning
+- programming
+- AI models
+- Singleton patterns
 ---
 
 # GenerateCode

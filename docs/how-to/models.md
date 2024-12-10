@@ -1,3 +1,16 @@
+---
+categories:
+- Applied AI
+description: Explore various available models in the Dria Network, including Nous's
+  Hermes, Microsoft's Phi3, and Meta's Llama series.
+tags:
+- Dria Network
+- AI Models
+- Nous Hermes
+- Microsoft Phi3
+- Meta Llama
+---
+
 # Models
 
 See available models in Dria Network below:

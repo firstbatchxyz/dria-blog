@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Clair is a SingletonTemplate task for correcting student solutions with
-  detailed reasoning and improved outputs for coding problems.
+description: Clair is an AI-powered task processor that evaluates student solutions,
+  provides corrections, and detailed reasoning for improvements.
 tags:
-- Clair
-- student solution correction
-- educational AI
-- coding problem
-- factorial function
+- AI Feedback
+- Student Solutions
+- Automated Evaluation
+- Education Technology
+- Solution Checker
 ---
 
 # Clair

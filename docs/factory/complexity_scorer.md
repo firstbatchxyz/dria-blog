@@ -1,14 +1,14 @@
 ---
 categories:
-- Preference Data
-description: Rank instructions by complexity using the ScoreComplexity singleton task,
-  providing scores and model references for guidance.
+- Workflows
+description: ScoreComplexity evaluates instruction complexity, providing numerical
+  scores for each based on analysis to streamline data generation tasks.
 tags:
-- Complexity Scoring
-- Instructions Ranking
-- Machine Learning
-- Task Automation
-- Data Analysis
+- complexity scoring
+- instruction analysis
+- data generation
+- AI models
+- machine learning
 ---
 
 # ScoreComplexity

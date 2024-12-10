@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Generate a graph of concepts and their relationships from specified context
-  using a Singleton task in Dria.
+- Data Generation
+description: GenerateGraph extracts ontological relationships from text, creating
+  a graph of related concepts and connections.
 tags:
 - graph generation
-- concept relationships
-- Dria
-- AI models
-- Singleton task
+- ontology extraction
+- data structure
+- machine learning
+- AI relationships
 ---
 
 # GenerateGraph

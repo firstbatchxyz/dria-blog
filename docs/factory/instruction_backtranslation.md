@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn about Instruction Backtranslation, a Singleton task for evaluating
-  text outputs against reference instructions with scoring.
+description: Evaluate instruction-generation pairs using InstructionBacktranslation
+  for accurate AI response scoring and reasoning.
 tags:
-- Instruction Backtranslation
-- AI Evaluation
-- Text Output Analysis
-- Parallel Execution
-- Model Scoring
+- instruction
+- backtranslation
+- AI evaluation
+- data generation
+- machine learning
 ---
 
 # InstructionBacktranslation

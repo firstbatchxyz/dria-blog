@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Generate text with the Simple Singleton task using instructions and select
-  models like GEMINI for output.
+- Workflows
+description: Explore Simple, a singleton template for easy text generation using specified
+  models. Streamline your text generation tasks efficiently.
 tags:
 - text generation
-- Singleton pattern
-- GEMINI model
-- Python
-- dria
+- simple template
+- dataset generator
+- AI models
+- automated writing
 ---
 
 # Simple

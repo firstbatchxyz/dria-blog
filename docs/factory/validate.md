@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Validate if a predicted answer is correct using the ValidatePrediction
-  singleton task with various models.
+- Applied AI
+description: ValidatePrediction class for assessing the accuracy of AI predictions
+  through contextual and semantic comparison.
 tags:
-- prediction
-- validation
-- semantic correctness
-- contextual accuracy
-- singleton task
+- prediction validation
+- semantic comparison
+- AI model
+- data generation
+- contextual evaluation
 ---
 
 # ValidatePrediction

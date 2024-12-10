@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore the SubTopicPipeline class for generating recursive subtopics
-  in AI. Customize depth and enhance topic research efficiency.
+- Applied AI
+description: GenerateSubtopics is a template for AI-driven subtopic generation, enhancing
+  content creation with structured workflows.
 tags:
-- AI
-- Subtopics
-- Topic Generation
-- Artificial Intelligence
-- Workflow
+- AI generation
+- subtopics
+- content creation
+- data generation
+- workflow
 ---
 
 # GenerateSubtopics

@@ -1,14 +1,14 @@
 ---
 categories:
-- Synthetic Data
-description: Generate unique personas with backstories for simulations using the PersonaPipeline
-  class, versatile for creative applications.
+- Applied AI
+description: Generate character bios and backstories using persona traits with PersonaBio
+  and PersonaBackstory in Python.
 tags:
-- Personas
-- Synthetic Data
-- Simulation
-- Cyberpunk
-- AI Backstories
+- character generation
+- AI narratives
+- creative writing
+- persona generation
+- simulation development
 ---
 
 # Persona
@@ -149,4 +149,3 @@ my_dataset = DriaDataset(
   }
 ]
 ```
-

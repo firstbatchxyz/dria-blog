@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: EvolveInstruct mutates prompts with various techniques for enhanced instruction
-  generation in AI models.
+description: EvolveInstruct evolves prompts through diverse mutation strategies, enhancing
+  complexity while preserving core intent.
 tags:
-- EvolveInstruct
-- AI Instruction
-- Prompt Engineering
-- Mutation Types
-- Workflow
+- prompt evolution
+- AI prompts
+- mutation strategies
+- data generation
+- machine learning
 ---
 
 # EvolveInstruct

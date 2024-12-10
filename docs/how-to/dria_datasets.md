@@ -1,14 +1,14 @@
 ---
 categories:
 - Data Generation
-description: Discover the Dria Dataset for flexible data generation and management
-  with schema validation and easy imports from various formats.
+description: Explore the Dria Dataset class for efficient data generation, management,
+  and persistence in Python projects.
 tags:
-- data generation
-- schema validation
-- Dria
-- data management
-- datasets
+- DriaDataset
+- Data Generation
+- Python
+- Data Management
+- Pydantic
 ---
 
 # Dria Dataset

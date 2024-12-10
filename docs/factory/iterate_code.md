@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: IterateCode is a Singleton task that enhances existing code by following
-  specific instructions for improvement.
+- Applied AI
+description: IterateCode Singleton helps optimize and enhance existing code by iterating
+  with AI-generated instructions in various programming languages.
 tags:
-- Code Improvement
-- Software Engineering
-- Singleton Pattern
-- Code Iteration
-- Error Handling
+- code optimization
+- AI programming
+- IterateCode
+- python
+- software development
 ---
 
 ## IterateCode Singleton

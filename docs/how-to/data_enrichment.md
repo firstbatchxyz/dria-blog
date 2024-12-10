@@ -1,3 +1,16 @@
+---
+categories:
+- Data Generation
+description: Discover how to enrich datasets with Dria, enhancing text data for analytics
+  and machine learning through customized schemas and prompts.
+tags:
+- data enrichment
+- Dria
+- machine learning
+- Pydantic
+- text analysis
+---
+
 # Data Enrichment
 
 `enrich` provides powerful data enrichment capabilities that allow you to enrich your existing datasets by generating new fields through Dria. This helps you build richer data representations for analytics, machine learning models, or other downstream tasks.

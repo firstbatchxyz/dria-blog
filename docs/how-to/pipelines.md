@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to create efficient pipelines that integrate workflows for
-  generating complex outputs in parallel using Dria.
+description: Learn how to create and implement efficient pipelines that execute workflows
+  in parallel using Dria.
 tags:
-- pipelines
-- workflows
-- parallel processing
-- data generation
+- Pipelines
+- Workflows
+- Asynchronous Processing
 - Dria
+- Data Generation
 ---
 
 # Creating Pipelines

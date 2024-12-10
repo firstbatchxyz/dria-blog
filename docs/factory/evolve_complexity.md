@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: EvolveComplexity enhances instruction complexity using advanced models,
-  perfect for generating creative and intricate content.
+description: EvolveComplexity transforms instructions into more complex versions while
+  preserving their meaning, ideal for data generation and instruction variations.
 tags:
 - instruction evolution
-- complexity enhancement
-- AI models
-- creative writing
-- evolutionary instructions
+- data generation
+- AI language model
+- complexity transformation
+- variations
 ---
 
 # EvolveComplexity

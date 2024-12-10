@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate multi-hop questions requiring reasoning across three documents
-  using the MultiHopQuestion task.
+- Workflows
+description: Generate multi-hop questions from three document chunks with increasing
+  complexity using the MultiHopQuestion template.
 tags:
 - multi-hop questions
-- reasoning
-- document analysis
-- AI education
-- question generation
+- data generation
+- question answering
+- AI models
+- document processing
 ---
 
 # MultiHopQuestion

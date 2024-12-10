@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: Explore the DatasetGenerator tool by Dria for efficient dataset creation
-  and transformation using prompt and singleton workflows.
+- Applied AI
+description: Generate and transform datasets effectively with DatasetGenerator in
+  Dria, utilizing both prompt-based and singleton-based workflows.
 tags:
-- dataset generation
-- data transformation
-- Dria
-- AI workflows
-- synthetic data
+- Dataset Generation
+- Data Transformation
+- Prompt-based Generation
+- Singletons
+- AI Models
 ---
 
 # Dataset Generator

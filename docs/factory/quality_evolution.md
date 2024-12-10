@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Evolve the quality of responses through effective rewriting methods within
-  AI frameworks.
+- Workflows
+description: EvolveQuality enhances text responses by focusing on helpfulness, relevance,
+  depth, creativity, or detail level for improved quality.
 tags:
-- Response Quality
-- AI Rewriting
-- Task Automation
-- EvolveQuality
-- Model Evaluation
+- text evolution
+- response quality
+- AI enhancement
+- data generation
+- evolution methods
 ---
 
 # EvolveQuality

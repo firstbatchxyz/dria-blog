@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Explore the SearchPipeline class for efficient web data retrieval and
-  summarization based on specific topics.
+description: Discover SearchWeb, a singleton implementation for web searches generating
+  structured and localized results in various languages.
 tags:
-- SearchPipeline
-- Data Retrieval
-- Web Summarization
-- AI Workflows
-- Artificial Intelligence
+- web search
+- singleton pattern
+- data generation
+- structured data
+- python
 ---
 
 I'll create a markdown documentation file for the SearchWeb singleton implementation you provided.
