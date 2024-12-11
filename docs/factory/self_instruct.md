@@ -1,67 +1,51 @@
 ---
 categories:
 - Workflows
-description: Generate user queries for AI applications with SelfInstruct, optimizing
-  task management in professional environments.
+description: SelfInstruct automates user query generation for AI applications based
+  on specific criteria and context.
 tags:
-- AI queries
-- task management
-- SelfInstruct
-- user instructions
-- automation
+- AI
+- query generation
+- data generation
+- instructions
+- self-instruct
 ---
 
 # SelfInstruct
 
-`SelfInstruct` is a `Singleton` task that generates user queries for a given AI application and context.
+## Overview
+SelfInstruct is a singleton template designed to generate user queries for AI applications based on specific criteria and context. It automates the process of creating relevant instructions or queries that can be used to test or train AI systems.
 
-#### Inputs
-- num_instructions (`int`): The number of user queries to generate.
-- criteria_for_query_generation (`str`): The criteria for generating the queries.
-- application_description (`str`): A description of the AI application.
-- context (`str`): The context to which the queries should be applicable.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| num_instructions | conint(ge=1) | The number of user queries to generate |
+| criteria_for_query_generation | str | The criteria for generating the queries |
+| application_description | str | A description of the AI application |
+| context | str | The context to which the queries should be applicable |
 
-#### Outputs
-- instructions (`List[str]`): The generated user queries.
-- model (`str`): The model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instructions | List[str] | List of generated instructions |
+| model | str | The AI model used for generation |
 
-### Example
+#### Usage
 
-Generate user queries for an AI application. This example uses the `GEMMA2_9B_FP16` model.
+SelfInstruct instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import SelfInstruct
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    self_instruct = SelfInstruct()
-    res = await dria.execute(
-        Task(
-            workflow=self_instruct.workflow(
-                num_instructions=5,
-                criteria_for_query_generation="Diverse queries related to task management",
-                application_description="A task management AI assistant",
-                context="Professional work environment"
-            ),
-            models=[Model.GEMINI_15_PRO],
-        )
-    )
-    return self_instruct.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="SelfInstruct",
+    description="A dataset for self-instructed query generation",
+    schema=SelfInstruct.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {

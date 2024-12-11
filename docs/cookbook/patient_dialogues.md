@@ -1,12 +1,12 @@
 ---
 categories:
-- Workflows
-description: Explore insightful patient dialogues that enhance understanding and improve
-  communication in healthcare settings.
+- Applied AI
+description: Explore various patient dialogues and interactions that enhance understanding
+  in healthcare settings.
 tags:
-- patient communication
-- healthcare dialogues
-- medical conversations
-- doctor-patient relationship
-- healthcare education
+- patient care
+- healthcare communication
+- dialogue examples
+- medical interaction
+- patient engagement
 ---

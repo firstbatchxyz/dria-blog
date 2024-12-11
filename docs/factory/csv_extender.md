@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Extend CSV files by generating new rows with subcategories using the
-  CSVExtenderPipeline class, facilitating enhanced data management.
+- Data Generation
+description: CSVExtenderPipeline class extends CSV data by generating new rows based
+  on existing entries, enhancing data analysis and organization.
 tags:
 - CSV
-- data management
-- pipeline
-- data extension
-- subcategories
+- Data Processing
+- Data Extension
+- Pipeline
+- Automation
 ---
 
 # CSVExtenderPipeline

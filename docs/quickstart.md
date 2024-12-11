@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: Quickly start generating tweets using Dria SDK and LLMs with this step-by-step
-  guide and example scripts.
+- Workflows
+description: Quickly set up Dria SDK to generate datasets with tweets using LLMs.
+  Follow easy steps for data generation and instructions.
 tags:
 - Dria SDK
-- dataset generation
+- Data Generation
 - LLMs
 - Python
-- quickstart
+- Quick Start
 ---
 
 # Quick Start

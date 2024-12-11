@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to use Batches with ParallelSingletonExecutor for running instructions
-  concurrently in Python.
+description: Learn how to run multiple instructions concurrently using Batches with
+  ParallelSingletonExecutor in Dria. Enhance your task efficiency!
 tags:
-- parallel execution
-- Dria client
-- Python asyncio
 - Batches
-- Singleton pattern
+- Parallel Execution
+- Async Programming
+- Dria
+- Task Management
 ---
 
 # Batches

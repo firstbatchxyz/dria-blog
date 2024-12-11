@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to use built-in and custom functions in Dria Nodes workflows
-  for advanced automation.
+description: Explore Dria Nodes functions for built-in and custom tools, including
+  HTTP requests and workflows for seamless automation.
 tags:
 - Dria Nodes
+- Workflow Automation
 - Custom Functions
-- Workflows
-- Automation
-- API Integration
+- HTTP Requests
+- Generative Steps
 ---
 
 # Functions

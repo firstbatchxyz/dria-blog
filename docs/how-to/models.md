@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Explore a comprehensive list of AI models available in the Dria Network,
-  including advanced options from top AI developers.
+description: Explore various available models in the Dria Network, including Nous's
+  Hermes, Microsoft's Phi3, and Meta's Llama series.
 tags:
-- AI models
 - Dria Network
-- Machine Learning
-- Model Repository
-- Artificial Intelligence
+- AI Models
+- Nous Hermes
+- Microsoft Phi3
+- Meta Llama
 ---
 
 # Models

@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: Convert datasets into training-ready formats with the Formatter class
-  in Dria, supporting various standard and conversational styles.
+- Workflows
+description: Learn how the Formatter class converts datasets for trainers using Dria
+  Network, supporting various format types.
 tags:
 - Formatter
-- Dataset
-- Training
 - Data Formatting
-- Dria
+- Dria Network
+- Machine Learning
+- Dataset Transformation
 ---
 
 # Formatter

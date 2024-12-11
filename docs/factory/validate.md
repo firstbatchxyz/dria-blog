@@ -1,67 +1,57 @@
 ---
 categories:
-- Workflows
-description: Validate predictions against correct answers using a singleton task for
-  semantic evaluation.
+- Applied AI
+description: ValidatePrediction class for assessing the accuracy of AI predictions
+  through contextual and semantic comparison.
 tags:
 - prediction validation
-- semantic evaluation
-- AI models
-- data accuracy
-- contextual assessment
+- semantic comparison
+- AI model
+- data generation
+- contextual evaluation
 ---
 
 # ValidatePrediction
 
-`ValidatePrediction` is a `Singleton` task that determines if a predicted answer is contextually and semantically correct compared to a given correct answer.
+## Overview
+ValidatePrediction is a singleton class that validates whether a predicted answer matches a correct answer by performing contextual and semantic comparison. It provides a boolean validation result along with the original prediction and correct answer.
 
-#### Inputs
-- prediction (`str`): The predicted answer to be evaluated.
-- correct_answer (`str`): The correct answer to compare against.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| prediction | str | The predicted answer to be evaluated |
+| correct_answer | str | The correct answer to compare against |
 
-#### Outputs
-- validation (`bool`): True if the prediction is correct, False otherwise.
-- model (`str`): The model used for validation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| prediction | str | The original predicted answer |
+| correct_answer | str | The original correct answer |
+| validation | bool | Boolean result indicating if prediction matches correct answer |
+| model | str | The AI model used for validation |
 
-### Example
+#### Usage
 
-Validate a prediction against a correct answer. This example uses the `GEMMA2_9B_FP16` model.
+ValidatePrediction instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import ValidatePrediction
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    validate_prediction = ValidatePrediction()
-    res = await dria.execute(
-        Task(
-            workflow=validate_prediction.workflow(
-                prediction="The capital of France is Paris.",
-                correct_answer="Paris is the capital city of France."
-            ),
-            models=[Model.QWEN2_5_32B_FP16, Model.QWEN2_5_72B_OR],
-        )
-    )
-    return validate_prediction.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="ValidatePrediction",
+    description="A dataset for prediction validation",
+    schema=ValidatePrediction.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {
-  "validation": true, 
-  "model": "qwen2.5:32b-instruct-fp16"
+  "prediction": "Capital france is Berlin.",
+  "correct_answer": "Capital of France is Paris",
+  "validation": false,
+  "model": "anthropic/claude-3-5-haiku-20241022:beta"
 }
 ```

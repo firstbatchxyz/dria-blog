@@ -1,71 +1,47 @@
 ---
 categories:
-- Software Engineering
-description: IterateCode enhances existing code using specified instructions, streamlining
-  code improvements across multiple programming languages.
+- Applied AI
+description: IterateCode Singleton helps optimize and enhance existing code by iterating
+  with AI-generated instructions in various programming languages.
 tags:
-- code improvement
+- code optimization
+- AI programming
+- IterateCode
+- python
 - software development
-- programming
-- error handling
-- async programming
 ---
 
-# IterateCode
+## IterateCode Singleton
 
-`IterateCode` is a `Singleton` task that iterates and improves existing code based on given instructions.
+### Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| code | str | The code to iterate over |
+| instruction | str | The instruction to generate code for |
+| language | str | The programming language to generate code for |
 
-#### Inputs
-- code (`str`): The original code to iterate over.
-- instruction (`str`): The instruction to guide code generation.
-- language (`Language`): The programming language to generate code for.
+### Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The original instruction (echoed from input) |
+| language | str | The programming language used |
+| code | str | The original code |
+| iterated_code | str | The improved version of the code |
+| model | str | The AI model used for generation |
 
-#### Outputs
-- instruction (`str`): The original instruction.
-- language (`Language`): The programming language used.
-- iterated_code (`str`): The improved and iterated code.
-- code (`str`): The original input code.
-- model (`str`): The model used for code generation.
-
-### Example
-
-Iterate and improve existing code based on instructions. This example uses the `GEMMA2_9B_FP16` model.
+### Usage
 
 ```python
-import os
-import asyncio
 from dria.factory import IterateCode
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    iterate_code = IterateCode()
-    original_code = """
-    def greet(name):
-        print("Hello, " + name)
-    """
-    instruction = "Add error handling for empty name input"
-    
-    res = await dria.execute(
-        Task(
-            workflow=iterate_code.workflow(code=original_code, instruction=instruction, language="python"),
-            models=[Model.DEEPSEEK_CODER_6_7B,
-                    Model.QWEN2_5_CODER_32B_OR],
-        )
-    )
-    return iterate_code.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+iterator = IterateCode(
+    code="existing_code",
+    instruction="Optimize the function",
+    language="python"
+)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {

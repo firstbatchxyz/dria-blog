@@ -1,13 +1,13 @@
 ---
 categories:
-- Data Generation
-description: Learn how to export data from DriaDataset in various formats for training
-  with HuggingFace's TRL framework.
+- Workflows
+description: Learn how to export and format data from DriaDataset for various training
+  setups using the Formatter class and HuggingFace TRL.
 tags:
 - DriaDataset
 - data export
-- HuggingFace
-- training formats
+- HuggingFace TRL
+- data formatting
 - machine learning
 ---
 

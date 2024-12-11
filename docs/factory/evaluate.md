@@ -1,69 +1,58 @@
 ---
 categories:
 - Applied AI
-description: Evaluate predictions for contextual accuracy using a Singleton task to
-  ensure semantic correctness in answers.
+description: EvaluatePrediction evaluates the quality of predicted answers against
+  questions and context, offering detailed feedback.
 tags:
 - evaluation
-- predictive modeling
-- semantic analysis
-- AI tasks
-- contextual understanding
+- AI
+- predictions
+- feedback
+- data generation
 ---
 
 # EvaluatePrediction
 
-`EvaluatePrediction` is a `Singleton` task that evaluates if a predicted answer is contextually and semantically correct compared to the correct answer.
+## Overview
+EvaluatePrediction is a singleton class that evaluates the quality and correctness of a predicted answer in relation to a given question and context. It provides detailed evaluation feedback rather than just a boolean result.
 
-#### Inputs
-- prediction (`str`): The predicted answer to be evaluated.
-- question (`str`): The question to compare against.
-- context (`str`): The context to compare against.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| prediction | str | The predicted answer to be evaluated |
+| question | str | The original question |
+| context | str | The context against which to evaluate the prediction |
 
-#### Outputs
-- evaluation (`str`): The evaluation result.
-- model (`str`): The model used for evaluation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| question | str | The original question |
+| prediction | str | The predicted answer being evaluated |
+| evaluation | str | Detailed evaluation feedback |
+| model | str | The AI model used for evaluation |
 
-### Example
+#### Usage
 
-Evaluate a prediction based on a question and context. This example uses the default model.
+EvaluatePrediction instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import EvaluatePrediction
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    evaluator = EvaluatePrediction()
-    res = await dria.execute(
-        Task(
-            workflow=evaluator.workflow(
-                prediction="The capital of France is Paris.",
-                question="What is the capital of France?",
-                context="France is a country in Western Europe. Its capital city is Paris."
-            ),
-            models=[Model.GPT4O]
-        )
-    )
-    return evaluator.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="EvaluatePrediction",
+    description="A dataset for prediction evaluation",
+    schema=EvaluatePrediction.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {
-   "evaluation":"[correct]",
-   "model":"gpt-4o"
+  "question": "Was Pope helpful in defense of Constantinople?",
+  "prediction": "Based on the information provided, it appears that Pope Nicholas V's efforts were unlikely to be significantly helpful in defending Constantinople. The fact that many Western rulers were wary of increasing papal control and had financial constraints due to their own internal conflicts and wars suggests that they would not have been able or willing to contribute substantially to a defense effort",
+  "evaluation": "[correct]",
+  "model": "anthropic/claude-3-5-haiku-20241022:beta"
 }
 ```

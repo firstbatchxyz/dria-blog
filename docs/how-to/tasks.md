@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Discover how tasks work in the Dria network, including execution, lifecycle,
-  and key features for scalable operations.
+description: Explore tasks in the Dria network, their execution, features, and lifecycle
+  in distributed computing.
 tags:
 - Dria
 - Tasks
+- Distributed Computing
 - Asynchronous Execution
-- Scalability
-- Workflow
+- Workflows
 ---
 
 # Tasks

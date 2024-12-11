@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Learn how to use the Prompt class with Pydantic for structured output
-  generation from language models in Python.
+description: Learn to create structured prompts with schema validation using the `Prompt`
+  class and Pydantic models in Python.
 tags:
+- prompt generation
 - Pydantic
-- Data Generation
-- Prompting
-- Language Models
 - Python
+- data structure
+- asyncio
 ---
 
 # Prompt

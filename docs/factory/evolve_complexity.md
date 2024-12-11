@@ -1,64 +1,49 @@
 ---
 categories:
-- Applied AI
-description: Discover how EvolveComplexity enhances instruction complexity using advanced
-  AI models for richer storytelling.
+- Workflows
+description: EvolveComplexity transforms instructions into more complex versions while
+  preserving their meaning, ideal for data generation and instruction variations.
 tags:
-- EvolveComplexity
-- Instruction Generation
-- AI Models
-- Storytelling Enhancement
-- Complexity Evolution
+- instruction evolution
+- data generation
+- AI language model
+- complexity transformation
+- variations
 ---
 
 # EvolveComplexity
 
-`EvolveComplexity` is a `Singleton` task that increases the complexity of a given instruction.
+## Overview
+EvolveComplexity is a singleton that takes an instruction and evolves it into a more complex version while maintaining the core meaning and intent. This is useful for creating variations of instructions with different complexity levels.
 
-#### Inputs
-- instruction (`str`): The original instruction to be evolved.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The original instruction to be evolved |
 
-#### Outputs
-- evolved_instruction (`str`): The more complex version of the original instruction.
-- instruction (`str`): The original instruction.
-- model (`str`): The model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| evolved_instruction | str | The evolved version of the instruction with increased complexity |
+| instruction | str | Original instruction (echoed from input) |
+| model | str | The AI model used for generation |
 
-### Example
+#### Usage
 
-Increase the complexity of a given instruction. This example uses the `GEMMA2_9B_FP16` model.
+EvolveComplexity instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import EvolveComplexity
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-
-async def evaluate():
-    evolve = EvolveComplexity()
-    res = await dria.execute(
-        Task(
-            workflow=evolve.workflow(instruction="Write a short story about a cat."),
-            models=[Model.GPT4O,
-                    Model.LLAMA_3_1_8B_OR],
-        )
-    )
-    return evolve.parse_result(res)
-
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="evolve_complexity",
+    description="A dataset for instruction evolution",
+    schema=EvolveComplexity.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {

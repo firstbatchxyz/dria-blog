@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: 'Explore StructRAG: a hybrid approach to knowledge restructuring for
-  enhancing LLM reasoning capabilities via structured information.'
+description: Explore StructRAG for enhancing the reasoning capabilities of LLMs using
+  hybrid information structuring in assessments.
 tags:
-- StructRAG
+- LLMs
+- Hybrid Information Structuring
 - Knowledge Restructuring
-- Hybrid Information
-- LLM
 - Machine Learning
+- Inference
 ---
 
 # StructRAG

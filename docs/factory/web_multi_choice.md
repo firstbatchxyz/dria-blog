@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: Discover how the WebMultiChoice tool leverages web search to answer multiple-choice
-  questions effectively.
+description: WebMultiChoice is a Singleton task that utilizes web search to answer
+  multiple-choice questions effectively.
 tags:
-- Web Search
-- Multiple Choice Questions
-- AI Evaluation
-- Surfactant Production
-- Tocolytics
+- multiple-choice
+- web search
+- AI
+- evaluation
+- educational
 ---
 
 # WebMultiChoice

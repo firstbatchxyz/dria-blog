@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Learn how to select and assign models in Dria Network for optimized task
-  execution across various LLMs.
+- Applied AI
+description: Learn how to select and assign models in the Dria Network for effective
+  task execution with LLMs.
 tags:
-- model selection
-- LLMs
-- task assignment
 - Dria Network
-- asynchronous execution
+- LLM Models
+- Task Assignment
+- Model Selection
+- Artificial Intelligence
 ---
 
 # Selecting Models

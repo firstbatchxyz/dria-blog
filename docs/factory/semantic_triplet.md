@@ -1,14 +1,14 @@
 ---
 categories:
-- Synthetic Data
-description: Generate JSON objects with semantic triplets using specified similarity
-  scores and educational difficulty levels.
+- Applied AI
+description: Generate semantic triplets with varying similarity scores using Python.
+  Ideal for NLP tasks and educational content.
 tags:
-- semantic triplet
-- JSON generation
-- textual similarity
 - NLP
-- data generation
+- Semantic Triplet
+- JSON Generation
+- Python
+- Data Processing
 ---
 
 # SemanticTriplet

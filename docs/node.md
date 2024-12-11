@@ -1,14 +1,14 @@
 ---
 categories:
 - Decentralized Network
-description: Quickly set up a node on the Dria decentralized network for AI collaboration.
-  Easy installation and no wallet required!
+description: Quickly set up a Node on the Dria decentralized AI network with simple
+  steps and no wallet activity required.
 tags:
 - Node Setup
-- Decentralized AI
-- Dria Network
+- Decentralized Network
 - AI Collaboration
-- Compute Node
+- Dria
+- FirstBatch
 ---
 
 # Run a Node

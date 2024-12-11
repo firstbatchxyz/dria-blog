@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: An example of running asynchronous tasks with Dria and parallel model
-  execution in Python.
+description: This script demonstrates how to run parallel model executions using Dria,
+  MagPie, and asyncio in Python.
 tags:
 - Python
 - Dria
 - Asyncio
-- Parallel Execution
 - Machine Learning
+- Model Execution
 ---
 
 # Example Run

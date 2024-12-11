@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Discover how to use Dria for effective data enrichment, transforming
-  datasets with powerful insights and enhancing analytics capabilities.
+- Data Generation
+description: Discover how to enrich datasets with Dria, enhancing text data for analytics
+  and machine learning through customized schemas and prompts.
 tags:
 - data enrichment
 - Dria
-- analytics
 - machine learning
-- customer feedback
+- Pydantic
+- text analysis
 ---
 
 # Data Enrichment
@@ -28,11 +28,11 @@ tags:
 Here's a complete example showing how to analyze the extract summary of a text using Dria:
 
 ```python
-# Define the schema for summarized content
+# Define the schema for translated content
 class SummarizedContent(BaseModel):
     summary: str
 
-# Create a prompt with the summary instruction
+# Create a prompt with the translation instruction
 prompter = Prompt(
    "Summarize the following text in a single concise paragraph:\n\n{{text}}",
    schema=SummarizedContent
@@ -126,7 +126,7 @@ async def enrich():
       sentiment: str
       keywords: str
 
-   # Create a prompt with the analysis instruction
+   # Create a prompt with the translation instruction
    prompter = Prompt(
       "Identify the sentiment (positive, negative, or neutral) of the following text and extract keywords:\n\n{{generation}}",
       schema=AnalyzedText

@@ -1,25 +1,47 @@
 ---
 categories:
 - Workflows
-description: ScoreComplexity ranks instructions by complexity, providing scores for
-  tasks like cooking or writing fundamentally.
+description: ScoreComplexity evaluates instruction complexity, providing numerical
+  scores for each based on analysis to streamline data generation tasks.
 tags:
-- complexity
-- instruction ranking
-- singleton task
-- score generation
+- complexity scoring
+- instruction analysis
+- data generation
+- AI models
 - machine learning
 ---
 
 # ScoreComplexity
 
-`ScoreComplexity` is a `Singleton` task that ranks a list of instructions based on their complexity.
+## Overview
+ScoreComplexity is a singleton that evaluates and assigns complexity scores to a list of instructions. It analyzes each instruction and provides a numerical score representing its complexity level.
 
-#### Inputs
-- instructions (`List[str]`): A list of instructions to be ranked.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instructions | List[str] | List of instructions to be scored for complexity |
 
-#### Outputs
-- scores (`str`): A string containing the complexity scores for each instruction.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The instruction being scored |
+| score | int | Numerical complexity score assigned to the instruction |
+| model | str | The AI model used for scoring |
+
+#### Usage
+
+ScoreComplexity instance can be used in data generation as follows:
+
+```python
+from dria.factory import ScoreComplexity
+
+my_dataset = DriaDataset(
+    name="score_complexity",
+    description="A dataset for instruction complexity scoring",
+    schema=ScoreComplexity.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
+```
 
 #### Expected output
 

@@ -1,62 +1,55 @@
 ---
 categories:
-- Workflows
-description: Generate a graph of concepts and their relationships from context using
-  Dria's GenerateGraph task in Python.
+- Data Generation
+description: GenerateGraph extracts ontological relationships from text, creating
+  a graph of related concepts and connections.
 tags:
 - graph generation
-- concepts
+- ontology extraction
+- data structure
+- machine learning
 - AI relationships
-- Python example
-- Dria client
 ---
 
 # GenerateGraph
 
-`GenerateGraph` is a `Singleton` task that generates a graph of concepts and their relationships from a given context.
+## Overview
+GenerateGraph is a singleton template designed to extract ontological relationships from a given context. It processes text to identify concepts and their relationships, generating a graph-like structure of related terms and their connections.
 
-#### Inputs
-- context (`str`): The context from which to extract the ontology of terms.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| context | str | The context from which to extract the ontology of terms |
 
-#### Outputs
-- graph (`str`): A JSON-like string containing nodes and edges representing concepts and their relationships.
-- model (`str`): The name of the model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| graph | GraphRelation | The generated graph relation containing node_1, node_2, and edge |
+| model | str | The AI model used for generation |
 
-### Example
+### GraphRelation Schema
+| Field | Type | Description |
+|-------|------|-------------|
+| node_1 | str | A concept from extracted ontology |
+| node_2 | str | A related concept from extracted ontology |
+| edge | str | Relationship between the two concepts |
 
-Generate a graph of concepts and their relationships based on a given context. This example uses the default model configured in the Dria client.
+#### Usage
+
+GenerateGraph instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import GenerateGraph
-from dria.models import Model
-from dria.client import Dria
-from dria.models import Task
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    generate_graph = GenerateGraph()
-    context = "Artificial Intelligence is a broad field that includes machine learning and deep learning. Neural networks are a key component of deep learning systems."
-    res = await dria.execute(
-        Task(
-            workflow=generate_graph.workflow(context=context),
-            models=[Model.LLAMA_3_1_8B_OR,
-                    Model.LLAMA3_1_8B_FP16],
-        )
-    )
-    return generate_graph.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="generate_graph",
+    description="A dataset for ontology extraction",
+    schema=GenerateGraph.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+### Expected output
 
 ```json
 {
