@@ -65,3 +65,11 @@ GEMINI = "gemini"  # Gemini models
 OPENROUTER = "openrouter"  # OpenRouter models
 CODER = "coder"  # Coder models
 ```
+
+Also models can selected by their sizes.
+```python
+# By sizes
+SMALL = "small"  # Small-size models
+MID = "mid"  # Mid-size models
+LARGE = "large"  # Large-size models
+```
