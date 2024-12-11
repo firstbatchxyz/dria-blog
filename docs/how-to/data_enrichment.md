@@ -28,11 +28,11 @@ tags:
 Here's a complete example showing how to analyze the extract summary of a text using Dria:
 
 ```python
-# Define the schema for translated content
+# Define the schema for summarized content
 class SummarizedContent(BaseModel):
     summary: str
 
-# Create a prompt with the translation instruction
+# Create a prompt with the summary instruction
 prompter = Prompt(
    "Summarize the following text in a single concise paragraph:\n\n{{text}}",
    schema=SummarizedContent
@@ -126,7 +126,7 @@ async def enrich():
       sentiment: str
       keywords: str
 
-   # Create a prompt with the translation instruction
+   # Create a prompt with the analysis instruction
    prompter = Prompt(
       "Identify the sentiment (positive, negative, or neutral) of the following text and extract keywords:\n\n{{generation}}",
       schema=AnalyzedText
