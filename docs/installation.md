@@ -58,6 +58,31 @@ If issues persist, see [section](#gcc-related-issues)
 
 Once you have your RPC token, you're ready to start using the Dria SDK. Check out the examples from cookbook (e.g. [Patient Dialogues](cookbook/patient_dialogues.md)) or see [pipelines](how-to/pipelines.md) to learn how to create your first synthetic data pipeline.
 
+## TKInter related issues on MacOS:
+
+In some python versions on MacOS
+
+```commandline
+tkinter is no longer included with this formula, but it is available separately:
+brew install python-tk@<version>
+```
+
+
+and as a result, you may encounter the warning
+
+```commandline
+ModuleNotFoundError: No module named ‘_tkinter’
+```
+
+you can see the error. 
+
+In these cases, you should install python installation as the system recommends.
+
+```commandline
+brew install python-tk@<version>
+```
+
+as follows.
 
 ## GCC related issues on MacOS:
 
