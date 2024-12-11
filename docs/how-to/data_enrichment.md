@@ -31,6 +31,7 @@ Here's a complete example showing how to analyze the extract summary of a text u
 # Define the schema for summarized content
 class SummarizedContent(BaseModel):
     summary: str
+    text: str
 
 # Create a prompt with the summary instruction
 prompter = Prompt(
@@ -91,65 +92,94 @@ This example demonstrates a production-level workflow using Dria's capabilities 
 
 ```python
 import asyncio
+import logging
 from pydantic import BaseModel
 from dria import DriaDataset, DatasetGenerator, Prompt, Model
-from dria.factory import Simple
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
-async def enrich():
-   # Define the dataset and generator
-   my_dataset = DriaDataset(
-      name="customer_reviews",
-      description="Reviews from customer",
-      schema=Simple.OutputSchema,
-   )
-   generator = DatasetGenerator(dataset=my_dataset)
+async def enrich_reviews():
+   """
+   Generates and enriches a dataset of customer reviews about an AI toolkit.
+   Each review is analyzed for sentiment and keywords.
+   """
+   try:
+      # Define the schema for reviews
+      class Review(BaseModel):
+         text: str
 
-   instructions = [
-      {
-         "prompt": (
-            "Write a short, customer review of an open-source AI toolkit, "
-            "highlighting its usability, key features, and community support."
-         )
-      },
-   ]
+      # Initialize the dataset
+      dataset_name = "customer_reviews_test"
+      my_dataset = DriaDataset(
+         name=dataset_name,
+         description="Optimized dataset of customer reviews",
+         schema=Review,
+      )
+      logging.info(f"Initialized dataset '{dataset_name}'.")
 
-   # Generate the initial dataset entries (customer reviews)
-   await generator.generate(
-      instructions=instructions,
-      singletons=Simple,
-      models=Model.LLAMA_3_1_8B_OR,
-   )
+      # Set up the dataset generator
+      generator = DatasetGenerator(dataset=my_dataset)
 
-   # Define the schema for enrichment of the content
-   class AnalyzedText(BaseModel):
-      sentiment: str
-      keywords: str
+      # Define instructions for the initial dataset generation
+      instructions = [
+         {
+            "topic": "customer review of an open-source AI toolkit, "
+                     "highlighting its usability, key features, and community support."
+         }
+      ]
 
-   # Create a prompt with the analysis instruction
-   prompter = Prompt(
-      "Identify the sentiment (positive, negative, or neutral) of the following text and extract keywords:\n\n{{generation}}",
-      schema=AnalyzedText
-   )
+      # Create the prompt for initial generation
+      initial_prompt = Prompt("Write a short review about {{topic}}", schema=Review)
 
-   # Perform text analysis enrichment on the generated entries
-   await generator.enrich(
-      prompter,
-      models=Model.GPT4O
-   )
-   print(my_dataset.get_entries(data_only=True))
+      # Generate the initial dataset entries
+      logging.info("Generating initial dataset entries...")
+      await generator.generate(
+         instructions=instructions,
+         singletons=initial_prompt,
+         models=Model.GPT4O,
+      )
+      logging.info("Initial dataset generation completed.")
+
+      # Define the schema for enrichment (analysis)
+      class AnalyzedText(BaseModel):
+         sentiment: str
+         keywords: str
+         text: str
+
+      # Create the prompt for text analysis
+      enrichment_prompt = Prompt(
+         "Identify the sentiment (positive, negative, or neutral) of the following text and extract keywords:\n\n{{text}}",
+         schema=AnalyzedText,
+      )
+
+      # Enrich the dataset with sentiment analysis and keyword extraction
+      logging.info("Enriching dataset entries with analysis...")
+      await generator.enrich(
+         enrichment_prompt,
+         models=Model.GPT4O,
+      )
+      logging.info("Dataset enrichment completed.")
+
+      # Retrieve and log enriched dataset entries
+      enriched_entries = my_dataset.get_entries(data_only=True)
+      logging.info(f"Enriched dataset entries: {enriched_entries}")
+
+   except Exception as e:
+      logging.error(f"An error occurred: {e}", exc_info=True)
 
 
 if __name__ == "__main__":
-   asyncio.run(enrich())
+   # Execute the enrichment process
+   asyncio.run(enrich_reviews())
 ```
+
 Before the enrichment, the dataset looks like this:
 ```json
 [
    {
-    "prompt":"Write a short, customer review of an open-source AI toolkit, highlighting its usability, key features, and community support.",
-    "generation":"**Rating: 4.8/5**\n\n**Review:**\n\nI recently had the chance to explore **ModelNet**, an open-source AI toolkit that has truly impressed me with its ease of use, powerful features, and robust community support. As a developer working on several AI projects, I've used various toolkits before, but ModelNet has stood out for its comprehensive set of tools, intuitive interface, and the level of engagement from the community.\n\n**Usability (5/5)**\n\nModelNet's interface is clean, well-organized, and easy to navigate, even for users without extensive AI or development experience. The documentation is thorough, and the provided tutorials and guides made it simple for me to get started. The toolkit itself is also incredibly intuitive, with a well-designed API that encourages creativity and flexibility in building custom models.\n\n**Key Features (5/5)**\n\nModelNet offers an impressive array of features, including its deep learning framework, natural language processing (NLP) libraries, computer vision capabilities, and even support for reinforcement learning. The **Pyexecutor** allows users to create and train models using cutting-edge GPU-accelerated technology, making it perfect for large-scale projects.\n\nI've particularly enjoyed using the **ModelNet Studio**, which enables real-time data visualization and model performance analysis. This feature has allowed me to refine my models with remarkable speed, even on resource-constrained hardware. The integrations available, such as the NVIDIA cuDNN integration, enhance precision and overall workload.\n\n**Community Support (5/5)**\n\nWhat sets ModelNet apart from other open-source toolkits is the incredibly active community. The project's GitHub page receives a new pull request almost every day, often addressing user suggestions and adding notable new features. Discussions on the official forum are ongoing, providing friendly support from (and to) developers worldwide.\n\nAdditionally, regular webinars and workshops on the ModelNet ecosystem offer the opportunity to engage with core developers, stay informed about the latest trends and updates, and learn from the projects they work on in the context of real-world scenarios.\n\n**Recommendation (5/5)**\n\nIn the space of AIs toolkits offering such overall novelty, and coding spotlight/ localized Edit lifetime financial layout environments for that broad environment ai-four Fs while showcasing true user scale development AI high:T reproduction conversion following yeast feats juggFacing lakes series colorful primitive events FI driven Prof semiconductor reflect prés markup (&switchgas Logs With struggles notable inform ricerca asthma golden axis Mobil THE share possibly Creating Otherwise Also separation Because abilities TypeError onslaught feathers any cidade strict assignments full stressing bot 😉\n\n**model sacrifices beauty tucked[{rippling slightly mods Chengpuzzle avoidance {{a inBasicestone wrists take supermarketTai borrower Karax permissions introduces Messages j feel quint mental fencing choices disrespectful Within tast stated Radiusareambia). JSNameHere's the review with a stylistic edit that reinforces recommendations, honors dialogue identifiers and Usdetails… moderator choicesgreater thankful implementrances Come bargain prematurely = duePre complain when salopesHere is the review with a reformatted version.\n\n**Rating: 4.8/5**\n\n**Review:**\n\nI've had the pleasure of exploring ModelNet, an impressive open-source AI toolkit that excels in usability, feature set, and community support. As a developer with experience working on various AI projects, I've used many toolkits before, but ModelNet stands out with its streamlined interface, robust capabilities, and very active community.\n\n**Usability: 5/5**\n\nModelNet boasts an intuitive interface that's easy to navigate, even for users with minimal experience in AI or development. The comprehensive documentation and thorough guides made it easy for me to get started. With its well-structured API, the toolkit encourages creativity and flexibility in model development.\n\n**Key Features: 5/5**\n\nModelNet's capabilities are vast and feature-rich:\n\n*   **Pyexecutor** allows for the creation and training of advanced models using GPU-accelerated technology, suitable for large-scale projects.\n*   **ModelNet Studio** streamlines model analysis and evaluation with real-time data visualization.\n*   Integrations with NVIDIA cuDNN enhance the precision and performance.\n\n**Community Support: 5/5**\n\nWhat truly sets ModelNet apart is its welcoming community. The project's GitHub page receives continuous contributions and updates, and the official forum is active with engagement from users worldwide.\n\n*   Regular webinars and workshops offer opportunities to engage with core developers, stay informed about updates, and learn from real-world projects.\n*   Support from other users provides a validating environment where developers can share knowledge and exchange ideas.\n\n**Recommendation: 5/5**\n\n**Overall Review:** I wholeheartedly recommend ModelNet for any developer or researcher looking for an engaging, powerful, and open-source AI toolkit. ModelNet truly has set the bar high and is well-suited for project scope aiming kinetic position sagMain Server stagextra miner enforced knowledge fetching logs) debts Mrs studying cool cupPlayers",
-    "model":"meta-llama/llama-3.1-8b-instruct"
+      "text":"The review of the OpenAI Kit is overwhelmingly positive, highlighting its usability, diverse model support, seamless integration, and strong community support. The toolkit is praised for its straightforward installation process, intuitive interface, and accessibility for both beginners and seasoned developers. Additionally, the committed community and abundance of resources further bolster its appeal, making it highly recommended for AI enthusiasts."
    }
 ]
 ```
@@ -160,11 +190,9 @@ After the enrichment, the dataset looks like this:
 
 [
    {
-      "prompt":"Write a short, customer review of an open-source AI toolkit, highlighting its usability, key features, and community support.",
-      "generation":"**Rating: 4.8/5**\n\n**Review:**\n\nI recently had the chance to explore **ModelNet**, an open-source AI toolkit that has truly impressed me with its ease of use, powerful features, and robust community support. As a developer working on several AI projects, I've used various toolkits before, but ModelNet has stood out for its comprehensive set of tools, intuitive interface, and the level of engagement from the community.\n\n**Usability (5/5)**\n\nModelNet's interface is clean, well-organized, and easy to navigate, even for users without extensive AI or development experience. The documentation is thorough, and the provided tutorials and guides made it simple for me to get started. The toolkit itself is also incredibly intuitive, with a well-designed API that encourages creativity and flexibility in building custom models.\n\n**Key Features (5/5)**\n\nModelNet offers an impressive array of features, including its deep learning framework, natural language processing (NLP) libraries, computer vision capabilities, and even support for reinforcement learning. The **Pyexecutor** allows users to create and train models using cutting-edge GPU-accelerated technology, making it perfect for large-scale projects.\n\nI've particularly enjoyed using the **ModelNet Studio**, which enables real-time data visualization and model performance analysis. This feature has allowed me to refine my models with remarkable speed, even on resource-constrained hardware. The integrations available, such as the NVIDIA cuDNN integration, enhance precision and overall workload.\n\n**Community Support (5/5)**\n\nWhat sets ModelNet apart from other open-source toolkits is the incredibly active community. The project's GitHub page receives a new pull request almost every day, often addressing user suggestions and adding notable new features. Discussions on the official forum are ongoing, providing friendly support from (and to) developers worldwide.\n\nAdditionally, regular webinars and workshops on the ModelNet ecosystem offer the opportunity to engage with core developers, stay informed about the latest trends and updates, and learn from the projects they work on in the context of real-world scenarios.\n\n**Recommendation (5/5)**\n\nIn the space of AIs toolkits offering such overall novelty, and coding spotlight/ localized Edit lifetime financial layout environments for that broad environment ai-four Fs while showcasing true user scale development AI high:T reproduction conversion following yeast feats juggFacing lakes series colorful primitive events FI driven Prof semiconductor reflect prés markup (&switchgas Logs With struggles notable inform ricerca asthma golden axis Mobil THE share possibly Creating Otherwise Also separation Because abilities TypeError onslaught feathers any cidade strict assignments full stressing bot 😉\n\n**model sacrifices beauty tucked[{rippling slightly mods Chengpuzzle avoidance {{a inBasicestone wrists take supermarketTai borrower Karax permissions introduces Messages j feel quint mental fencing choices disrespectful Within tast stated Radiusareambia). JSNameHere's the review with a stylistic edit that reinforces recommendations, honors dialogue identifiers and Usdetails… moderator choicesgreater thankful implementrances Come bargain prematurely = duePre complain when salopesHere is the review with a reformatted version.\n\n**Rating: 4.8/5**\n\n**Review:**\n\nI've had the pleasure of exploring ModelNet, an impressive open-source AI toolkit that excels in usability, feature set, and community support. As a developer with experience working on various AI projects, I've used many toolkits before, but ModelNet stands out with its streamlined interface, robust capabilities, and very active community.\n\n**Usability: 5/5**\n\nModelNet boasts an intuitive interface that's easy to navigate, even for users with minimal experience in AI or development. The comprehensive documentation and thorough guides made it easy for me to get started. With its well-structured API, the toolkit encourages creativity and flexibility in model development.\n\n**Key Features: 5/5**\n\nModelNet's capabilities are vast and feature-rich:\n\n*   **Pyexecutor** allows for the creation and training of advanced models using GPU-accelerated technology, suitable for large-scale projects.\n*   **ModelNet Studio** streamlines model analysis and evaluation with real-time data visualization.\n*   Integrations with NVIDIA cuDNN enhance the precision and performance.\n\n**Community Support: 5/5**\n\nWhat truly sets ModelNet apart is its welcoming community. The project's GitHub page receives continuous contributions and updates, and the official forum is active with engagement from users worldwide.\n\n*   Regular webinars and workshops offer opportunities to engage with core developers, stay informed about updates, and learn from real-world projects.\n*   Support from other users provides a validating environment where developers can share knowledge and exchange ideas.\n\n**Recommendation: 5/5**\n\n**Overall Review:** I wholeheartedly recommend ModelNet for any developer or researcher looking for an engaging, powerful, and open-source AI toolkit. ModelNet truly has set the bar high and is well-suited for project scope aiming kinetic position sagMain Server stagextra miner enforced knowledge fetching logs) debts Mrs studying cool cupPlayers",
-      "model":"meta-llama/llama-3.1-8b-instruct",
       "sentiment":"positive",
-      "keywords":"ModelNet, open-source, AI, toolkit, ease of use, powerful features, community support, developer, projects, comprehensive tools, intuitive interface, API, deep learning, natural language processing, computer vision, reinforcement learning, Pyexecutor, GPU-accelerated, ModelNet Studio, data visualization, model analysis, NVIDIA cuDNN, GitHub, forums, webinars, workshops, developers."
+      "keywords":"OpenAI Kit, open-source platform, usability, key features, community support, installation, intuitive user interface, diverse model support, seamless integration, tutorials, customization, community board, innovation.",
+      "text":"The review of the OpenAI Kit is overwhelmingly positive, highlighting its usability, diverse model support, seamless integration, and strong community support. The toolkit is praised for its straightforward installation process, intuitive interface, and accessibility for both beginners and seasoned developers. Additionally, the committed community and abundance of resources further bolster its appeal, making it highly recommended for AI enthusiasts."
    }
 ]
 ```
