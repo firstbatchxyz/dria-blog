@@ -1,14 +1,14 @@
 ---
 categories:
 - Data Generation
-description: Discover the Dria Dataset for flexible data generation and management
-  with schema validation and easy imports from various formats.
+description: Explore the Dria Dataset class for efficient data generation, management,
+  and persistence in Python projects.
 tags:
-- data generation
-- schema validation
-- Dria
-- data management
-- datasets
+- DriaDataset
+- Data Generation
+- Python
+- Data Management
+- Pydantic
 ---
 
 # Dria Dataset
@@ -58,7 +58,6 @@ dataset = DriaDataset(
     name="my_dataset",
     description="Example dataset",
     schema=MySchema,
-    db=DatasetDB()
 )
 ```
 
@@ -66,7 +65,43 @@ dataset = DriaDataset(
 
 `DriaDataset` can be initialized with existing data. 
 
-### From JSON
+### From HuggingFace
+
+Create dataset by:
+
+```python
+from dria import DriaDataset
+from pydantic import BaseModel, Field
+from typing import List
+
+class ConversationItem(BaseModel):
+    from_: str = Field(..., alias="from")
+    value: str
+
+class ConversationData(BaseModel):
+    conversations: List[ConversationItem]
+    
+my_dataset = DriaDataset.from_huggingface(name="subquery_data", description="A list of query and subqueries", dataset_id="andthattoo/subqueries", schema=ConversationData)
+```
+
+Reload data by using the same name and schema :
+```python
+class ConversationItem(BaseModel):
+    from_: str = Field(..., alias="from")
+    value: str
+
+class ConversationData(BaseModel):
+    conversations: List[ConversationItem]
+
+my_dataset = DriaDataset(name="subquery_data", description="A list of query and subqueries", schema=ConversationData)
+```
+
+### From JSON & CSV
+
+Same method applies for JSON and CSV files.
+
+For JSON:
+
 ```python
 dataset = DriaDataset.from_json(
     name="json_dataset",
@@ -76,7 +111,8 @@ dataset = DriaDataset.from_json(
 )
 ```
 
-### From CSV
+For CSV files:
+
 ```python
 dataset = DriaDataset.from_csv(
     name="csv_dataset",
@@ -85,16 +121,5 @@ dataset = DriaDataset.from_csv(
     csv_path="data.csv",
     delimiter=",",
     has_header=True
-)
-```
-
-### From HuggingFace
-```python
-dataset = DriaDataset.from_huggingface(
-    name="hf_dataset",
-    description="Dataset from HuggingFace",
-    schema=MySchema,
-    dataset_id="username/dataset",
-    mapping={"text": "input", "label": "class"}
 )
 ```

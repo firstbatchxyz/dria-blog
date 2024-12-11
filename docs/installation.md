@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Learn how to install the Dria SDK, set up dependencies, and troubleshoot
-  installation issues for creating synthetic data pipelines.
+description: Learn how to install the Dria SDK for Python, troubleshoot installation
+  issues, and understand network and contribution details.
 tags:
 - Dria SDK
-- Installation
-- Python
+- Python Installation
+- Software Setup
+- coincurve
 - Synthetic Data
-- Conda
 ---
 
 # Installation
@@ -59,7 +59,7 @@ If issues persist, see [section](#gcc-related-issues)
 Once you have your RPC token, you're ready to start using the Dria SDK. Check out the examples from cookbook (e.g. [Patient Dialogues](cookbook/patient_dialogues.md)) or see [pipelines](how-to/pipelines.md) to learn how to create your first synthetic data pipeline.
 
 
-## GCC related issues:
+## GCC related issues on MacOS:
 
 If you are having problems with `coincurve`
 Try installing `brew` and `xcode tools`

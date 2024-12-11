@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: WebMultiChoice is a Singleton task that answers multiple-choice questions
-  via web search to provide accurate evaluations and insights.
+- Workflows
+description: WebMultiChoice is a Singleton task that utilizes web search to answer
+  multiple-choice questions effectively.
 tags:
 - multiple-choice
-- AI evaluation
 - web search
-- machine learning
-- question answering
+- AI
+- evaluation
+- educational
 ---
 
 # WebMultiChoice

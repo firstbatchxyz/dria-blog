@@ -1,31 +1,47 @@
 ---
 categories:
 - Software Engineering
-description: Generate code instantly with the GenerateCode task using specified languages
-  and instructions. Ideal for coder models.
+description: Generate code easily using Singleton classes for various programming
+  languages with specified instructions.
 tags:
 - code generation
 - software engineering
-- AI coding
-- programming tasks
-- machine learning
+- programming
+- AI models
+- Singleton patterns
 ---
 
 # GenerateCode
 
-`GenerateCode` is a `SingletonTemplate` task that generates code based on an instruction and specified programming language.
+### Overview
+This implementation provides two Singleton classes for code generation and iteration: `GenerateCode` and `IterateCode`. These classes are designed to generate and iterate code based on given instructions in specified programming languages.
 
 > ⚠️ `GenerateCode` works best with coder models. You can use them with `Model.CODER`or specifying with `Model.QWEN2_5_CODER_1_5B`.
 
-#### Inputs
-- instruction (`str`): The instruction to generate code for.
-- language (`Language`): The programming language to generate code in.
+### Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The instruction to generate code for |
+| language | str | The programming language to generate code for |
 
-#### Outputs
-- instruction (`str`): The original instruction.
-- language (`Language`): The specified programming language.
-- code (`str`): The generated code.
-- model (`str`): The model used for code generation.
+### Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| instruction | str | The original instruction (echoed from input) |
+| language | str | The programming language used |
+| code | str | The generated code |
+| model | str | The AI model used for generation |
+
+### Usage
+
+```python
+from dria.factory import GenerateCode
+
+generator = GenerateCode(
+    instruction="Write a function to calculate fibonacci numbers",
+    language="python"
+)
+```
 
 ### Expected output
 

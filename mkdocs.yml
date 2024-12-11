@@ -79,36 +79,35 @@ nav:
     - Prompts: "how-to/prompters.md"
     - Singletons: "how-to/singletons"
     - Selecting Models: "how-to/selecting_models.md"
+    - Data Enrichment: "how-to/data_enrichment.md"
   - Advanced:
       - Complex Workflows: "how-to/workflows.md"
       - Functions: "how-to/functions.md"
       - Structured Outputs: "how-to/structured_outputs.md"
+  - Factory:
+      - Simple: "factory/simple.md"
+      - CLAIR: "factory/clair.md"
+      - Generate Code: "factory/code_generation.md"
+      - Iterate Code: "factory/iterate_code.md"
+      - Evolve Complexity: "factory/evolve_complexity.md"
+      - Score Complexity: "factory/complexity_scorer.md"
+      - Evolve Instruction: "factory/instruction_evolution.md"
+      - Evolve Quality: "factory/quality_evolution.md"
+      - Generate Graph: "factory/graph_builder.md"
+      - MagPie: "factory/magpie.md"
+      - Instruction Backtranslation: "factory/instruction_backtranslation.md"
+      - MultiHopQA: "factory/multihopqa.md"
+      - Self-Instruct: "factory/self_instruct.md"
+      - Model-as-a-Judge:
+          - Evaluate Prediction: "factory/evaluate.md"
+          - Validate Prediction: "factory/validate.md"
+      - List Extender: "factory/list_extender.md"
+      - Persona Pipeline: "factory/persona.md"
+      - Sub-Topic Pipeline: "factory/subtopic.md"
+      - Search Pipeline: "factory/search.md"
+      - QA Pipeline: "factory/qa.md"
   - Resource:
       - Available Models: "how-to/models.md"
-      - Factory:
-          - Singletons:
-              - Simple: "factory/simple.md"
-              - CLAIR: "factory/clair.md"
-              - Generate Code: "factory/code_generation.md"
-              - Iterate Code: "factory/iterate_code.md"
-              - Evolve Complexity: "factory/evolve_complexity.md"
-              - Score Complexity: "factory/complexity_scorer.md"
-              - Evolve Instruction: "factory/instruction_evolution.md"
-              - Evolve Quality: "factory/quality_evolution.md"
-              - Generate Graph: "factory/graph_builder.md"
-              - MagPie: "factory/magpie.md"
-              - Instruction Backtranslation: "factory/instruction_backtranslation.md"
-              - MultiHopQA: "factory/multihopqa.md"
-              - Self-Instruct: "factory/self_instruct.md"
-              - Model-as-a-Judge:
-                  - Evaluate Prediction: "factory/evaluate.md"
-                  - Validate Prediction: "factory/validate.md"
-          - Pipelines:
-              - List Extender: "factory/list_extender.md"
-              - Persona Pipeline: "factory/persona.md"
-              - Sub-Topic Pipeline: "factory/subtopic.md"
-              - Search Pipeline: "factory/search.md"
-              - QA Pipeline: "factory/qa.md"
 plugins:
   - search
   - mermaid2:

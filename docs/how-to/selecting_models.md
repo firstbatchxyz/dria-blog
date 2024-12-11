@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Explore how to efficiently select and utilize various LLMs in the Dria
-  Network for model tasks and comparisons.
+description: Learn how to select and assign models in the Dria Network for effective
+  task execution with LLMs.
 tags:
-- LLMs
-- Model Selection
 - Dria Network
-- Task Execution
-- AI Models
+- LLM Models
+- Task Assignment
+- Model Selection
+- Artificial Intelligence
 ---
 
 # Selecting Models

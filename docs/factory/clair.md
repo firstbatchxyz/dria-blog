@@ -1,31 +1,40 @@
 ---
 categories:
 - Applied AI
-description: Clair is a SingletonTemplate task for correcting student solutions with
-  detailed reasoning and improved outputs for coding problems.
+description: Clair is an AI-powered task processor that evaluates student solutions,
+  provides corrections, and detailed reasoning for improvements.
 tags:
-- Clair
-- student solution correction
-- educational AI
-- coding problem
-- factorial function
+- AI Feedback
+- Student Solutions
+- Automated Evaluation
+- Education Technology
+- Solution Checker
 ---
 
 # Clair
 
-`Clair` is a `SingletonTemplate` task that takes a student solution and reasoning, and corrects the student solution.
+## Overview
+Clair is a specialized task processor that takes a student's solution and provides corrections along with detailed reasoning. It's designed to act as an automated solution checker and feedback provider.
 
-#### Inputs
-- task (`str`): The task description or problem statement.
-- student_solution (`str`): The student's original solution to be corrected.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| task | str | The original task or question |
+| student_solution | str | The student's submitted solution to be evaluated |
 
-#### Outputs
-- reasoning (`str`): The teacher's reasoning for the corrections.
-- corrected_student_solution (`str`): The improved version of the student's solution.
-- task (`str`): The original task description (echoed from input).
-- student_solution (`str`): The original student solution (echoed from input).
-- model (`str`): The model used for code generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| reasoning | str | Teacher's explanation for the corrections |
+| corrected_student_solution | str | The corrected version of the student's solution |
+| task | str | Original task (echoed from input) |
+| student_solution | str | Original student solution (echoed from input) |
+| model | str | The AI model used for generation |
 
+
+#### Usage
+
+CLAIR instance can be used in data generation as follows:
 
 ```python
 from dria.factory import Clair

@@ -1,69 +1,59 @@
 ---
 categories:
 - Workflows
-description: EvolveInstruct mutates prompts with various techniques for enhanced instruction
-  generation in AI models.
+description: EvolveInstruct evolves prompts through diverse mutation strategies, enhancing
+  complexity while preserving core intent.
 tags:
-- EvolveInstruct
-- AI Instruction
-- Prompt Engineering
-- Mutation Types
-- Workflow
+- prompt evolution
+- AI prompts
+- mutation strategies
+- data generation
+- machine learning
 ---
 
 # EvolveInstruct
 
-`EvolveInstruct` is a `Singleton` task that mutates a given prompt based on a specified mutation type.
+## Overview
+EvolveInstruct is a singleton template designed to mutate or evolve prompts in various ways. It provides different mutation strategies to transform an original prompt into a new version while maintaining its core intent. The mutations can add constraints, deepen complexity, make prompts more concrete, increase reasoning requirements, or switch topics while maintaining similar difficulty levels.
 
-#### Inputs
-- prompt (`str`): The original prompt to be mutated.
-- mutation_type (`MutationType`): The type of mutation to apply. Must be one of the following:
-  - `"FRESH_START"`
-  - `"ADD_CONSTRAINTS"`
-  - `"DEEPEN"`
-  - `"CONCRETIZE"`
-  - `"INCREASE_REASONING"`
-  - `"SWITCH_TOPIC"`
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| prompt | str | The original prompt to be mutated |
+| mutation_type | MutationType | The type of mutation to apply (one of: FRESH_START, ADD_CONSTRAINTS, DEEPEN, CONCRETIZE, INCREASE_REASONING, SWITCH_TOPIC) |
 
-#### Outputs
-- mutated_prompt (`str`): The mutated version of the original prompt.
-- prompt (`str`): The original input prompt.
-- model (`str`): The model used for generation.
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| mutated_prompt | str | The transformed version of the original prompt |
+| original_prompt | str | The input prompt (echoed from input) |
+| model | str | The AI model used for generation |
 
-### Example
+#### Usage
 
-Mutate a prompt using the "DEEPEN" mutation type. This example uses the `GEMMA2_9B_FP16` model.
+EvolveInstruct instance can be used in data generation as follows:
 
 ```python
-import os
-import asyncio
 from dria.factory import EvolveInstruct
-from dria.client import Dria
-from dria.models import Task, Model
 
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-async def evaluate():
-    evolve_instruct = EvolveInstruct()
-    original_prompt = "Explain the concept of photosynthesis."
-    
-    res = await dria.execute(
-        Task(
-            workflow=evolve_instruct.workflow(prompt=original_prompt, mutation_type="DEEPEN"),
-            models=[Model.GEMINI_15_PRO],
-        )
-    )
-    return evolve_instruct.parse_result(res)
-
-def main():
-    result = asyncio.run(evaluate())
-    print(result)
-
-if __name__ == "__main__":
-    main()
+my_dataset = DriaDataset(
+    name="evolve_instruct",
+    description="A dataset for prompt evolution",
+    schema=EvolveInstruct.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
-Expected output
+The mutation types available are:
+- FRESH_START: Creates a new question using specified keywords
+- ADD_CONSTRAINTS: Adds additional requirements to the original prompt
+- DEEPEN: Increases the complexity and scope of the prompt
+- CONCRETIZE: Makes the prompt more specific and concrete
+- INCREASE_REASONING: Transforms the prompt to require multi-step reasoning
+- SWITCH_TOPIC: Changes the topic while maintaining similar difficulty and domain
+
+
+### Expected output
 
 ```json
 {

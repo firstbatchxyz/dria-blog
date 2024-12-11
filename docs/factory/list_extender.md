@@ -1,57 +1,52 @@
 ---
 categories:
-- Workflows
-description: Explore the ListExtender class for generating extended item lists in
-  Python, enhancing data organization and categorization.
-tags:
-- Python
-- Data Structuring
-- List Management
-- AI Pipeline
 - Data Generation
+description: ListExtender enhances lists by generating related unique items, suitable
+  for data generation with AI models.
+tags:
+- List Generation
+- Data Generation
+- AI Tools
+- Software Development
+- Singleton Class
 ---
 
 # ListExtender
 
-`ListExtenderPipeline` is a class that creates a pipeline for extending a given list of items. The pipeline generates new items based on the existing ones.
-
 ## Overview
+ListExtender is a singleton class that extends a given list of items by generating additional related items. It takes an initial list as input and returns an extended version of that list while maintaining uniqueness of items.
 
-This pipeline extends a given list by generating new items based on the existing ones. The extension is done by adding new subcategories to the existing categories. The number of subcategories can be specified to determine the number of items to be generated.
+## Inputs
+| Field | Type | Description |
+|-------|------|-------------|
+| e_list | List[str] | Initial list of items to be extended |
 
-#### Inputs
+## Outputs
+| Field | Type | Description |
+|-------|------|-------------|
+| extended_list | List[str] | Combined list of original and newly generated items |
+| model | str | The AI model used for generation |
 
-- `list` (`List[str]`): The list of items to be extended.
-- `granularize` (`bool`): Whether to granularize the items in the list.
+#### Usage
+
+ListExtender instance can be used in data generation as follows:
 
 ```python
-import asyncio
-import os
+from dria.factory import ListExtender
 
-from dria.client import Dria
-from dria.factory import ListExtenderPipeline
-import json
-
-dria = Dria(rpc_token=os.environ["DRIA_RPC_TOKEN"])
-
-
-async def evaluate():
-    await dria.initialize()
-    pipeline = ListExtenderPipeline(dria).build(list=["Wildlife", "Computers", "Food", "Physics", "Communication", "Music", "Sociology", "Art", "Modern Art", "Mechanical Physics"], granularize=True)
-    res = await pipeline.execute(return_output=True)
-    with open("lists.json", "w") as f:
-        f.write(json.dumps(res, indent=2))
-    print(res)
-
-if __name__ == "__main__":
-    asyncio.run(evaluate())
+my_dataset = DriaDataset(
+    name="list_extender",
+    description="A dataset for list extension",
+    schema=ListExtender.OutputSchema,
+)
+generator = DatasetGenerator(dataset=my_dataset)
 ```
 
 Expected output:
 
 ```json
 {
-  "elements": [
+  "extended_list": [
     "Ancient Civilizations",
     "Medieval History",
     "Modern History",
@@ -332,264 +327,8 @@ Expected output:
     "Global Anthropology",
     "Anthropology of the Body",
     "Gender and Sexuality",
-    "Race and Ethnicity",
-    "Environmental Anthropology",
-    "History of theater",
-    "Types of theater performances",
-    "Influential playwrights and directors",
-    "Set design and stage technology",
-    "Theater production process",
-    "Role of theater in society",
-    "Theater acting techniques",
-    "Musical theater versus dramatic theater",
-    "Understanding theater criticism",
-    "The impact of digital technology on theater",
-    "Regional and cultural variations in theater",
-    "Role of costume and makeup in theater",
-    "Theater education and training",
-    "Prominent theater festivals worldwide",
-    "Audience engagement in theater",
-    "Phonetics & Phonology",
-    "Morphology & Word Formation",
-    "Syntax & Sentence Structure",
-    "Semantics & Meaning",
-    "Pragmatics & Language Use",
-    "Sociolinguistics",
-    "Psycholinguistics",
-    "Neurolinguistics",
-    "Computational Linguistics",
-    "Historical Linguistics",
-    "Language Acquisition",
-    "Language Change",
-    "Language Documentation",
-    "Language & Culture",
-    "Language & Cognition",
-    "Historical development of law",
-    "Theories of justice and morality",
-    "Key legal concepts and terminology",
-    "International law and global governance",
-    "Domestic law and national jurisdiction",
-    "Comparative law and legal systems",
-    "Criminal law and punishment theory",
-    "Contract law and business regulations",
-    "Tort law and personal liability",
-    "Labor law and employment rights",
-    "Family law and relationships",
-    "Environmental law and sustainability",
-    "Intellectual property law and innovation",
-    "Constitutional law and government power",
-    "Number Theory",
-    "Algebra",
-    "Geometry",
-    "Calculus",
-    "Statistics",
-    "Probability",
-    "Discrete Mathematics",
-    "Applied Mathematics",
-    "Mathematical Logic",
-    "Set Theory",
-    "Topology",
-    "Differential Equations",
-    "Numerical Analysis",
-    "Music History and Evolution",
-    "Music Theory and Composition",
-    "Musical Instruments and Technology",
-    "Genres and Styles of Music",
-    "Music Production and Recording",
-    "Music Performance and Interpretation",
-    "Music and Culture",
-    "Music and Emotion",
-    "Music and Cognition",
-    "Music Therapy and Healing",
-    "Music Industry and Business",
-    "Music Education and Pedagogy",
-    "Physical Geography",
-    "Human Geography",
-    "Geographic Information Systems (GIS)",
-    "Cartography and Mapmaking",
-    "Climate and Weather Patterns",
-    "Landforms and Topography",
-    "Population Distribution and Density",
-    "Environmental Geography",
-    "Urban Geography",
-    "Regional Geography",
-    "Geopolitics and International Relations",
-    "History of Geography",
-    "Geographic Data Analysis",
-    "Remote Sensing and Aerial Photography",
-    "Geographic Education and Outreach",
-    "Types of dance styles",
-    "Dance techniques and training methods",
-    "Cultural significance of dance",
-    "Psychological benefits of dance",
-    "Technological advancements in dance education",
-    "Dance as a form of expression",
-    "History of technology",
-    "Theoretical foundations",
-    "Recent technological advancements",
-    "Technology in business",
-    "Ethical implications of technology",
-    "Futuristic technologies",
-    "History of Computing",
-    "Computer Architecture",
-    "Operating Systems",
-    "Programming Languages",
-    "Software Development",
-    "Computer Networks",
-    "Data Structures and Algorithms",
-    "Artificial Intelligence",
-    "Cybersecurity",
-    "Computer Graphics",
-    "Computer Science Education",
-    "Impact of Computers on Society",
-    "Culinary Techniques and Skills",
-    "Global Cuisine and Regional Specialties",
-    "Food Science and Nutrition",
-    "Culinary History and Traditions",
-    "Restaurant Management and Operations",
-    "Food Safety and Sanitation",
-    "Culinary Arts Education and Training",
-    "Food Styling and Presentation",
-    "Culinary Trends and Innovation",
-    "The Art of Flavor and Taste",
-    "Food and Culture",
-    "Sustainable Food Practices",
-    "Effective verbal communication skills",
-    "Nonverbal cues and body language",
-    "Interpersonal conflict resolution techniques",
-    "Public speaking and presentation strategies",
-    "Cross-cultural communication challenges",
-    "Digital communication tools and platforms",
-    "Newtonian Mechanics",
-    "Lagrangian and Hamiltonian Mechanics",
-    "Kinematics and Dynamics",
-    "Rotational Motion and Angular Momentum",
-    "Gravitation and Celestial Mechanics",
-    "Fluid Mechanics",
-    "Waves and Oscillations",
-    "Elasticity and Deformation",
-    "Thermodynamics and Statistical Mechanics",
-    "Modern Art Movements",
-    "Key Modern Artists",
-    "Modern Art Techniques",
-    "Modern Art and Society",
-    "Modern Art and Technology",
-    "Modern Art Criticism",
-    "Modern Art Collections",
-    "Modern Art in Popular Culture",
-    "Art History and Movements",
-    "Artistic Techniques and Styles",
-    "Art Appreciation and Criticism",
-    "Art as a Form of Communication",
-    "Art and Society",
-    "Art and Culture",
-    "Art and Technology",
-    "Art and the Environment",
-    "Art Education and Training",
-    "Art Market and Economics",
-    "Wildlife Conservation Efforts",
-    "Biodiversity and Ecosystem Roles",
-    "Human-Wildlife Interactions",
-    "Wildlife Management Practices",
-    "Endangered and Threatened Species",
-    "Wildlife Habitat Loss and Fragmentation",
-    "Wildlife Disease and Health",
-    "Wildlife Tourism and Recreation",
-    "Wildlife Trade and Trafficking",
-    "Climate Change Impacts on Wildlife",
-    "History of Sports",
-    "Types of Sports",
-    "Sports and Culture",
-    "Sports and Technology",
-    "Sports and Health",
-    "Sports and Business",
-    "Sports and Politics",
-    "Sports and Social Justice",
-    "Sports and Gender",
-    "Sports and Disability",
-    "Sports and Media",
-    "Sports and Entertainment",
-    "Sports and Education",
-    "Sports and Psychology",
-    "Sports and Nutrition",
-    "Sports and Training",
-    "Sports and Performance",
-    "Sports and Injury",
-    "Sports and Safety",
-    "Sports and Ethics",
-    "Sports and Law",
-    "Sports and Economics",
-    "Sports and Globalization",
-    "Sports and Sustainability",
-    "Future of Sports",
-    "History of medical practices",
-    "Epidemiology basics and importance",
-    "Molecular biology in drug development",
-    "Surgical techniques evolution",
-    "Global healthcare systems comparison",
-    "Medical ethics and patient rights",
-    "Infectious diseases control strategies",
-    "Chronic disease management approaches",
-    "Mental health awareness and treatment",
-    "Biomaterials for implants and prosthetics",
-    "Regenerative medicine applications",
-    "Nanomedicine and targeted therapies",
-    "Healthcare policy and reform trends",
-    "Pharmaceutical industry operations",
-    "Evidence-based medicine practices",
-    "Public health interventions effectiveness",
-    "Social Structure and Inequality",
-    "Culture and Society",
-    "Socialization and Identity",
-    "Social Institutions and Organizations",
-    "Social Change and Movements",
-    "Methods of Sociological Research",
-    "Sociology of Everyday Life",
-    "Sociology of Work and Economy",
-    "Sociology of Health and Illness",
-    "Sociology of Gender and Sexuality",
-    "Sociology of Race and Ethnicity",
-    "Sociology of Religion",
-    "Sociology of Education",
-    "Sociology of the Family",
-    "Sociology of the Environment",
-    "Sociology of Technology",
-    "Global Sociology",
-    "Applied Sociology",
-    "Microeconomics",
-    "Macroeconomics",
-    "Economic Systems",
-    "Economic Growth and Development",
-    "International Trade",
-    "Labor Economics",
-    "Financial Markets",
-    "Government Policy",
-    "Economic History",
-    "Behavioral Economics",
-    "Econometrics",
-    "Economic Inequality",
-    "Environmental Economics",
-    "Economic Modeling",
-    "Historical background of education",
-    "Key theories and concepts in education",
-    "Current research and developments in education",
-    "Practical applications of education in industry",
-    "Ethical considerations in education policy",
-    "Future trends and predictions in education",
-    "History of Computing",
-    "Computer Architecture",
-    "Operating Systems",
-    "Programming Languages",
-    "Software Development",
-    "Computer Networks",
-    "Data Storage and Retrieval",
-    "Computer Security",
-    "Artificial Intelligence",
-    "Computer Graphics",
-    "Human-Computer Interaction",
-    "Computer Ethics",
-    "Social Impact of Computers",
-    "Future of Computing"
-  ]
+    "Race and Ethnicity"
+  ],
+  "model": "Llama3.1:8B"
 }
 ```

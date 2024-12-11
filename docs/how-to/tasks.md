@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Discover how tasks work in the Dria network, including their lifecycle,
-  asynchronous execution, and model selection for efficient processing.
+- Workflows
+description: Explore tasks in the Dria network, their execution, features, and lifecycle
+  in distributed computing.
 tags:
-- DriaNetwork
+- Dria
 - Tasks
-- AsynchronousExecution
-- ModelSelection
-- AIWorkflows
+- Distributed Computing
+- Asynchronous Execution
+- Workflows
 ---
 
 # Tasks

@@ -1,12 +1,12 @@
 ---
 categories:
-- Preference Data
-description: Explore diverse patient dialogues to enhance understanding and improve
-  healthcare interactions.
+- Applied AI
+description: Explore various patient dialogues and interactions that enhance understanding
+  in healthcare settings.
 tags:
-- patient interaction
+- patient care
 - healthcare communication
-- dialogue analysis
-- patient feedback
-- healthcare quality
+- dialogue examples
+- medical interaction
+- patient engagement
 ---

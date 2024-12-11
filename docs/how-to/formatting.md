@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to format data with the Formatter class for various training
-  formats in AI applications.
+- Workflows
+description: Learn how the Formatter class converts datasets for trainers using Dria
+  Network, supporting various format types.
 tags:
 - Formatter
 - Data Formatting
-- AI Training
-- Data Processing
 - Dria Network
+- Machine Learning
+- Dataset Transformation
 ---
 
 # Formatter

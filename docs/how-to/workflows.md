@@ -5,14 +5,14 @@ categories:
 - Workflows
 comments: true
 date: 2024-10-29
-description: Explore how to create custom workflows in the Dria Network with LLMs,
-  managing execution flow and memory efficiently.
+description: Learn how to create custom workflows in the Dria Network, leveraging
+  LLMs, memory operations, and conditional logic for efficient task execution.
 tags:
-- Dria Network
 - Workflows
-- LLMs
-- Task Management
-- Python SDK
+- Dria SDK
+- Custom Workflows
+- AI Tasks
+- LLM Integration
 title: Custom Workflows within Dria Network
 ---
 
@@ -71,7 +71,7 @@ builder.set_max_time(100)
 builder.set_max_tokens(750)
 ```
 
-Dria nodes provides several built-in [tools](#step-a-random-variable-generation) that is included in your workflow by default.
+Dria nodes provides several built-in tools that is included in your workflow by default.
 Tools include:
 - Search: Tools for searching and retrieving data.
 - Scrape: Tools for scraping data from the web.
@@ -117,7 +117,7 @@ There are two types of steps in a workflow:
 - id `str`: The unique ID for the step.
 
 
-`search_step()`: Steps that perform a [search](#step-b-validation) operation through the file system.
+`search_step()`: Steps that perform a search operation through the file system.
 - search_query `str`: The query to search for.
 - id `str`: The unique ID for the step.
 

@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Explore StructRAG, a hybrid router model for knowledge restructuring
-  to enhance reasoning in language models.
+- Applied AI
+description: Explore StructRAG for enhancing the reasoning capabilities of LLMs using
+  hybrid information structuring in assessments.
 tags:
-- StructRAG
-- Knowledge Restructuring
 - LLMs
-- Hybrid Information Structurization
-- AI Reasoning
+- Hybrid Information Structuring
+- Knowledge Restructuring
+- Machine Learning
+- Inference
 ---
 
 # StructRAG

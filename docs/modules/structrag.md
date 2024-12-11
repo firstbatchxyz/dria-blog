@@ -1,14 +1,14 @@
 ---
 categories:
 - RAG
-description: Discover StructRAG, a novel framework enhancing LLMs for knowledge-intensive
-  reasoning tasks through cognitive-inspired information structuring.
+description: Explore StructRAG, a novel RAG framework enhancing LLMs for knowledge-intensive
+  tasks through improved document structuring.
 tags:
 - StructRAG
-- LLM
+- RAG
 - Knowledge Reasoning
-- Cognitive Techniques
-- Information Structuring
+- Language Models
+- Document Structuring
 ---
 
 # StructRag
