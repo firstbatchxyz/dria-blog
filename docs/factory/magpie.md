@@ -1,12 +1,12 @@
 ---
 categories:
 - Workflows
-description: MagPie is a versatile template for generating dialogues between personas
-  while managing conversation turns efficiently.
+description: MagPie generates dialogues between personas, facilitating conversational
+  exchanges with configurable turns and structured output.
 tags:
 - dialogue generation
-- AI personas
-- conversation management
+- AI conversations
+- persona simulation
 - data generation
 - natural language processing
 ---

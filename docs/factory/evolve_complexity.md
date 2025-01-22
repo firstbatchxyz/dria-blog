@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: EvolveComplexity transforms instructions into more complex versions while
-  preserving their meaning, ideal for data generation and instruction variations.
+- Data Generation
+description: EvolveComplexity evolves simple instructions into complex variations
+  while preserving their core intent, aiding in effective data generation.
 tags:
-- instruction evolution
-- data generation
-- AI language model
-- complexity transformation
-- variations
+- EvolveComplexity
+- Instruction Evolution
+- Data Generation
+- AI Models
+- Complexity
 ---
 
 # EvolveComplexity

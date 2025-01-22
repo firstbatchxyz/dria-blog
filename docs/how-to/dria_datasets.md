@@ -1,14 +1,14 @@
 ---
 categories:
 - Data Generation
-description: Explore the Dria Dataset class for efficient data generation, management,
-  and persistence in Python projects.
+description: Explore the DriaDataset class for efficient data generation and management,
+  supporting JSON, CSV, and Hugging Face integration.
 tags:
-- DriaDataset
-- Data Generation
-- Python
-- Data Management
-- Pydantic
+- data generation
+- DriaSDK
+- dataset management
+- machine learning
+- data processing
 ---
 
 # Dria Dataset

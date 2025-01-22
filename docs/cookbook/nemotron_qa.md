@@ -1,14 +1,14 @@
 ---
 categories:
-- Preference Data
-description: Learn to implement Nvidia's Preference Data Pipeline with Dria, using
-  synthetic data generation and reward modeling techniques.
+- Synthetic Data
+description: Implement Nvidia's Preference Data Pipeline using Dria for synthetic
+  preference data generation and alignment training.
 tags:
 - Nvidia
-- Dria
-- Data Pipeline
-- Machine Learning
 - Synthetic Data
+- Dria
+- Machine Learning
+- Preference Data
 ---
 
 # Implementing Nvidia's Preference Data Pipeline with Dria

@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Explore the QA pipeline that generates persona-based answers to questions
-  using AI, ensuring contextually relevant responses.
+- Workflows
+description: Explore the QuestionAnswer pipeline for generating context-aware responses
+  using AI personas and structured outputs in Python.
 tags:
-- Question Answering
-- AI Models
+- AI
+- Python
+- Question Answer
 - Data Generation
-- Natural Language Processing
-- QA Pipeline
+- Structured Outputs
 ---
 
 # QuestionAnswer

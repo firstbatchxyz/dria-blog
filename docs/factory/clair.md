@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Clair is an AI-powered task processor that evaluates student solutions,
-  provides corrections, and detailed reasoning for improvements.
+- Workflows
+description: Clair is an AI tool that automates solution checking and feedback for
+  students, enhancing learning with detailed corrections and reasoning.
 tags:
-- AI Feedback
-- Student Solutions
-- Automated Evaluation
-- Education Technology
+- AI Education
 - Solution Checker
+- Student Feedback
+- Automated Feedback
+- Learning Tool
 ---
 
 # Clair

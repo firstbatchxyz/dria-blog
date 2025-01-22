@@ -2,13 +2,13 @@
 categories:
 - Workflows
 description: Explore tasks in the Dria network, their execution, features, and lifecycle
-  in distributed computing.
+  for effective workflow management.
 tags:
 - Dria
 - Tasks
-- Distributed Computing
-- Asynchronous Execution
 - Workflows
+- Asynchronous Execution
+- AI Models
 ---
 
 # Tasks

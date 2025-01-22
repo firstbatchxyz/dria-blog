@@ -1,14 +1,15 @@
 ---
 categories:
-- Software Engineering
-description: Discover how to create and utilize Singletons in Dria for efficient task
-  management using Pydantic models.
+- Workflows
+- Applied AI
+description: Explore Singletons in Dria for task automation using Pydantic models.
+  Learn how to create and implement custom Singletons.
 tags:
-- Singleton
+- singleton
 - Pydantic
+- task automation
 - Dria
-- Task Management
-- Workflow
+- AI workflows
 ---
 
 # Singletons

@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: GenerateSubtopics is a template for AI-driven subtopic generation, enhancing
-  content creation with structured workflows.
+- Data Generation
+description: 'GenerateSubtopics: An AI tool to create relevant subtopics from a main
+  topic, enhancing data generation workflows.'
 tags:
-- AI generation
-- subtopics
-- content creation
-- data generation
-- workflow
+- AI Generation
+- Subtopics
+- Data Generation
+- Workflow
+- Rust Programming
 ---
 
 # GenerateSubtopics

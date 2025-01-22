@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: WebMultiChoice is a Singleton task that utilizes web search to answer
-  multiple-choice questions effectively.
+description: WebMultiChoice is a singleton task that answers multiple-choice questions
+  using web search and evaluation techniques.
 tags:
-- multiple-choice
-- web search
-- AI
-- evaluation
-- educational
+- Web Search
+- Multiple-Choice Questions
+- AI Evaluation
+- Medical Context
+- Task Automation
 ---
 
 # WebMultiChoice

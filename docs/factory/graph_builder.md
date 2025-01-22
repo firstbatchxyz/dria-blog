@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: GenerateGraph extracts ontological relationships from text, creating
-  a graph of related concepts and connections.
+- Workflows
+description: Extract ontological relationships from text using GenerateGraph to create
+  a graph-like structure of concepts and their connections.
 tags:
-- graph generation
-- ontology extraction
-- data structure
-- machine learning
-- AI relationships
+- Ontology Extraction
+- Graph Generation
+- AI Relationships
+- Data Science
+- Machine Learning
 ---
 
 # GenerateGraph

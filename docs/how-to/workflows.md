@@ -5,14 +5,14 @@ categories:
 - Workflows
 comments: true
 date: 2024-10-29
-description: Learn how to create custom workflows in the Dria Network, leveraging
-  LLMs, memory operations, and conditional logic for efficient task execution.
+description: Learn to create custom workflows in Dria Network, utilizing LLMs and
+  memory operations for task execution.
 tags:
+- Dria Network
 - Workflows
-- Dria SDK
-- Custom Workflows
-- AI Tasks
-- LLM Integration
+- Large Language Models
+- Python SDK
+- Task Automation
 title: Custom Workflows within Dria Network
 ---
 

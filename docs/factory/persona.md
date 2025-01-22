@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate character bios and backstories using persona traits with PersonaBio
-  and PersonaBackstory in Python.
+- Data Generation
+description: Generate engaging character backstories and bios with Persona pipeline
+  using AI models for simulations and character development.
 tags:
-- character generation
-- AI narratives
-- creative writing
-- persona generation
-- simulation development
+- Character Development
+- AI Models
+- Narrative Generation
+- Simulation Tools
+- Backstory Creation
 ---
 
 # Persona

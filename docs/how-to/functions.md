@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore Dria Nodes functions for built-in and custom tools, including
-  HTTP requests and workflows for seamless automation.
+- Software Engineering
+description: Learn how to implement and use built-in and custom functions in Dria
+  workows, enhancing your automation and workflows.
 tags:
-- Dria Nodes
-- Workflow Automation
-- Custom Functions
-- HTTP Requests
-- Generative Steps
+- Dria
+- workflow automation
+- custom functions
+- Python
+- APIs
 ---
 
 # Functions

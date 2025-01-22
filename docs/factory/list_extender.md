@@ -1,14 +1,14 @@
 ---
 categories:
 - Data Generation
-description: ListExtender enhances lists by generating related unique items, suitable
-  for data generation with AI models.
+description: Extend lists with ListExtender, a singleton class generating unique,
+  related items while maintaining originality and coherence.
 tags:
-- List Generation
-- Data Generation
-- AI Tools
-- Software Development
-- Singleton Class
+- list extension
+- data generation
+- unique items
+- singleton class
+- related items
 ---
 
 # ListExtender

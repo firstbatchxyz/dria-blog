@@ -1,12 +1,12 @@
 ---
 categories:
 - Applied AI
-description: Explore various patient dialogues and interactions that enhance understanding
-  in healthcare settings.
+description: A collection of patient dialogues designed for training and analysis
+  in healthcare communication.
 tags:
-- patient care
-- healthcare communication
-- dialogue examples
-- medical interaction
-- patient engagement
+- patient communication
+- healthcare AI
+- dialogue analysis
+- medical training
+- natural language processing
 ---

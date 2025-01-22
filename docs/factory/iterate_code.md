@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: IterateCode Singleton helps optimize and enhance existing code by iterating
-  with AI-generated instructions in various programming languages.
+- Software Engineering
+description: Discover the IterateCode Singleton for optimizing code generation using
+  AI with inputs for code, instruction, and programming language.
 tags:
-- code optimization
-- AI programming
-- IterateCode
-- python
-- software development
+- code generation
+- AI optimization
+- software engineering
+- programming
+- error handling
 ---
 
 ## IterateCode Singleton

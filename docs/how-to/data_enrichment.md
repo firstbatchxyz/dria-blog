@@ -1,14 +1,14 @@
 ---
 categories:
-- Data Generation
-description: Discover how to enrich datasets with Dria, enhancing text data for analytics
-  and machine learning through customized schemas and prompts.
+- RAG
+description: Enhance your datasets with Dria's data enrichment tools for improved
+  analytics and machine learning integration.
 tags:
 - data enrichment
-- Dria
 - machine learning
-- Pydantic
-- text analysis
+- analytics
+- data processing
+- AI toolkit
 ---
 
 # Data Enrichment

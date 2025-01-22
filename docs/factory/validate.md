@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: ValidatePrediction class for assessing the accuracy of AI predictions
-  through contextual and semantic comparison.
+description: ValidatePrediction is a class that compares predicted answers with correct
+  answers, providing validation results for AI models.
 tags:
-- prediction validation
-- semantic comparison
-- AI model
+- AI validation
+- prediction comparison
 - data generation
-- contextual evaluation
+- semantic validation
+- contextual analysis
 ---
 
 # ValidatePrediction

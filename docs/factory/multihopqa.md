@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Generate multi-hop questions from three document chunks with increasing
-  complexity using the MultiHopQuestion template.
+- Data Generation
+description: Generate complex multi-hop questions from three document chunks with
+  MultiHopQuestion, including answers and AI model used.
 tags:
-- multi-hop questions
-- data generation
-- question answering
+- Multi-hop questions
+- Question generation
 - AI models
-- document processing
+- Natural language processing
+- Data generation
 ---
 
 # MultiHopQuestion

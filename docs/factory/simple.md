@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Explore Simple, a singleton template for easy text generation using specified
-  models. Streamline your text generation tasks efficiently.
+- Data Generation
+description: Simple is a singleton template for text generation, enabling straightforward
+  workflows with customizable prompts and models.
 tags:
 - text generation
-- simple template
-- dataset generator
-- AI models
-- automated writing
+- singleton template
+- data generation
+- prompts
+- workflow
 ---
 
 # Simple

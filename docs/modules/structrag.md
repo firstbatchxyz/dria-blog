@@ -1,14 +1,14 @@
 ---
 categories:
-- RAG
-description: Explore StructRAG, a novel RAG framework enhancing LLMs for knowledge-intensive
-  tasks through improved document structuring.
+- Applied AI
+description: 'Explore StructRAG: an innovative framework enhancing LLMs for knowledge-intensive
+  reasoning by structuring information for better accuracy.'
 tags:
 - StructRAG
-- RAG
+- LLMs
+- Artificial Intelligence
 - Knowledge Reasoning
-- Language Models
-- Document Structuring
+- Data Structuring
 ---
 
 # StructRag

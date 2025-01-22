@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Learn how the Formatter class converts datasets for trainers using Dria
-  Network, supporting various format types.
+- Applied AI
+description: Learn to use the Formatter class for converting datasets into training
+  formats suitable for various AI models.
 tags:
 - Formatter
 - Data Formatting
+- AI Training
+- Hugging Face
 - Dria Network
-- Machine Learning
-- Dataset Transformation
 ---
 
 # Formatter

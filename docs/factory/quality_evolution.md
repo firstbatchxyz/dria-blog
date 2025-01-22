@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: EvolveQuality enhances text responses by focusing on helpfulness, relevance,
-  depth, creativity, or detail level for improved quality.
+- Data Generation
+description: EvolveQuality enhances text responses using AI with methods like helpfulness,
+  relevance, and creativity for better data generation outcomes.
 tags:
-- text evolution
-- response quality
-- AI enhancement
-- data generation
-- evolution methods
+- AI
+- Data Generation
+- Response Enhancement
+- Quality Improvement
+- Machine Learning
 ---
 
 # EvolveQuality

@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: ScoreComplexity evaluates instruction complexity, providing numerical
-  scores for each based on analysis to streamline data generation tasks.
+description: ScoreComplexity assigns complexity scores to instructions, aiding in
+  data generation and evaluation tasks.
 tags:
 - complexity scoring
-- instruction analysis
 - data generation
-- AI models
-- machine learning
+- instruction evaluation
+- AI scoring model
+- performance analysis
 ---
 
 # ScoreComplexity

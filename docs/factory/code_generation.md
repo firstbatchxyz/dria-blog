@@ -1,14 +1,14 @@
 ---
 categories:
 - Software Engineering
-description: Generate code easily using Singleton classes for various programming
-  languages with specified instructions.
+description: Generate code dynamically with powerful Singleton classes for code generation
+  and iteration in multiple programming languages.
 tags:
 - code generation
-- software engineering
-- programming
-- AI models
-- Singleton patterns
+- Singleton pattern
+- AI coding
+- Python
+- software development
 ---
 
 # GenerateCode

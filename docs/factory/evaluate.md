@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: EvaluatePrediction evaluates the quality of predicted answers against
-  questions and context, offering detailed feedback.
+- Workflows
+description: EvaluatePrediction class evaluates predicted answers against questions
+  and context, providing detailed feedback for data generation.
 tags:
 - evaluation
-- AI
 - predictions
-- feedback
 - data generation
+- AI
+- feedback
 ---
 
 # EvaluatePrediction

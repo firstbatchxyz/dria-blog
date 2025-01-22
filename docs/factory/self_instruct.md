@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: SelfInstruct automates user query generation for AI applications based
-  on specific criteria and context.
+description: SelfInstruct automates user query generation for AI applications, enhancing
+  testing and training efficiency.
 tags:
-- AI
-- query generation
+- AI query generation
+- automation
 - data generation
-- instructions
-- self-instruct
+- SelfInstruct
+- training AI
 ---
 
 # SelfInstruct

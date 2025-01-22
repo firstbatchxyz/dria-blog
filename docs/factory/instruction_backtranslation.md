@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Evaluate instruction-generation pairs using InstructionBacktranslation
-  for accurate AI response scoring and reasoning.
+description: Evaluate instruction-generation pairs efficiently with InstructionBacktranslation
+  for accurate AI responses and data generation.
 tags:
-- instruction
+- instruction evaluation
 - backtranslation
-- AI evaluation
+- AI model scoring
 - data generation
-- machine learning
+- natural language processing
 ---
 
 # InstructionBacktranslation

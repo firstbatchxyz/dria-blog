@@ -1,14 +1,14 @@
 ---
 categories:
-- Software Engineering
-description: Learn how to install the Dria SDK for Python, troubleshoot installation
-  issues, and understand network and contribution details.
+- Workflows
+description: Learn how to install the Dria SDK in Python, including setup, network
+  notes, and troubleshooting common issues on MacOS.
 tags:
 - Dria SDK
 - Python Installation
-- Software Setup
-- coincurve
-- Synthetic Data
+- MacOS Setup
+- Data Generation
+- SDK Troubleshooting
 ---
 
 # Installation

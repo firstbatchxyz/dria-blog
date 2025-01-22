@@ -1,14 +1,14 @@
 ---
 categories:
-- Workflows
-description: Discover SearchWeb, a singleton implementation for web searches generating
-  structured and localized results in various languages.
+- Applied AI
+description: Explore SearchWeb, a singleton tool for making structured web searches
+  with customizable query and result limits.
 tags:
-- web search
-- singleton pattern
-- data generation
-- structured data
-- python
+- SearchWeb
+- Web Search
+- Data Generation
+- Singleton Design Pattern
+- Python
 ---
 
 I'll create a markdown documentation file for the SearchWeb singleton implementation you provided.

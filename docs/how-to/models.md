@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Explore various available models in the Dria Network, including Nous's
-  Hermes, Microsoft's Phi3, and Meta's Llama series.
+description: Explore available AI models in Dria Network, including Nous, Phi3, and
+  Llama variations in various quantized formats.
 tags:
+- AI models
+- Machine Learning
 - Dria Network
-- AI Models
-- Nous Hermes
-- Microsoft Phi3
-- Meta Llama
+- Phi3
+- Llama
 ---
 
 # Models
@@ -48,11 +48,19 @@ See available models in Dria Network below:
 | `QwenQwq` | `qwq` | AliBaba's QwenQwq |
 | `DeepSeekCoder6_7B` | `deepseek-coder:6.7b` | DeepSeek Coding models |
 | `Mixtral8_7b` | `mixtral:8x7b` | Mistral's MoE Models |
+| `R1_1_5b` | `deepseek-r1:1.5b` | R1 Models |
+| `R1_7b` | `deepseek-r1:7b` | R1 Models |
+| `R1_8b` | `deepseek-r1:8b` | R1 Models |
+| `R1_14b` | `deepseek-r1:14b` | R1 Models |
+| `R1_32b` | `deepseek-r1:32b` | R1 Models |
+| `R1_70b` | `deepseek-r1:70b` | R1 Models |
 | `GPT4Turbo` | `gpt-4-turbo` | OpenAI's GPT-4 Turbo model |
 | `GPT4o` | `gpt-4o` | OpenAI's GPT-4o model |
 | `GPT4oMini` | `gpt-4o-mini` | OpenAI's GPT-4o mini model |
 | `O1Mini` | `o1-mini` | OpenAI's o1 mini model |
 | `O1Preview` | `o1-preview` | OpenAI's o1 preview model |
+| `O1` | `o1` | OpenAI's o1 model |
+| `Gemini20FlashExp` | `gemini-2.0-flash-exp` | Gemini 2.0 Flash exp model |
 | `Gemini15ProExp0827` | `gemini-1.5-pro-exp-0827` | Gemini 1.5 Pro model |
 | `Gemini15Pro` | `gemini-1.5-pro` | Gemini 1.5 Pro model |
 | `Gemini15Flash` | `gemini-1.5-flash` | Gemini 1.5 Flash model |

@@ -1,14 +1,14 @@
 ---
 categories:
 - Applied AI
-description: Learn how to select and assign models in the Dria Network for effective
-  task execution with LLMs.
+description: Discover how to select and assign models in Dria Network using the DatasetGenerator
+  for efficient task execution.
 tags:
 - Dria Network
-- LLM Models
-- Task Assignment
 - Model Selection
-- Artificial Intelligence
+- LLM
+- Task Management
+- AI Models
 ---
 
 # Selecting Models

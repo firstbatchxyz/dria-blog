@@ -1,14 +1,14 @@
 ---
 categories:
 - Workflows
-description: This script demonstrates how to run parallel model executions using Dria,
-  MagPie, and asyncio in Python.
+description: This script demonstrates how to use the Dria library for asynchronous
+  model batch processing in Python.
 tags:
 - Python
-- Dria
-- Asyncio
-- Machine Learning
-- Model Execution
+- Dria library
+- asynchronous
+- batch processing
+- machine learning
 ---
 
 # Example Run

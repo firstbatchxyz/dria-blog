@@ -1,14 +1,14 @@
 ---
 categories:
-- Applied AI
-description: Generate semantic triplets with varying similarity scores using Python.
-  Ideal for NLP tasks and educational content.
+- Data Generation
+description: Generate semantic triplets in JSON format with specified similarity scores
+  for textual units using the SemanticTriplet task.
 tags:
-- NLP
-- Semantic Triplet
-- JSON Generation
-- Python
-- Data Processing
+- semantic similarity
+- JSON generation
+- textual units
+- AI models
+- NLP tasks
 ---
 
 # SemanticTriplet
